@@ -28,7 +28,7 @@
   "faucets": [
     {
       "currency": "BTC",
-      "frequency": 60,
+      "frequency": 0,
       "name": "Bit Fun",
       "payment": 0,
       "url": "http://bitfun.co/?ref=6432A0FB3F81"
