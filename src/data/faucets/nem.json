@@ -1,0 +1,9 @@
+[
+  {
+    "name": "NEM mainnet Faucet",
+    "frequency": 240,
+    "payment": "Pooling",
+    "url": "http://namuyan.dip.jp/nem/mainnet_nodb/",
+    "min": 5
+  }
+]

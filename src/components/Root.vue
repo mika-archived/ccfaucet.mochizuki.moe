@@ -36,7 +36,7 @@
       </b-card>
     </section>
     <section>
-      <b-table bordered striped responsible :items="filtered()" :fields="fields">
+      <b-table bordered striped hover show-empty empty-text="アイテムが見つかりませんでした" :items="filtered()" :fields="fields">
         <template slot="currency" slot-scope="data">
           {{resolve('currencies', 'symbol', data.item.currency).name}}
         </template>
@@ -61,6 +61,7 @@
         </template>
       </b-table>
     </section>
+    <l-footer />
   </b-container>
 </template>
 
@@ -68,10 +69,15 @@
 /* eslint-disable space-before-function-paren */
 import _ from 'lodash'
 
+import Footer from './Footer.vue'
+
 export default {
   name: 'Root',
+  components: {
+    'l-footer': Footer
+  },
   data () {
-    const currencies = _.sortBy(require('../data/currencies.json'), 'name')
+    const currencies = _.sortBy(require('../data/currencies.json'), (w) => w.name.toLowerCase())
     const faucets = []
     _.forEach(currencies, (w) => {
       const _faucets = require(`../data/faucets/${w.name.toLowerCase()}.json`)

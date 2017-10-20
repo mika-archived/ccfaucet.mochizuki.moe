@@ -1,1 +1,14 @@
-[]
+[
+  {
+    "name": "Nekonium Mining Pool",
+    "frequency": 30,
+    "payment": "Direct",
+    "url": "http://nuko.oldbeyond.com/#/faucet"
+  },
+  {
+    "name": "ねこの水飲み場 - Nekonium Faucet",
+    "frequency": 180,
+    "payment": "Direct",
+    "url": "https://faucet.nekonium.net/"
+  }
+]
