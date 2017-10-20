@@ -1,12 +1,19 @@
 <template>
   <div id="app">
-    <router-view/>
+    <container>
+      <router-view/>
+    </container>
   </div>
 </template>
 
 <script>
+import Container from './components/Container.vue'
+
 export default {
-  name: 'app'
+  name: 'app',
+  components: {
+    container: Container
+  }
 }
 </script>
 
@@ -60,7 +67,5 @@ html {
 body {
   color: #333;
   background-color: #f9f9f9;
-  margin-top: 24px;
-  margin-bottom: 24px;
 }
 </style>

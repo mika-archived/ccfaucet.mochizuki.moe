@@ -31,5 +31,12 @@
     "payment": "Pooling",
     "url": "http://www.shiganaicontents.ga/faucet3/",
     "min": 0.1
+  },
+  {
+    "name": "AllInFaucet",
+    "frequency": 60,
+    "payment": "Pooling",
+    "url": "http://namuyan.dip.jp/all_in_faucet.php",
+    "min": 0.01
   }
 ]

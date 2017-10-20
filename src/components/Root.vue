@@ -61,7 +61,6 @@
         </template>
       </b-table>
     </section>
-    <l-footer />
   </b-container>
 </template>
 
@@ -69,18 +68,13 @@
 /* eslint-disable space-before-function-paren */
 import _ from 'lodash'
 
-import Footer from './Footer.vue'
-
 export default {
   name: 'Root',
-  components: {
-    'l-footer': Footer
-  },
   data () {
     const currencies = _.sortBy(require('../data/currencies.json'), (w) => w.name.toLowerCase())
     const faucets = []
     _.forEach(currencies, (w) => {
-      const _faucets = require(`../data/faucets/${w.name.toLowerCase()}.json`)
+      const _faucets = _.sortBy(require(`../data/faucets/${w.name.toLowerCase()}.json`), (w) => w.name.toLowerCase())
       _.forEach(_faucets, (v) => {
         faucets.push(Object.assign(v, {currency: w.symbol}))
       })

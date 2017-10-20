@@ -4,5 +4,12 @@
     "name": "SA BitZeny Faucet",
     "payment": "Direct",
     "url": "http://shiganairingozeny.chocottokozukai.click/bitzeny/faucet_top.php"
+  },
+  {
+    "name": "AllInFaucet",
+    "frequency": 60,
+    "payment": "Pooling",
+    "url": "http://namuyan.dip.jp/all_in_faucet.php",
+    "min": 0.1
   }
 ]

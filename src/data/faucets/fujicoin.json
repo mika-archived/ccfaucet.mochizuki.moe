@@ -1,1 +1,9 @@
-[]
+[
+  {
+    "name": "AllInFaucet",
+    "frequency": 60,
+    "payment": "Pooling",
+    "url": "http://namuyan.dip.jp/all_in_faucet.php",
+    "min": 0
+  }
+]
