@@ -3,11 +3,11 @@ module.exports = {
   ** Headers of the page
   */
   head: {
-    title: 'Faucet list of cryptocurrencies - mochizuki.moe',
+    title: '暗号通貨フォーセットリスト - mochizuki.moe',
     meta: [
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
-      { hid: 'description', name: 'description', content: 'Faucet list of cryptocurrencies.' }
+      { hid: 'description', name: 'description', content: 'Bitcoin や Monacoin, BitZeny など暗号通貨のフォーセット (蛇口)リスト' }
     ],
     link: [
       { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }

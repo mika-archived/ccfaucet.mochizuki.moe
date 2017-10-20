@@ -1,0 +1,42 @@
+[
+  {
+    "name": "Bitcoin",
+    "symbol": "BTC"
+  },
+  {
+    "name": "BitZeny",
+    "symbol": "ZNY"
+  },
+  {
+    "name": "DASH",
+    "symbol": "DASH"
+  },
+  {
+    "name": "Dogecoin",
+    "symbol": "DOGE"
+  },
+  {
+    "name": "Litecoin",
+    "symbol": "LTC"
+  },
+  {
+    "name": "Nekonium",
+    "symbol": "NUKO"
+  },
+  {
+    "name": "Monacoin",
+    "symbol": "MONA"
+  },
+  {
+    "name": "Kumacoin",
+    "symbol": "KUMA"
+  },
+  {
+    "name": "FujiCoin",
+    "symbol": "FJC"
+  },
+  {
+    "name": "Sha1coin",
+    "symbol": "SHA"
+  }
+]

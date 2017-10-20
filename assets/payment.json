@@ -1,0 +1,26 @@
+[
+  {
+    "id": "Direct",
+    "min": 0,
+    "name": "Direct",
+    "url": ""
+  },
+  {
+    "id": "Pooling",
+    "min": -1,
+    "name": "Pooling",
+    "url": ""
+  },
+  {
+    "id": "CoinPot",
+    "min": 0.0005,
+    "name": "CoinPot",
+    "url": "https://coinpot.co"
+  },
+  {
+    "id": "FaucetHub",
+    "min": 0.0002,
+    "name": "FaucetHub.io",
+    "url": "https://faucethub.io"
+  }
+]

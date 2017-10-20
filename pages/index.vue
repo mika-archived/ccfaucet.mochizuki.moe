@@ -5,13 +5,34 @@
         暗号通貨フォーセットリスト
       </h1>
       <p>
-        暗号通貨のフォーセット(蛇口)リストです。<br> 当サイトで得た情報によって何らかの損害を得たとしても、責任を負うことは出来ません。
-        <br> どのフォーセットを使用するかは、あなた自身によって決めて下さい。
+        仮想通貨・暗号通貨のフォーセット(蛇口)リストです。
       </p>
     </section>
     <section class="container">
+      <div class="card">
+        <div class="card-body">
+          <p>
+            絞り込み
+          </p>
+          <form action="">
+            <div class="form-row">
+              <div class="col-auto">
+                <label for="currency">通貨</label>
+                <select class="form-control" id="currency" v-model="selected">
+                  <option value="*">全て</option>
+                  <option v-for="currency in currencies" :key="currency.symbol" :value="currency.symbol">
+                    {{currency.name}} ({{currency.symbol}})
+                  </option>
+                </select>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+    </section>
+    <section class="container">
       <div>
-        <table class="table table-striped table-bordered">
+        <table class="table table-striped table-bordered table-responsive">
           <thead>
             <tr>
               <td>暗号通貨</td>
@@ -22,33 +43,24 @@
             </tr>
           </thead>
           <tbody>
-            <tr v-for="(w, index) in faucets" :key="index">
-              <td>{{relation('currencies', w.currency).name}}</td>
+            <tr v-for="faucet in filtered()" :key="faucet.url">
+              <td>{{relation('currencies', 'symbol', faucet.currency).name}}</td>
               <td>
-                <a :href="w.url" target="_blank">
-                  {{w.name}}
-                </a>
+                <a :href="faucet.url" target="_blank">{{faucet.name}}</a>
               </td>
+              <td>{{time(faucet.frequency)}}</td>
               <td>
-                {{time(w.frequency)}}
-              </td>
-              <td>
-                <template v-if="w.payment === 0 || w.payment === 1">
-                  {{relation('payment_methods', w.payment).name}}
+                <template v-if="faucet.payment === 'Direct' || faucet.payment === 'Pooling'">
+                  {{relation('payment', 'id', faucet.payment).name}}
                 </template>
                 <template v-else>
-                  <a :href="relation('payment_methods', w.payment).url" target="_blank">
-                    {{relation('payment_methods', w.payment).name}}
+                  <a :href="relation('payment', 'id', faucet.payment).url" target="_blank">
+                    {{relation('payment', 'id', faucet.payment).name}}
                   </a>
                 </template>
               </td>
               <td>
-                <template v-if="w.payment === 0 || w.payment === 1">
-                  なし
-                </template>
-                <template v-else>
-                  {{relation('payment_methods', w.payment).min}}
-                </template>
+                {{min(faucet, relation('payment', 'id', faucet.payment).min)}}
               </td>
             </tr>
           </tbody>
@@ -65,16 +77,40 @@
 </template>
 
 <script>
+/* eslint-disable space-before-function-paren */
+import _ from 'lodash'
+
 export default {
   data: () => {
-    return require('../assets/list.json')
+    const currencies = _.sortBy(require('../assets/currencies.json'), (w) => w.name.toUpperCase())
+    const faucets = []
+    currencies.map((w) => {
+      const _faucets = _.sortBy(require(`../assets/faucets/${w.name.toLowerCase()}.json`), (w) => w.name.toUpperCase())
+      _.forEach(_faucets, (v) => {
+        faucets.push(Object.assign(v, {currency: w.symbol}))
+      })
+    })
+
+    return {
+      currencies,
+      faucets,
+      payment: require('../assets/payment.json'),
+      // form
+      selected: '*'
+    }
   },
   methods: {
-    // eslint-disable-next-line space-before-function-paren
-    relation(target, id) {
-      return this.$data[target].find((w) => w.id === id)
+    filtered() {
+      if (this.$data.selected === '*') {
+        return this.$data.faucets
+      }
+      return _.filter(this.$data.faucets, (w) => {
+        return w.currency === this.$data.selected
+      })
     },
-    // eslint-disable-next-line space-before-function-paren
+    relation(target, property, value) {
+      return this.$data[target].find(w => w[property] === value)
+    },
     time(minutes) {
       if (minutes === 0) {
         return 'Generate'
@@ -88,13 +124,20 @@ export default {
           return `${hour} hour`
         }
       }
+    },
+    min(faucet, amount) {
+      if (amount === -1) {
+        return faucet.min
+      }
+      return amount
     }
   },
   head: {
     link: [
       {
         rel: 'stylesheet',
-        href: 'https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css'
+        href:
+          'https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css'
       }
     ]
   }
