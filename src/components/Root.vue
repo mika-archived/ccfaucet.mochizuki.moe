@@ -21,12 +21,25 @@
                 </b-form-select>
               </b-form-group>
             </b-col>
+            <b-col col md="auto">
+              <b-form-group label="支払い方法" label-for="payment">
+                <b-form-select v-model="selectedPayment" id="payment">
+                  <option value="*">全て</option>
+                  <option v-for="payment in payments" :key="payment.id" :value="payment.id">
+                    {{payment.name}}
+                  </option>
+                </b-form-select>
+              </b-form-group>
+            </b-col>
           </b-form-row>
         </b-form>
       </b-card>
     </section>
     <section>
       <b-table bordered striped responsible :items="filtered()" :fields="fields">
+        <template slot="currency" slot-scope="data">
+          {{resolve('currencies', 'symbol', data.item.currency).name}}
+        </template>
         <template slot="website" slot-scope="data">
           <a :href="data.item.url" target="_blank">{{data.item.name}}</a>
         </template>
@@ -77,7 +90,8 @@ export default {
         minimumAmount: {label: '最小出金額'}
       },
       payments: require('../data/payments.json'),
-      selectedCurrency: '*'
+      selectedCurrency: '*',
+      selectedPayment: '*'
     }
   },
   methods: {
@@ -85,11 +99,14 @@ export default {
       return ''
     },
     filtered: function() {
-      if (this.$data.selectedCurrency === '*') {
+      if (this.$data.selectedCurrency === '*' && this.$data.selectedPayment === '*') {
         return this.$data.faucets
       }
       return _.filter(this.$data.faucets, (w) => {
-        return w.currency === this.$data.selectedCurrency
+        let bool = true
+        bool &= this.$data.selectedCurrency === '*' ? true : w.currency === this.$data.selectedCurrency
+        bool &= this.$data.selectedPayment === '*' ? true : w.payment === this.$data.selectedPayment
+        return bool
       })
     },
     minimumAmount: function(data) {
