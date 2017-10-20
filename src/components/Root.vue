@@ -59,6 +59,9 @@
         <template slot="minimumAmount" slot-scope="data">
           {{minimumAmount(data.item)}}
         </template>
+        <template slot="price" slot-scope="data">
+          {{pricing(data.item)}}
+        </template>
       </b-table>
     </section>
   </b-container>
@@ -66,6 +69,7 @@
 
 <script>
 /* eslint-disable space-before-function-paren */
+import axios from 'axios'
 import _ from 'lodash'
 
 export default {
@@ -87,11 +91,13 @@ export default {
         website: {label: 'ウェブサイト'},
         frequency: {label: '支払い間隔'},
         payment: {label: '支払い方法'},
-        minimumAmount: {label: '最小出金額'}
+        minimumAmount: {label: '最小出金額'},
+        price: {label: 'JPY'}
       },
       payments: require('../data/payments.json'),
       selectedCurrency: '*',
-      selectedPayment: '*'
+      selectedPayment: '*',
+      tickers: null
     }
   },
   methods: {
@@ -116,6 +122,22 @@ export default {
       const payment = this.resolve('payments', 'id', data.payment)
       return payment.min
     },
+    pricing: function(data) {
+      if (this.$data.tickers === null) {
+        return '読み込み中...'
+      }
+      const ticker = this.resolve('tickers', 'symbol', data.currency)
+      if (ticker) {
+        const jpy = ticker.price_jpy
+        if (jpy >= 1000) {
+          return Math.floor(jpy)
+        } else {
+          return Math.floor(jpy * Math.pow(10, 3)) / Math.pow(10, 3)
+        }
+      } else {
+        return '使用不可'
+      }
+    },
     readable: function(frequency) {
       if (frequency >= 60) {
         const hours = frequency / 60
@@ -132,6 +154,19 @@ export default {
     },
     resolve: function(target, property, value) {
       return this.$data[target].find((w) => w[property] === value)
+    }
+  },
+  mounted: function() {
+    if (this.$data.tickers === null) {
+      axios.get('https://cors-anywhere.herokuapp.com/https://api.coinmarketcap.com/v1/ticker?convert=JPY')
+      .then((w) => {
+        this.$data.tickers = w.data
+      })
+      .catch((w) => {
+        console.error(w)
+      })
+    } else {
+      console.log('Already loaded, skip.')
     }
   }
 }
