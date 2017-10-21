@@ -1,4 +1,5 @@
 import Vue from 'vue'
+import ga from 'vue-ga'
 import Router from 'vue-router'
 
 import About from '@/components/About'
@@ -6,7 +7,7 @@ import Root from '@/components/Root'
 
 Vue.use(Router)
 
-export default new Router({
+const router = new Router({
   routes: [
     {
       path: '/',
@@ -20,3 +21,9 @@ export default new Router({
     }
   ]
 })
+
+if (process.env.NODE_ENV === 'production') {
+  ga(router, 'UA-68289020-2')
+}
+
+export default router

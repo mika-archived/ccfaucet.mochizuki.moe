@@ -42,5 +42,9 @@
   {
     "name": "NEM",
     "symbol": "XEM"
+  },
+  {
+    "name": "Ethereum",
+    "symbol": "ETH"
   }
 ]

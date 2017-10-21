@@ -96,7 +96,7 @@ export default {
         frequency: {label: '支払い間隔'},
         payment: {label: '支払い方法'},
         minimumAmount: {label: '最小出金額'},
-        price: {label: 'JPY'}
+        price: {label: '日本円'}
       },
       payments: require('../data/payments.json'),
       selectedCurrency: '*',
@@ -120,11 +120,15 @@ export default {
       })
     },
     minimumAmount: function(data) {
+      const currency = this.resolve('currencies', 'symbol', data.currency)
       if (data.payment === 'Direct' || data.payment === 'Pooling') {
-        return data.min || 0
+        if (data.min) {
+          return `${data.min} ${currency.symbol}`
+        }
+        return 'N/A'
       }
       const payment = this.resolve('payments', 'id', data.payment)
-      return payment.min
+      return `${payment.min[currency.name.toLowerCase()]} ${currency.symbol}`
     },
     pricing: function(data) {
       if (this.$data.tickers === null) {
@@ -133,13 +137,15 @@ export default {
       const ticker = this.resolve('tickers', 'symbol', data.currency)
       if (ticker) {
         const jpy = ticker.price_jpy
+        let floored = 0
         if (jpy >= 1000) {
-          return Math.floor(jpy)
+          floored = Math.floor(jpy)
         } else {
-          return Math.floor(jpy * Math.pow(10, 3)) / Math.pow(10, 3)
+          floored = Math.floor(jpy * Math.pow(10, 3)) / Math.pow(10, 3)
         }
+        return `${floored} 円`
       } else {
-        return '使用不可'
+        return 'N/A'
       }
     },
     readable: function(frequency) {

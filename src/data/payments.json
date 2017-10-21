@@ -13,13 +13,27 @@
   },
   {
     "id": "CoinPot",
-    "min": 0.0005,
+    "min": {
+      "bitcoin": 0.0001,
+      "dogecoin": 50,
+      "litecoin": 0.002
+    },
     "name": "CoinPot",
     "url": "https://coinpot.co"
   },
   {
     "id": "FaucetHub",
-    "min": 0.0002,
+    "min": {
+      "bitcoin": 0.0002,
+      "ethereum": 0.01,
+      "litecoin": 0.01,
+      "dogecoin": 10,
+      "bitcoin cash": 0.0002,
+      "blackcoin": 2,
+      "dash": 0.001,
+      "peercoin": 1,
+      "primecoin": 2
+    },
     "name": "FaucetHub.io",
     "url": "https://faucethub.io"
   }

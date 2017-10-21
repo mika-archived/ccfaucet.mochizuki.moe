@@ -10,5 +10,11 @@
     "frequency": 180,
     "payment": "Direct",
     "url": "https://faucet.nekonium.net/"
+  },
+  {
+    "name": "Nekonium Faucet",
+    "frequency": 180,
+    "payment": "Direct",
+    "url": "http://namuyan.dip.jp/nekoniumFaucet.php"
   }
 ]
