@@ -26,6 +26,16 @@
       </p>
       <b-table bordered :items="payment.items" :fields="payment.fields" />
     </section>
+    <section>
+      <h3>その他</h3>
+      <div>
+        <h4>招待リンクになっているのウザい</h4>
+        <p>
+          どうしてもという場合は、URL に
+          <code>?refer=false</code> を付けてリロードすると、純粋なサイト URL になります。
+        </p>
+      </div>
+    </section>
   </b-container>
 </template>
 
@@ -63,5 +73,9 @@ export default {
 <style scoped>
 section {
   padding: 10px 0 20px 0;
+}
+
+div {
+  padding: 10px 0 10px 0;
 }
 </style>

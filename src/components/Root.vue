@@ -75,11 +75,15 @@ import _ from 'lodash'
 export default {
   name: 'Root',
   data () {
+    const b = this.$route.query.refer && this.$route.query.refer === 'false'
     const currencies = _.sortBy(require('../data/currencies.json'), (w) => w.name.toLowerCase())
     const faucets = []
     _.forEach(currencies, (w) => {
       const _faucets = _.sortBy(require(`../data/faucets/${w.name.toLowerCase()}.json`), (w) => w.name.toLowerCase())
       _.forEach(_faucets, (v) => {
+        if (b) {
+          v.url = v.url.replace(/(\?)?r(ef)?(=|\/).*/g, '')
+        }
         faucets.push(Object.assign(v, {currency: w.symbol}))
       })
     })
