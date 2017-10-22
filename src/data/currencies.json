@@ -46,5 +46,25 @@
   {
     "name": "Ethereum",
     "symbol": "ETH"
+  },
+  {
+    "name": "Blackcoin",
+    "symbol": "BLK"
+  },
+  {
+    "name": "Peercoin",
+    "symbol": "PPC"
+  },
+  {
+    "name": "Primecoin",
+    "symbol": "XPM"
+  },
+  {
+    "name": "Lisk",
+    "symbol": "LSK"
+  },
+  {
+    "name": "Monero",
+    "symbol": "XMR"
   }
 ]

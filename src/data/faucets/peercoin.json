@@ -1,0 +1,15 @@
+[
+  {
+    "name": "PPC-Faucet.com",
+    "frequency": 60,
+    "payment": "FaucetHub",
+    "url": "https://ppc-faucet.com/?r=PBHB7UYxn1QQcavS1JZrVmXWza7tKt6Lxh"
+  },
+  {
+    "name": "Free PPC from the Peercoin Faucet!",
+    "frequency": 60,
+    "payment": "Pooling",
+    "url": "http://peercoinfaucet.info/ref/PAhsQAGaarFr5CznSBii31mGgx9L3NhoVf",
+    "min": 0.05
+  }
+]

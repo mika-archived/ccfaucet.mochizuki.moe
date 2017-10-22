@@ -1,0 +1,15 @@
+[
+  {
+    "name": "BlackcoinFaucet.com",
+    "frequency": 60,
+    "payment": "FaucetHub",
+    "url": "https://blackcoinfaucet.com/?r=BGgDvUmW4mbF1jgi69wVUbwskYRNyB4Trx"
+  },
+  {
+    "name": "Free Blackcoin with the Blackcoin.info faucet!",
+    "frequency": 60,
+    "payment": "Pooling",
+    "url": "http://blackcoin.info/ref/B69gaoqskF4LQ1ABqwJbFuqtuBKoNaDyts",
+    "min": 0.2
+  }
+]

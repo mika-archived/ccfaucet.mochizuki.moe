@@ -1,33 +1,33 @@
 [
   {
-    "frequency": 360,
     "name": "Monacoin Station",
+    "frequency": 360,
     "payment": "Pooling",
     "url": "https://faucet.mona-coin.org",
     "min": 0.002
   },
   {
-    "frequency": 1440,
     "name": "Space Space Faucets",
+    "frequency": 1440,
     "payment": "Direct",
     "url": "http://utyuu.space/spacespace-faucet/"
   },
   {
-    "frequency": 1440,
     "name": "しがないふぉーせっと",
+    "frequency": 1440,
     "payment": "Direct",
     "url": "http://shiganaifaucet.chocottokozukai.click/"
   },
   {
-    "frequency": 30,
     "name": "しがないふぉーせっと2",
+    "frequency": 30,
     "payment": "Pooling",
     "url": "http://shiganaifaucet.chocottokozukai.click/faucet2/",
     "min": 1
   },
   {
-    "frequency": 10,
     "name": "しがないふぉーせっと3",
+    "frequency": 10,
     "payment": "Pooling",
     "url": "http://www.shiganaicontents.ga/faucet3/",
     "min": 0.1

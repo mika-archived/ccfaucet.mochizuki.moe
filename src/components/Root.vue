@@ -168,7 +168,7 @@ export default {
   },
   mounted: function() {
     if (this.$data.tickers === null) {
-      axios.get('https://cors-anywhere.herokuapp.com/https://api.coinmarketcap.com/v1/ticker?convert=JPY')
+      axios.get('https://api.coinmarketcap.com/v1/ticker/?convert=JPY')
       .then((w) => {
         this.$data.tickers = w.data
       })

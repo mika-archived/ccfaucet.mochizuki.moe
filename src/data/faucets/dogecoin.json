@@ -1,26 +1,26 @@
 [
   {
-    "frequency": 60,
     "name": "DOGE-Faucet.com",
+    "frequency": 60,
     "payment": "FaucetHub",
     "url": "https://doge-faucet.com/?r=DU2g1zeQbmhXdFzx3vzSFGbkuwzduVas85"
   },
   {
-    "frequency": 60,
     "name": "FreeDoge.co.in",
+    "frequency": 60,
     "payment": "Pooling",
     "url": "https://freedoge.co.in/?r=1294087",
     "min": 200
   },
   {
-    "frequency": 0,
     "name": "Moon Dogecoin",
+    "frequency": 0,
     "payment": "CoinPot",
     "url": "http://moondoge.co.in/?ref=22948157f96d"
   },
   {
-    "frequency": 5,
     "name": "xFaucet",
+    "frequency": 5,
     "payment": "FaucetHub",
     "url": "https://www.xfaucet.net/dogecoin/?r=DU2g1zeQbmhXdFzx3vzSFGbkuwzduVas85"
   }

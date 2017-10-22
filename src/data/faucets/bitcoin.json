@@ -6,33 +6,33 @@
     "url": "http://bitfun.co/?ref=6432A0FB3F81"
   },
   {
-    "frequency": 15,
     "name": "Bonus Bitcoin",
+    "frequency": 15,
     "payment": "CoinPot",
     "url": "http://bonusbitcoin.co/?ref=D7ED3F50E1A9"
   },
   {
-    "frequency": 60,
     "name": "BtcForEveryone.xyz",
+    "frequency": 60,
     "payment": "FaucetHub",
     "url": "https://btcforeveryone.xyz/?r=1E4NZUSC39BEPsE1xVKVyHrBxstXdrNVM4"
   },
   {
-    "frequency": 60,
     "name": "FreeBitco.in",
+    "frequency": 60,
     "payment": "Pooling",
     "url": "https://freebitco.in/?r=7713155",
     "min": 0.0003
   },
   {
-    "frequency": 0,
     "name": "Moon Bitcoin",
+    "frequency": 0,
     "payment": "CoinPot",
     "url": "http://moonbit.co.in/?ref=7a838f6cbb5c"
   },
   {
-    "frequency": 5,
     "name": "xFaucet",
+    "frequency": 5,
     "payment": "FaucetHub",
     "url": "https://www.xfaucet.net/bitcoin/?r=1E4NZUSC39BEPsE1xVKVyHrBxstXdrNVM4"
   }

@@ -1,26 +1,26 @@
 [
   {
-    "frequency": 60,
     "name": "Free LTC from the Litecoin Faucet!",
+    "frequency": 60,
     "payment": "Pooling",
     "url": "http://litecoinfaucet.info/ref/LVfzaELameCFoEWoLQtKiBCsCUWgwkorcq",
     "min": 0.01
   },
   {
-    "frequency": 60,
     "name": "Litecoin-Faucet.com",
+    "frequency": 60,
     "payment": "FaucetHub",
     "url": "https://litecoin-faucet.com/?r=LiSmd3Pp1hCoPGPguSVCUyo1RHak5g1mcj"
   },
   {
-    "frequency": 0,
     "name": "Moon Litecoin",
+    "frequency": 0,
     "payment": "CoinPot",
     "url": "http://moonliteco.in/?ref=c2f750048d81"
   },
   {
-    "frequency": 5,
     "name": "xFaucet",
+    "frequency": 5,
     "payment": "FaucetHub",
     "url": "https://www.xfaucet.net/litecoin/?r=LiSmd3Pp1hCoPGPguSVCUyo1RHak5g1mcj"
   }

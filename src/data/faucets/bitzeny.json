@@ -1,7 +1,7 @@
 [
   {
-    "frequency": 1440,
     "name": "SA BitZeny Faucet",
+    "frequency": 1440,
     "payment": "Direct",
     "url": "http://shiganairingozeny.chocottokozukai.click/bitzeny/faucet_top.php"
   },

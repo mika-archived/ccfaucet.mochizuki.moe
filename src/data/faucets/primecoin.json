@@ -1,0 +1,15 @@
+[
+  {
+    "name": "XPM-Faucet.com",
+    "frequency": 60,
+    "payment": "FaucetHub",
+    "url": "https://xpm-faucet.com/?r=AM2QVydWBt23S5HCsCNVvaWqDRShqfkJKa"
+  },
+  {
+    "name": "Free Primecoin from the Primecoin Faucet!",
+    "frequency": 60,
+    "payment": "Pooling",
+    "url": "http://primecoinfaucet.info/ref/AR1PhZrZsqiFysV8u8VboEjBfPow4kSoHs",
+    "min": 0.2
+  }
+]
