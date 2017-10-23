@@ -27,6 +27,9 @@ export default {
       this.selected = checked ? this.options.slice().map((w) => w[this.fieldValue]) : []
     }
   },
+  mounted: function() {
+    this.toggleAll(true)
+  },
   props: [
     'fieldText',
     'fieldValue',

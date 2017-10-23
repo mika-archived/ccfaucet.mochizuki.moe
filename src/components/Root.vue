@@ -35,12 +35,12 @@
           {{readable(data.item.frequency)}}
         </template>
         <template slot="payment" slot-scope="data">
-          <template v-if="resolve('payments', 'id', data.item.payment).url === ''">
-            {{resolve('payments', 'id', data.item.payment).name}}
+          <template v-if="resolvePayment(data).url === ''">
+            {{resolvePayment(data).name}}
           </template>
           <template v-else>
-            <a :href="resolve('payments', 'id', data.item.payment).url" target="_blank">
-              {{resolve('payments', 'id', data.item.payment).name}}
+            <a :href="resolvePayment(data).url" target="_blank">
+              {{resolvePayment(data).name}}
             </a>
           </template>
         </template>
@@ -60,7 +60,7 @@
 import axios from 'axios'
 import _ from 'lodash'
 
-import CheckboxGroupImlp from './form/CheckboxGroupImpl.vue'
+import CheckboxGroupImlp from './CheckboxGroupImpl.vue'
 
 export default {
   name: 'Root',
@@ -98,9 +98,6 @@ export default {
     }
   },
   methods: {
-    amount: function(data) {
-      return ''
-    },
     filtered: function() {
       return _.filter(this.$data.faucets, (w) => {
         return this.selectedCurrencies.includes(w.currency) && this.selectedPayments.includes(w.payment)
@@ -123,14 +120,8 @@ export default {
       }
       const ticker = this.resolve('tickers', 'symbol', data.currency)
       if (ticker) {
-        const jpy = ticker.price_jpy
-        let floored = 0
-        if (jpy >= 1000) {
-          floored = Math.floor(jpy)
-        } else {
-          floored = Math.floor(jpy * Math.pow(10, 3)) / Math.pow(10, 3)
-        }
-        return `${floored} 円`
+        const price = ticker.price_jpy >= 1000 ? Math.round(ticker.price_jpy) : ticker.price_jpy
+        return new Intl.NumberFormat('ja-JP', {style: 'currency', currency: 'JPY', currencyDisplay: 'name', maximumFractionDigits: 3}).format(price)
       } else {
         return 'N/A'
       }
@@ -151,6 +142,9 @@ export default {
     },
     resolve: function(target, property, value) {
       return this.$data[target].find((w) => w[property] === value)
+    },
+    resolvePayment: function(data) {
+      return this.resolve('payments', 'id', data.item.payment)
     }
   },
   mounted: function() {
