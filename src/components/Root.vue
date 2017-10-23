@@ -5,31 +5,19 @@
       <p>
         仮想通貨・暗号通貨のフォーセット(蛇口)の一覧です。
         <br> 絞り込み機能を使うことで、 Monacoin (MONA) 限定にしたり、 Direct Payment のみ表示することも出来ます。
+        <br>
+        <span class="text-danger">必ず、各フォーセットのルールを守った上で使用して下さい。</span>
       </p>
     </section>
     <section>
       <b-card title="絞り込み">
         <b-form>
           <b-form-row>
-            <b-col col md="auto">
-              <b-form-group label="通貨" label-for="currency">
-                <b-form-select v-model="selectedCurrency" id="currency">
-                  <option value="*">全て</option>
-                  <option v-for="currency in currencies" :key="currency.symbol" :value="currency.symbol">
-                    {{currency.name}} ({{currency.symbol}})
-                  </option>
-                </b-form-select>
-              </b-form-group>
+            <b-col col md="12">
+              <form-checkbox-group-impl field-text="name" field-value="symbol" :options="currencies" label="通貨" v-model="selectedCurrencies" />
             </b-col>
-            <b-col col md="auto">
-              <b-form-group label="支払い方法" label-for="payment">
-                <b-form-select v-model="selectedPayment" id="payment">
-                  <option value="*">全て</option>
-                  <option v-for="payment in payments" :key="payment.id" :value="payment.id">
-                    {{payment.name}}
-                  </option>
-                </b-form-select>
-              </b-form-group>
+            <b-col col md="12">
+              <form-checkbox-group-impl field-text="name" field-value="id" :options="payments" label="支払い方法" v-model="selectedPayments" />
             </b-col>
           </b-form-row>
         </b-form>
@@ -72,8 +60,13 @@
 import axios from 'axios'
 import _ from 'lodash'
 
+import CheckboxGroupImlp from './form/CheckboxGroupImpl.vue'
+
 export default {
   name: 'Root',
+  components: {
+    'form-checkbox-group-impl': CheckboxGroupImlp
+  },
   data () {
     const b = this.$route.query.refer && this.$route.query.refer === 'false'
     const currencies = _.sortBy(require('../data/currencies.json'), (w) => w.name.toLowerCase())
@@ -99,8 +92,8 @@ export default {
         price: {label: '日本円'}
       },
       payments: require('../data/payments.json'),
-      selectedCurrency: '*',
-      selectedPayment: '*',
+      selectedCurrencies: [],
+      selectedPayments: [],
       tickers: null
     }
   },
@@ -109,14 +102,8 @@ export default {
       return ''
     },
     filtered: function() {
-      if (this.$data.selectedCurrency === '*' && this.$data.selectedPayment === '*') {
-        return this.$data.faucets
-      }
       return _.filter(this.$data.faucets, (w) => {
-        let bool = true
-        bool &= this.$data.selectedCurrency === '*' ? true : w.currency === this.$data.selectedCurrency
-        bool &= this.$data.selectedPayment === '*' ? true : w.payment === this.$data.selectedPayment
-        return bool
+        return this.selectedCurrencies.includes(w.currency) && this.selectedPayments.includes(w.payment)
       })
     },
     minimumAmount: function(data) {
