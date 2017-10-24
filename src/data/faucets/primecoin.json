@@ -11,5 +11,11 @@
     "payment": "Pooling",
     "url": "http://primecoinfaucet.info/ref/AR1PhZrZsqiFysV8u8VboEjBfPow4kSoHs",
     "min": 0.2
+  },
+  {
+    "name": "xFaucet Primecoin",
+    "frequency": 5,
+    "payment": "FaucetHub",
+    "url": "https://www.xfaucet.net/primecoin/?r=AM2QVydWBt23S5HCsCNVvaWqDRShqfkJKa"
   }
 ]

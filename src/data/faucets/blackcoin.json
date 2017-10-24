@@ -11,5 +11,11 @@
     "payment": "Pooling",
     "url": "http://blackcoin.info/ref/B69gaoqskF4LQ1ABqwJbFuqtuBKoNaDyts",
     "min": 0.2
+  },
+  {
+    "name": "xFaucet Blackcoin",
+    "frequency": 5,
+    "payment": "FaucetHub",
+    "url": "https://www.xfaucet.net/blackcoin/?r=BGgDvUmW4mbF1jgi69wVUbwskYRNyB4Trx"
   }
 ]

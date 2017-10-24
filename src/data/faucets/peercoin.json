@@ -11,5 +11,11 @@
     "payment": "Pooling",
     "url": "http://peercoinfaucet.info/ref/PAhsQAGaarFr5CznSBii31mGgx9L3NhoVf",
     "min": 0.05
+  },
+  {
+    "name": "xFaucet Peercoin",
+    "frequency": 5,
+    "payment": "FaucetHub",
+    "url": "https://www.xfaucet.net/peercoin/?r=PBHB7UYxn1QQcavS1JZrVmXWza7tKt6Lxh"
   }
 ]

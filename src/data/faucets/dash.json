@@ -13,7 +13,7 @@
     "min": 0.0002
   },
   {
-    "name": "xFaucet",
+    "name": "xFaucet Dashcoin",
     "frequency": 5,
     "payment": "FaucetHub",
     "url": "https://www.xfaucet.net/dashcoin/?r=XinqrYP4KD3vxFhuEniqkwa6GPRayhriqU"
