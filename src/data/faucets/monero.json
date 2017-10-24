@@ -2,7 +2,7 @@
   {
     "name": "Free Monero (XMR) from Monero Faucet!",
     "frequency": 60,
-    "payment": "Pooling",
+    "payout": "Pooling",
     "url": "http://monerofaucet.info/ref/485hBEHtnV26No8MriUAdyjd7V8GrvFkVXD4AAAFYTD9cG1Jw64KrkjHqNiqcbLtj1CxLTRJVhqBjcU6PjQSTzJr33tGmmG",
     "min": 0.05
   }

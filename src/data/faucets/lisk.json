@@ -2,7 +2,7 @@
   {
     "name": "Free LSK from the Lisk Faucet!",
     "frequency": 60,
-    "payment": "Pooling",
+    "payout": "Pooling",
     "url": "http://liskfaucet.info/ref/12123451325770747144L",
     "min": 0.5
   }

@@ -2,20 +2,20 @@
   {
     "name": "DASH-Faucet.com",
     "frequency": 60,
-    "payment": "FaucetHub",
+    "payout": "FaucetHub",
     "url": "https://dash-faucet.com/?r=XinqrYP4KD3vxFhuEniqkwa6GPRayhriqU"
   },
   {
     "name": "Free DASH from the DASH Faucet!",
     "frequency": 60,
-    "payment": "Pooling",
+    "payout": "Pooling",
     "url": "http://dashfaucet.net/ref/XrTP5SXkzqDuwcEcdSfDASxoqU2ops9RjS",
     "min": 0.0002
   },
   {
     "name": "xFaucet Dashcoin",
     "frequency": 5,
-    "payment": "FaucetHub",
+    "payout": "FaucetHub",
     "url": "https://www.xfaucet.net/dashcoin/?r=XinqrYP4KD3vxFhuEniqkwa6GPRayhriqU"
   }
 ]

@@ -2,14 +2,14 @@
   {
     "name": "NEM mainnet Faucet",
     "frequency": 240,
-    "payment": "Pooling",
+    "payout": "Pooling",
     "url": "http://namuyan.dip.jp/nem/mainnet_nodb/",
     "min": 5
   },
   {
     "name": "Free XEM from the NEM Faucet!",
     "frequency": 60,
-    "payment": "Pooling",
+    "payout": "Pooling",
     "url": "http://nemfaucet.info/ref/NDXD3H-ZJVPEI-JDWA7Q-56DUKJ-3YYQZV-QHX7DL-GMDV",
     "min": 0.5
   }

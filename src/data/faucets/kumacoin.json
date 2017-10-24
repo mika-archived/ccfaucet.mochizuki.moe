@@ -2,7 +2,7 @@
   {
     "name": "AllInFaucet",
     "frequency": 60,
-    "payment": "Pooling",
+    "payout": "Pooling",
     "url": "http://namuyan.dip.jp/all_in_faucet.php",
     "min": 1
   }

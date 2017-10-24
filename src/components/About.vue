@@ -24,7 +24,7 @@
       <p>
         当サイトにて表記している支払い方法にについて、サイト名に加えて以下の2種類の表記があります。 なお、サイト名が表記されている場合においても、支払い方法は Pooling と同様です。
       </p>
-      <b-table bordered :items="payment.items" :fields="payment.fields" />
+      <b-table bordered :items="payout.items" :fields="payout.fields" />
     </section>
     <section>
       <h3>その他</h3>
@@ -55,7 +55,7 @@ export default {
           {label: 'Generate', desc: '時間経過によって、もらえる暗号通貨の量が増加します。'}
         ]
       },
-      payment: {
+      payout: {
         fields: {
           label: {label: '表記'},
           desc: {label: '説明'}

@@ -4,7 +4,7 @@
       <h2>仮想通貨・暗号通貨フォーセットリスト</h2>
       <p>
         仮想通貨・暗号通貨のフォーセット(蛇口)の一覧です。
-        <br> 絞り込み機能を使うことで、 Monacoin (MONA) 限定にしたり、 Direct Payment のみ表示することも出来ます。
+        <br> 絞り込み機能を使うことで、 Monacoin (MONA) 限定にしたり、 Direct Payout のみ表示することも出来ます。
         <br>
         <span class="text-danger">必ず、各フォーセットのルールを守った上で使用して下さい。</span>
       </p>
@@ -17,7 +17,7 @@
               <form-checkbox-group-impl field-text="name" field-value="symbol" :options="currencies" label="通貨" v-model="selectedCurrencies" />
             </b-col>
             <b-col col md="12">
-              <form-checkbox-group-impl field-text="name" field-value="id" :options="payments" label="支払い方法" v-model="selectedPayments" />
+              <form-checkbox-group-impl field-text="name" field-value="id" :options="payouts" label="支払い方法" v-model="selectedPayouts" />
             </b-col>
           </b-form-row>
         </b-form>
@@ -34,13 +34,13 @@
         <template slot="frequency" slot-scope="data">
           {{readable(data.item.frequency)}}
         </template>
-        <template slot="payment" slot-scope="data">
-          <template v-if="resolvePayment(data).url === ''">
-            {{resolvePayment(data).name}}
+        <template slot="payout" slot-scope="data">
+          <template v-if="resolvePayout(data).url === ''">
+            {{resolvePayout(data).name}}
           </template>
           <template v-else>
-            <a :href="resolvePayment(data).url" target="_blank">
-              {{resolvePayment(data).name}}
+            <a :href="resolvePayout(data).url" target="_blank">
+              {{resolvePayout(data).name}}
             </a>
           </template>
         </template>
@@ -87,32 +87,32 @@ export default {
         currency: {label: '通貨'},
         website: {label: 'ウェブサイト'},
         frequency: {label: '支払い間隔'},
-        payment: {label: '支払い方法'},
+        payout: {label: '支払い方法'},
         minimumAmount: {label: '最小出金額'},
         price: {label: '日本円'}
       },
-      payments: require('../data/payments.json'),
+      payouts: require('../data/payouts.json'),
       selectedCurrencies: [],
-      selectedPayments: [],
+      selectedPayouts: [],
       tickers: null
     }
   },
   methods: {
     filtered: function() {
       return _.filter(this.$data.faucets, (w) => {
-        return this.selectedCurrencies.includes(w.currency) && this.selectedPayments.includes(w.payment)
+        return this.selectedCurrencies.includes(w.currency) && this.selectedPayouts.includes(w.payout)
       })
     },
     minimumAmount: function(data) {
       const currency = this.resolve('currencies', 'symbol', data.currency)
-      if (data.payment === 'Direct' || data.payment === 'Pooling') {
+      if (data.payout === 'Direct' || data.payout === 'Pooling') {
         if (data.min) {
           return `${data.min} ${currency.symbol}`
         }
         return 'N/A'
       }
-      const payment = this.resolve('payments', 'id', data.payment)
-      return `${payment.min[currency.name.toLowerCase()]} ${currency.symbol}`
+      const payout = this.resolve('payouts', 'id', data.payout)
+      return `${payout.min[currency.name.toLowerCase()]} ${currency.symbol}`
     },
     pricing: function(data) {
       if (this.$data.tickers === null) {
@@ -143,8 +143,8 @@ export default {
     resolve: function(target, property, value) {
       return this.$data[target].find((w) => w[property] === value)
     },
-    resolvePayment: function(data) {
-      return this.resolve('payments', 'id', data.item.payment)
+    resolvePayout: function(data) {
+      return this.resolve('payouts', 'id', data.item.payout)
     }
   },
   mounted: function() {
