@@ -72,7 +72,7 @@ export default {
     const currencies = _.sortBy(require('../data/currencies.json'), (w) => w.name.toLowerCase())
     const faucets = []
     _.forEach(currencies, (w) => {
-      const _faucets = _.sortBy(require(`../data/faucets/${w.name.toLowerCase()}.json`), (w) => w.name.toLowerCase())
+      const _faucets = _.sortBy(require(`../data/faucets/${w.name.toLowerCase().replace(' ', '-')}.json`), (w) => w.name.toLowerCase())
       _.forEach(_faucets, (v) => {
         if (b) {
           v.url = v.url.replace(/(\?)?r(ef)?(=|\/).*/g, '')
@@ -112,7 +112,7 @@ export default {
         return 'N/A'
       }
       const payout = this.resolve('payouts', 'id', data.payout)
-      return `${payout.min[currency.name.toLowerCase()]} ${currency.symbol}`
+      return `${payout.min[currency.name.toLowerCase().replace(' ', '-')]} ${currency.symbol}`
     },
     pricing: function(data) {
       if (this.$data.tickers === null) {

@@ -66,5 +66,9 @@
   {
     "name": "Monero",
     "symbol": "XMR"
+  },
+  {
+    "name": "Bitcoin Cash",
+    "symbol": "BCH"
   }
 ]
