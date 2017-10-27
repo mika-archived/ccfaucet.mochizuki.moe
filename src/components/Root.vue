@@ -75,7 +75,7 @@ export default {
       const _faucets = _.sortBy(require(`../data/faucets/${w.name.toLowerCase().replace(' ', '-')}.json`), (w) => w.name.toLowerCase())
       _.forEach(_faucets, (v) => {
         if (b) {
-          v.url = v.url.replace(/(\?)?r(ef)?(=|\/).*/g, '')
+          v.url = v.url.replace(/(\?)?(ref|r|i)(=|\/).*/g, '')
         }
         faucets.push(Object.assign(v, {currency: w.symbol}))
       })

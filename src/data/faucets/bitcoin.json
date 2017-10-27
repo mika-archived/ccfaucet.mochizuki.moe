@@ -35,5 +35,12 @@
     "frequency": 5,
     "payout": "FaucetHub",
     "url": "https://www.xfaucet.net/bitcoin/?r=1E4NZUSC39BEPsE1xVKVyHrBxstXdrNVM4"
+  },
+  {
+    "name": "BTC HEAT",
+    "frequency": 3,
+    "payout": "Pooling",
+    "url": "http://btcheat.com/?i=332724",
+    "min": 0.002
   }
 ]
