@@ -38,7 +38,7 @@
   },
   {
     "name": "BTC HEAT",
-    "frequency": 3,
+    "frequency": 180,
     "payout": "Pooling",
     "url": "http://btcheat.com/?i=332724",
     "min": 0.002
