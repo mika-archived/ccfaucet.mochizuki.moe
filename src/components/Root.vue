@@ -50,6 +50,9 @@
         <template slot="price" slot-scope="data">
           {{pricing(data.item)}}
         </template>
+        <template slot="captcha" slot-scope="data">
+          {{data.item.captcha.join(", ")}}
+        </template>
       </b-table>
     </section>
   </b-container>
@@ -89,7 +92,8 @@ export default {
         frequency: {label: '支払い間隔'},
         payout: {label: '支払い方法'},
         minimumAmount: {label: '最小出金額'},
-        price: {label: '日本円'}
+        price: {label: '日本円'},
+        captcha: {label: '認証形式'}
       },
       payouts: require('../data/payouts.json'),
       selectedCurrencies: [],

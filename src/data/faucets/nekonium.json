@@ -3,18 +3,27 @@
     "name": "Nekonium Mining Pool",
     "frequency": 30,
     "payout": "Direct",
-    "url": "http://nuko.oldbeyond.com/#/faucet"
+    "url": "http://nuko.oldbeyond.com/#/faucet",
+    "captcha": [
+      "reCAPTCHA"
+    ]
   },
   {
     "name": "ねこの水飲み場 - Nekonium Faucet",
     "frequency": 180,
     "payout": "Direct",
-    "url": "https://faucet.nekonium.net/"
+    "url": "https://faucet.nekonium.net/",
+    "captcha": [
+      "reCAPTCHA"
+    ]
   },
   {
     "name": "Nekonium Faucet",
     "frequency": 180,
     "payout": "Direct",
-    "url": "http://namuyan.dip.jp/nekoniumFaucet.php"
+    "url": "http://namuyan.dip.jp/nekoniumFaucet.php",
+    "captcha": [
+      "reCAPTCHA"
+    ]
   }
 ]

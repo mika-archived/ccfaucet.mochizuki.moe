@@ -3,13 +3,19 @@
     "name": "SA BitZeny Faucet",
     "frequency": 1440,
     "payout": "Direct",
-    "url": "http://shiganairingozeny.chocottokozukai.click/bitzeny/faucet_top.php"
+    "url": "http://shiganairingozeny.chocottokozukai.click/bitzeny/faucet_top.php",
+    "captcha": [
+      "reCAPTCHA"
+    ]
   },
   {
     "name": "AllInFaucet",
     "frequency": 60,
     "payout": "Pooling",
     "url": "http://namuyan.dip.jp/all_in_faucet.php",
-    "min": 0.1
+    "min": 0.1,
+    "captcha": [
+      "reCAPTCHA"
+    ]
   }
 ]

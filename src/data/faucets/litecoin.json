@@ -1,27 +1,41 @@
 [
   {
-    "name": "Free LTC from the Litecoin Faucet!",
+    "name": "Litecoin Faucet",
     "frequency": 60,
     "payout": "Pooling",
     "url": "http://litecoinfaucet.info/ref/LVfzaELameCFoEWoLQtKiBCsCUWgwkorcq",
-    "min": 0.01
+    "min": 0.01,
+    "captcha": [
+      "reCAPTCHA"
+    ]
   },
   {
-    "name": "Litecoin-Faucet.com",
+    "name": "Free Litecoin (LTC) Faucet",
     "frequency": 60,
     "payout": "FaucetHub",
-    "url": "https://litecoin-faucet.com/?r=LiSmd3Pp1hCoPGPguSVCUyo1RHak5g1mcj"
+    "url": "https://litecoin-faucet.com/?r=LiSmd3Pp1hCoPGPguSVCUyo1RHak5g1mcj",
+    "captcha": [
+      "reCAPTCHA",
+      "SolveMedia"
+    ]
   },
   {
     "name": "Moon Litecoin",
     "frequency": 0,
     "payout": "CoinPot",
-    "url": "http://moonliteco.in/?ref=c2f750048d81"
+    "url": "http://moonliteco.in/?ref=c2f750048d81",
+    "captcha": [
+      "reCAPTCHA"
+    ]
   },
   {
     "name": "xFaucet Litecoin",
     "frequency": 5,
     "payout": "FaucetHub",
-    "url": "https://www.xfaucet.net/litecoin/?r=LiSmd3Pp1hCoPGPguSVCUyo1RHak5g1mcj"
+    "url": "https://www.xfaucet.net/litecoin/?r=LiSmd3Pp1hCoPGPguSVCUyo1RHak5g1mcj",
+    "captcha": [
+      "Geetest",
+      "reCAPTCHA"
+    ]
   }
 ]

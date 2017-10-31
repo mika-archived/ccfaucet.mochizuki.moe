@@ -3,44 +3,67 @@
     "name": "Bit Fun",
     "frequency": 0,
     "payout": "CoinPot",
-    "url": "http://bitfun.co/?ref=6432A0FB3F81"
+    "url": "http://bitfun.co/?ref=6432A0FB3F81",
+    "captcha": [
+      "reCAPTCHA"
+    ]
   },
   {
     "name": "Bonus Bitcoin",
     "frequency": 15,
     "payout": "CoinPot",
-    "url": "http://bonusbitcoin.co/?ref=D7ED3F50E1A9"
+    "url": "http://bonusbitcoin.co/?ref=D7ED3F50E1A9",
+    "captcha": [
+      "reCAPTCHA",
+      "SolveMedia"
+    ]
   },
   {
-    "name": "BtcForEveryone.xyz",
+    "name": "Free Bitcoin (BTC) Faucet",
     "frequency": 60,
     "payout": "FaucetHub",
-    "url": "https://btcforeveryone.xyz/?r=1E4NZUSC39BEPsE1xVKVyHrBxstXdrNVM4"
+    "url": "https://btcforeveryone.xyz/?r=1E4NZUSC39BEPsE1xVKVyHrBxstXdrNVM4",
+    "captcha": [
+      "reCAPTCHA",
+      "SolveMedia"
+    ]
   },
   {
     "name": "FreeBitco.in",
     "frequency": 60,
     "payout": "Pooling",
     "url": "https://freebitco.in/?r=7713155",
-    "min": 0.0003
+    "min": 0.0003,
+    "captcha": [
+      "reCAPTCHA",
+      "SolveMedia"
+    ]
   },
   {
     "name": "Moon Bitcoin",
     "frequency": 0,
     "payout": "CoinPot",
-    "url": "http://moonbit.co.in/?ref=7a838f6cbb5c"
+    "url": "http://moonbit.co.in/?ref=7a838f6cbb5c",
+    "captcha": [
+      "reCAPTCHA"
+    ]
   },
   {
     "name": "xFaucet Bitcoin",
     "frequency": 5,
     "payout": "FaucetHub",
-    "url": "https://www.xfaucet.net/bitcoin/?r=1E4NZUSC39BEPsE1xVKVyHrBxstXdrNVM4"
+    "url": "https://www.xfaucet.net/bitcoin/?r=1E4NZUSC39BEPsE1xVKVyHrBxstXdrNVM4",
+    "captcha": [
+      "Geetest",
+      "reCAPTCHA"
+    ]
   },
   {
     "name": "BTC HEAT",
     "frequency": 180,
     "payout": "Pooling",
     "url": "http://btcheat.com/?i=332724",
-    "min": 0.002
+    "min": 0.002,
+    "captcha": []
   }
 ]

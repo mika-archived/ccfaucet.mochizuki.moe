@@ -1,27 +1,42 @@
 [
   {
-    "name": "DOGE-Faucet.com",
+    "name": "Free Dogecoin (DOGE) Faucet",
     "frequency": 60,
     "payout": "FaucetHub",
-    "url": "https://doge-faucet.com/?r=DU2g1zeQbmhXdFzx3vzSFGbkuwzduVas85"
+    "url": "https://doge-faucet.com/?r=DU2g1zeQbmhXdFzx3vzSFGbkuwzduVas85",
+    "captcha": [
+      "reCAPTCHA",
+      "SolveMedia"
+    ]
   },
   {
     "name": "FreeDoge.co.in",
     "frequency": 60,
     "payout": "Pooling",
     "url": "https://freedoge.co.in/?r=1294087",
-    "min": 200
+    "min": 200,
+    "captcha": [
+      "reCAPTCHA",
+      "SolveMedia"
+    ]
   },
   {
     "name": "Moon Dogecoin",
     "frequency": 0,
     "payout": "CoinPot",
-    "url": "http://moondoge.co.in/?ref=22948157f96d"
+    "url": "http://moondoge.co.in/?ref=22948157f96d",
+    "captcha": [
+      "reCAPTCHA"
+    ]
   },
   {
     "name": "xFaucet Dogecoin",
     "frequency": 5,
     "payout": "FaucetHub",
-    "url": "https://www.xfaucet.net/dogecoin/?r=DU2g1zeQbmhXdFzx3vzSFGbkuwzduVas85"
+    "url": "https://www.xfaucet.net/dogecoin/?r=DU2g1zeQbmhXdFzx3vzSFGbkuwzduVas85",
+    "captcha": [
+      "Geetest",
+      "reCAPTCHA"
+    ]
   }
 ]

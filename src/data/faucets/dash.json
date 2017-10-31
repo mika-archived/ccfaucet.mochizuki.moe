@@ -1,21 +1,33 @@
 [
   {
-    "name": "DASH-Faucet.com",
+    "name": "Free Dash (DASH) Faucet",
     "frequency": 60,
     "payout": "FaucetHub",
-    "url": "https://dash-faucet.com/?r=XinqrYP4KD3vxFhuEniqkwa6GPRayhriqU"
+    "url": "https://dash-faucet.com/?r=XinqrYP4KD3vxFhuEniqkwa6GPRayhriqU",
+    "captcha": [
+      "reCAPTCHA",
+      "SolveMedia"
+    ]
   },
   {
-    "name": "Free DASH from the DASH Faucet!",
+    "name": "DASH Faucet",
     "frequency": 60,
     "payout": "Pooling",
     "url": "http://dashfaucet.net/ref/XrTP5SXkzqDuwcEcdSfDASxoqU2ops9RjS",
-    "min": 0.0002
+    "min": 0.0002,
+    "captcha": [
+      "reCAPTCHA",
+      "SolveMedia"
+    ]
   },
   {
     "name": "xFaucet Dashcoin",
     "frequency": 5,
     "payout": "FaucetHub",
-    "url": "https://www.xfaucet.net/dashcoin/?r=XinqrYP4KD3vxFhuEniqkwa6GPRayhriqU"
+    "url": "https://www.xfaucet.net/dashcoin/?r=XinqrYP4KD3vxFhuEniqkwa6GPRayhriqU",
+    "captcha": [
+      "Geetest",
+      "reCAPTCHA"
+    ]
   }
 ]

@@ -4,39 +4,57 @@
     "frequency": 360,
     "payout": "Pooling",
     "url": "https://faucet.mona-coin.org",
-    "min": 0.002
+    "min": 0.002,
+    "captcha": [
+      "reCAPTCHA"
+    ]
   },
   {
     "name": "Space Space Faucets",
     "frequency": 1440,
     "payout": "Direct",
-    "url": "http://utyuu.space/spacespace-faucet/"
+    "url": "http://utyuu.space/spacespace-faucet/",
+    "captcha": [
+      "reCAPTCHA"
+    ]
   },
   {
     "name": "しがないふぉーせっと",
     "frequency": 1440,
     "payout": "Direct",
-    "url": "http://shiganaifaucet.chocottokozukai.click/"
+    "url": "http://shiganaifaucet.chocottokozukai.click/",
+    "captcha": [
+      "reCAPTCHA"
+    ]
   },
   {
     "name": "しがないふぉーせっと2",
     "frequency": 30,
     "payout": "Pooling",
     "url": "http://shiganaifaucet.chocottokozukai.click/faucet2/",
-    "min": 1
+    "min": 1,
+    "captcha": [
+      "reCAPTCHA"
+    ]
   },
   {
     "name": "しがないふぉーせっと3",
     "frequency": 10,
     "payout": "Pooling",
     "url": "http://www.shiganaicontents.ga/faucet3/",
-    "min": 0.1
+    "min": 0.1,
+    "captcha": [
+      "reCAPTCHA"
+    ]
   },
   {
     "name": "AllInFaucet",
     "frequency": 60,
     "payout": "Pooling",
     "url": "http://namuyan.dip.jp/all_in_faucet.php",
-    "min": 0.01
+    "min": 0.01,
+    "captcha": [
+      "reCAPTCHA"
+    ]
   }
 ]

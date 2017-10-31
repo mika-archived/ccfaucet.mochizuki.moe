@@ -4,13 +4,19 @@
     "frequency": 240,
     "payout": "Pooling",
     "url": "http://namuyan.dip.jp/nem/mainnet_nodb/",
-    "min": 5
+    "min": 5,
+    "captcha": [
+      "reCAPTCHA"
+    ]
   },
   {
     "name": "Free XEM from the NEM Faucet!",
     "frequency": 60,
     "payout": "Pooling",
     "url": "http://nemfaucet.info/ref/NDXD3H-ZJVPEI-JDWA7Q-56DUKJ-3YYQZV-QHX7DL-GMDV",
-    "min": 0.5
+    "min": 0.5,
+    "captcha": [
+      "reCAPTCHA"
+    ]
   }
 ]

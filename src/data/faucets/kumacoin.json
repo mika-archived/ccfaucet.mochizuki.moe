@@ -4,6 +4,9 @@
     "frequency": 60,
     "payout": "Pooling",
     "url": "http://namuyan.dip.jp/all_in_faucet.php",
-    "min": 1
+    "min": 1,
+    "captcha": [
+      "reCAPTCHA"
+    ]
   }
 ]
