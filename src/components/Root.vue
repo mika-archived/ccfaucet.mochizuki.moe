@@ -3,6 +3,9 @@
     <section>
       <h2>仮想通貨・暗号通貨フォーセットリスト</h2>
       <p>
+        <a href="https://twitter.com/share?ref_src=twsrc%5Etfw" class="twitter-share-button" data-via="MikazukiFuyuno" data-show-count="false">Tweet</a>
+      </p>
+      <p>
         仮想通貨・暗号通貨のフォーセット(蛇口)の一覧です。
         <br> 絞り込み機能を使うことで、 Monacoin (MONA) 限定にしたり、 Direct Payout のみ表示することも出来ます。
         <br>
