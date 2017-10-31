@@ -34,6 +34,7 @@
     "payout": "Pooling",
     "url": "https://freebitco.in/?r=7713155",
     "min": 0.0003,
+    "fee": 0,
     "captcha": [
       "reCAPTCHA",
       "SolveMedia"
@@ -64,6 +65,7 @@
     "payout": "Pooling",
     "url": "http://btcheat.com/?i=332724",
     "min": 0.002,
+    "fee": 0,
     "captcha": []
   }
 ]

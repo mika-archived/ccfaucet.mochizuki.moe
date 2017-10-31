@@ -27,6 +27,13 @@
       <b-table bordered :items="payout.items" :fields="payout.fields" />
     </section>
     <section>
+      <h3>支払い手数料について</h3>
+      <p>
+        当サイトにて表記している手数料は、全て
+        <b class="text-danger">最小金額</b> です。 サイトによっては、引き出す金額によって、手数料が異なったりします。
+      </p>
+    </section>
+    <section>
       <h3>その他</h3>
       <div>
         <h4>招待リンクになっているのウザい</h4>

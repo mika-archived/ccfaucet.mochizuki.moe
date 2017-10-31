@@ -13,18 +13,21 @@
       <b-card title="絞り込み">
         <b-form>
           <b-form-row>
-            <b-col col md="12">
+            <b-col sm="12">
               <form-checkbox-group-impl field-text="name" field-value="symbol" :options="currencies" label="通貨" v-model="selectedCurrencies" />
             </b-col>
-            <b-col col md="12">
+            <b-col sm="12">
               <form-checkbox-group-impl field-text="name" field-value="id" :options="payouts" label="支払い方法" v-model="selectedPayouts" />
+            </b-col>
+            <b-col sm="12">
+              <form-checkbox-group-impl field-text="label" field-value="id" :options="fields" label="表示項目" v-model="selectedFields" />
             </b-col>
           </b-form-row>
         </b-form>
       </b-card>
     </section>
     <section>
-      <b-table bordered striped hover show-empty empty-text="アイテムが見つかりませんでした" :items="filtered()" :fields="fields">
+      <b-table bordered striped responsive hover show-empty empty-text="アイテムが見つかりませんでした" class="l-table" :items="filteredItems()" :fields="filteredFields()">
         <template slot="currency" slot-scope="data">
           {{resolve('currencies', 'symbol', data.item.currency).name}}
         </template>
@@ -47,11 +50,14 @@
         <template slot="minimumAmount" slot-scope="data">
           {{minimumAmount(data.item)}}
         </template>
+        <template slot="fee" slot-scope="data">
+          {{fee(data.item)}}
+        </template>
         <template slot="price" slot-scope="data">
           {{pricing(data.item)}}
         </template>
         <template slot="captcha" slot-scope="data">
-          {{data.item.captcha.join(", ")}}
+          <b-badge class="l-badge" v-for="w in data.item.captcha" :key="w" :variant="variant(w)">{{w}}</b-badge>
         </template>
       </b-table>
     </section>
@@ -84,25 +90,53 @@ export default {
       })
     })
     return {
+      colors: require('../data/captcha.json'),
       currencies,
       faucets,
-      fields: {
-        currency: {label: '通貨'},
-        website: {label: 'ウェブサイト'},
-        frequency: {label: '支払い間隔'},
-        payout: {label: '支払い方法'},
-        minimumAmount: {label: '最小出金額'},
-        price: {label: '日本円'},
-        captcha: {label: '認証形式'}
-      },
+      fields: [
+        {label: '最小出金額', id: 'minimumAmount'},
+        {label: '手数料', id: 'fee'},
+        {label: '日本円', id: 'price'},
+        {label: '認証形式', id: 'captcha'}
+      ],
       payouts: require('../data/payouts.json'),
       selectedCurrencies: [],
+      selectedFields: [],
       selectedPayouts: [],
       tickers: null
     }
   },
   methods: {
-    filtered: function() {
+    fee: function(data) {
+      const currency = this.resolve('currencies', 'symbol', data.currency)
+      if (data.payout === 'Direct') {
+        return 'N/A'
+      } else if (data.payout === 'Pooling') {
+        if (data.fee) {
+          return `${data.fee} ${currency.symbol}`
+        }
+        return 'N/A'
+      }
+      const payout = this.resolve('payouts', 'id', data.payout)
+      return `${payout.fee[currency.name.toLowerCase().replace(' ', '-')]} ${currency.symbol}`
+    },
+    filteredFields: function() {
+      let fields = {
+        currency: {label: '通貨'},
+        website: {label: 'ウェブサイト'},
+        frequency: {label: '支払い間隔'},
+        payout: {label: '支払い方法'}
+      }
+      _.filter(this.$data.fields, (w) => {
+        return this.selectedFields.includes(w.id)
+      }).map((w) => {
+        const obj = {}
+        obj[w.id] = {label: w.label}
+        fields = Object.assign(fields, obj)
+      })
+      return fields
+    },
+    filteredItems: function() {
       return _.filter(this.$data.faucets, (w) => {
         return this.selectedCurrencies.includes(w.currency) && this.selectedPayouts.includes(w.payout)
       })
@@ -149,6 +183,9 @@ export default {
     },
     resolvePayout: function(data) {
       return this.resolve('payouts', 'id', data.item.payout)
+    },
+    variant: function(data) {
+      return this.$data.colors.find((w) => w.name === data).color
     }
   },
   mounted: function() {
@@ -170,5 +207,13 @@ export default {
 <style scoped>
 section {
   padding: 10px 0 20px 0;
+}
+
+.l-table {
+  min-width: 100%;
+}
+
+.badge {
+  margin: 0 0.5px;
 }
 </style>

@@ -1,0 +1,14 @@
+[
+  {
+    "name": "reCAPTCHA",
+    "color": "primary"
+  },
+  {
+    "name": "SolveMedia",
+    "color": "secondary"
+  },
+  {
+    "name": "Geetest",
+    "color": "info"
+  }
+]

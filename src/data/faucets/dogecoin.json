@@ -15,6 +15,7 @@
     "payout": "Pooling",
     "url": "https://freedoge.co.in/?r=1294087",
     "min": 200,
+    "fee": 1,
     "captcha": [
       "reCAPTCHA",
       "SolveMedia"

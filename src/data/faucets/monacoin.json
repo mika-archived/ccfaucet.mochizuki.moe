@@ -33,6 +33,7 @@
     "payout": "Pooling",
     "url": "http://shiganaifaucet.chocottokozukai.click/faucet2/",
     "min": 1,
+    "fee": 0,
     "captcha": [
       "reCAPTCHA"
     ]
@@ -43,6 +44,7 @@
     "payout": "Pooling",
     "url": "http://www.shiganaicontents.ga/faucet3/",
     "min": 0.1,
+    "fee": 0,
     "captcha": [
       "reCAPTCHA"
     ]
@@ -52,7 +54,8 @@
     "frequency": 60,
     "payout": "Pooling",
     "url": "http://namuyan.dip.jp/all_in_faucet.php",
-    "min": 0.01,
+    "min": 0,
+    "fee": 0.01,
     "captcha": [
       "reCAPTCHA"
     ]
