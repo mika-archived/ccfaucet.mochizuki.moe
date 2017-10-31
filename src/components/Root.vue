@@ -57,7 +57,7 @@
           {{fee(data.item)}}
         </template>
         <template slot="price" slot-scope="data">
-          {{pricing(data.item)}}
+          <a :href="`https://coinmarketcap.com/currencies/${lowerCurrencyName(data.item)}/`" target="_blank">{{pricing(data.item)}}</a>
         </template>
         <template slot="captcha" slot-scope="data">
           <b-badge class="l-badge" v-for="w in data.item.captcha" :key="w" :variant="variant(w)">{{w}}</b-badge>
@@ -84,7 +84,7 @@ export default {
     const currencies = _.sortBy(require('../data/currencies.json'), (w) => w.name.toLowerCase())
     const faucets = []
     _.forEach(currencies, (w) => {
-      const _faucets = _.sortBy(require(`../data/faucets/${w.name.toLowerCase().replace(' ', '-')}.json`), (w) => w.name.toLowerCase())
+      const _faucets = _.sortBy(require(`../data/faucets/${this.lowerCurrencyName(w.name)}.json`), (w) => w.name.toLowerCase())
       _.forEach(_faucets, (v) => {
         if (b) {
           v.url = v.url.replace(/(\?)?(ref|r|i)(=|\/).*/g, '')
@@ -121,7 +121,7 @@ export default {
         return 'N/A'
       }
       const payout = this.resolve('payouts', 'id', data.payout)
-      return `${payout.fee[currency.name.toLowerCase().replace(' ', '-')]} ${currency.symbol}`
+      return `${payout.fee[this.lowerCurrencyName(currency.name)]} ${currency.symbol}`
     },
     filteredFields: function() {
       let fields = {
@@ -144,6 +144,15 @@ export default {
         return this.selectedCurrencies.includes(w.currency) && this.selectedPayouts.includes(w.payout)
       })
     },
+    lowerCurrencyName: function(data) {
+      let name = ''
+      if (data.currency) {
+        name = this.resolve('currencies', 'symbol', data.currency).name
+      } else {
+        name = data
+      }
+      return name.toLocaleLowerCase().replace(' ', '-')
+    },
     minimumAmount: function(data) {
       const currency = this.resolve('currencies', 'symbol', data.currency)
       if (data.payout === 'Direct' || data.payout === 'Pooling') {
@@ -153,7 +162,7 @@ export default {
         return 'N/A'
       }
       const payout = this.resolve('payouts', 'id', data.payout)
-      return `${payout.min[currency.name.toLowerCase().replace(' ', '-')]} ${currency.symbol}`
+      return `${payout.min[this.lowerCurrencyName(currency.name)]} ${currency.symbol}`
     },
     pricing: function(data) {
       if (this.$data.tickers === null) {
