@@ -5,6 +5,7 @@
     "payout": "Pooling",
     "url": "http://ethereumfaucet.info/ref/0x3cD67f16C2D7FE518E924930f645DD73AAdAAF39",
     "min": 0.025,
+    "verified": false,
     "captcha": [
       "reCAPTCHA"
     ]

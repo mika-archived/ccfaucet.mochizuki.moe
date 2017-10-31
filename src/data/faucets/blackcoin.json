@@ -15,6 +15,7 @@
     "payout": "Pooling",
     "url": "http://blackcoin.info/ref/B69gaoqskF4LQ1ABqwJbFuqtuBKoNaDyts",
     "min": 0.2,
+    "verified": false,
     "captcha": [
       "reCAPTCHA",
       "SolveMedia"

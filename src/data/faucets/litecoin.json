@@ -5,6 +5,7 @@
     "payout": "Pooling",
     "url": "http://litecoinfaucet.info/ref/LVfzaELameCFoEWoLQtKiBCsCUWgwkorcq",
     "min": 0.01,
+    "verified": false,
     "captcha": [
       "reCAPTCHA"
     ]

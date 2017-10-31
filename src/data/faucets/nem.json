@@ -6,6 +6,7 @@
     "url": "http://namuyan.dip.jp/nem/mainnet_nodb/",
     "min": 5,
     "fee": 5,
+    "verified": false,
     "captcha": [
       "reCAPTCHA"
     ]
@@ -16,6 +17,7 @@
     "payout": "Pooling",
     "url": "http://nemfaucet.info/ref/NDXD3H-ZJVPEI-JDWA7Q-56DUKJ-3YYQZV-QHX7DL-GMDV",
     "min": 0.5,
+    "verified": false,
     "captcha": [
       "reCAPTCHA"
     ]

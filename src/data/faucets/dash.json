@@ -15,6 +15,7 @@
     "payout": "Pooling",
     "url": "http://dashfaucet.net/ref/XrTP5SXkzqDuwcEcdSfDASxoqU2ops9RjS",
     "min": 0.0002,
+    "verified": false,
     "captcha": [
       "reCAPTCHA",
       "SolveMedia"

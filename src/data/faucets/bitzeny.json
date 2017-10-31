@@ -15,6 +15,7 @@
     "url": "http://namuyan.dip.jp/all_in_faucet.php",
     "min": 0,
     "fee": 0.1,
+    "verified": false,
     "captcha": [
       "reCAPTCHA"
     ]

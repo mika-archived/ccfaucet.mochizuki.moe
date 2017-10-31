@@ -15,6 +15,7 @@
     "payout": "Pooling",
     "url": "http://peercoinfaucet.info/ref/PAhsQAGaarFr5CznSBii31mGgx9L3NhoVf",
     "min": 0.05,
+    "verified": false,
     "captcha": [
       "reCAPTCHA"
     ]

@@ -16,6 +16,7 @@
     "url": "https://freedoge.co.in/?r=1294087",
     "min": 200,
     "fee": 1,
+    "verified": false,
     "captcha": [
       "reCAPTCHA",
       "SolveMedia"

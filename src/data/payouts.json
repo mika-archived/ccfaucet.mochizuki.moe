@@ -25,6 +25,11 @@
       "dogecoin": 0,
       "litecoin": 0
     },
+    "verified": {
+      "bitcoin": true,
+      "dogecoin": true,
+      "litecoin": true
+    },
     "name": "CoinPot",
     "url": "https://coinpot.co"
   },
@@ -51,6 +56,17 @@
       "dash": 0.000002,
       "peercoin": 0.0002,
       "primecoin": 0.0002
+    },
+    "verified": {
+      "bitcoin": false,
+      "ethereum": false,
+      "litecoin": false,
+      "dogecoin": true,
+      "bitcoin-cash": false,
+      "blackcoin": false,
+      "dash": false,
+      "peercoin": false,
+      "primecoin": false
     },
     "name": "FaucetHub.io",
     "url": "https://faucethub.io/r/23804436"

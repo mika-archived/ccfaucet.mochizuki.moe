@@ -8,6 +8,7 @@
       <p>
         仮想通貨・暗号通貨のフォーセット(蛇口)の一覧です。
         <br> 絞り込み機能を使うことで、 Monacoin (MONA) 限定にしたり、 Direct Payout のみ表示することも出来ます。
+        <br> 各項目について説明が必要な場合は、 About ページにて説明を見ることが出来ます。
         <br>
         <span class="text-danger">必ず、各フォーセットのルールを守った上で使用して下さい。</span>
       </p>
@@ -62,6 +63,9 @@
         <template slot="captcha" slot-scope="data">
           <b-badge class="l-badge" v-for="w in data.item.captcha" :key="w" :variant="variant(w)">{{w}}</b-badge>
         </template>
+        <template slot="verified" slot-scope="data">
+          {{verified(data.item) ? "✓" : ""}}
+        </template>
       </b-table>
     </section>
   </b-container>
@@ -100,7 +104,8 @@ export default {
         {label: '最小出金額', id: 'minimumAmount'},
         {label: '手数料', id: 'fee'},
         {label: '日本円', id: 'price'},
-        {label: '認証形式', id: 'captcha'}
+        {label: '認証形式', id: 'captcha'},
+        {label: 'Verify', id: 'verified'}
       ],
       payouts: require('../data/payouts.json'),
       selectedCurrencies: [],
@@ -127,7 +132,7 @@ export default {
       let fields = {
         currency: {label: '通貨'},
         website: {label: 'ウェブサイト'},
-        frequency: {label: '支払い間隔'},
+        frequency: {label: 'タイマー'},
         payout: {label: '支払い方法'}
       }
       _.filter(this.$data.fields, (w) => {
@@ -198,6 +203,17 @@ export default {
     },
     variant: function(data) {
       return this.$data.colors.find((w) => w.name === data).color
+    },
+    verified: function(data) {
+      if (data.payout === 'Direct') {
+        return true
+      }
+      if (data.payout === 'Pooling') {
+        return data.verified
+      }
+      const currency = this.resolve('currencies', 'symbol', data.currency)
+      const payout = this.resolve('payouts', 'id', data.payout)
+      return payout.verified[this.lowerCurrencyName(currency.name)]
     }
   },
   mounted: function() {
