@@ -104,8 +104,7 @@ export default {
         {label: '最小出金額', id: 'minimumAmount'},
         {label: '手数料', id: 'fee'},
         {label: '日本円', id: 'price'},
-        {label: '認証形式', id: 'captcha'},
-        {label: 'Verify', id: 'verified'}
+        {label: '認証形式', id: 'captcha'}
       ],
       payouts: require('../data/payouts.json'),
       selectedCurrencies: [],
@@ -130,6 +129,7 @@ export default {
     },
     filteredFields: function() {
       let fields = {
+        verified: {label: '✓'},
         currency: {label: '通貨'},
         website: {label: 'ウェブサイト'},
         frequency: {label: 'タイマー'},

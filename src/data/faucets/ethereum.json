@@ -28,5 +28,14 @@
     "captcha": [
       "SolveMedia"
     ]
+  },
+  {
+    "name": "FreeBitcoin.Win :: Ethereum",
+    "frequency": 5,
+    "payout": "FaucetHub",
+    "url": "http://freebitcoin.win/eth/?ref=15437",
+    "captcha": [
+      "SolveMedia"
+    ]
   }
 ]

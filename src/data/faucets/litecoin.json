@@ -38,5 +38,14 @@
       "Geetest",
       "reCAPTCHA"
     ]
+  },
+  {
+    "name": "FreeBitcoin.Win :: LTC",
+    "frequency": 5,
+    "payout": "FaucetHub",
+    "url": "http://freebitcoin.win/ltc/?ref=17085",
+    "captcha": [
+      "SolveMedia"
+    ]
   }
 ]

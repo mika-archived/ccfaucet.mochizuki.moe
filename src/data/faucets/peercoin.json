@@ -29,5 +29,14 @@
       "Geetest",
       "reCAPTCHA"
     ]
+  },
+  {
+    "name": "FreeBitcoin.Win :: PPC",
+    "frequency": 5,
+    "payout": "FaucetHub",
+    "url": "http://freebitcoin.win/ppc/?ref=4772",
+    "captcha": [
+      "SolveMedia"
+    ]
   }
 ]

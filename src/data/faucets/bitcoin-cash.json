@@ -8,5 +8,14 @@
       "reCAPTCHA",
       "SolveMedia"
     ]
+  },
+  {
+    "name": "FreeBitcoin.Win :: BTC Cash",
+    "frequency": 5,
+    "payout": "FaucetHub",
+    "url": "http://freebitcoin.win/bch/?ref=15659",
+    "captcha": [
+      "SolveMedia"
+    ]
   }
 ]

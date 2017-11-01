@@ -40,5 +40,14 @@
       "Geetest",
       "reCAPTCHA"
     ]
+  },
+  {
+    "name": "FreeBitcoin.Win :: DOGE",
+    "frequency": 5,
+    "payout": "FaucetHub",
+    "url": "http://freebitcoin.win/doge/?ref=13474",
+    "captcha": [
+      "SolveMedia"
+    ]
   }
 ]

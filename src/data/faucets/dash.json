@@ -30,5 +30,14 @@
       "Geetest",
       "reCAPTCHA"
     ]
+  },
+  {
+    "name": "FreeBitcoin.Win :: DASH",
+    "frequency": 5,
+    "payout": "FaucetHub",
+    "url": "http://freebitcoin.win/dash/?ref=7213",
+    "captcha": [
+      "SolveMedia"
+    ]
   }
 ]

@@ -29,5 +29,14 @@
       "Geetest",
       "reCAPTCHA"
     ]
+  },
+  {
+    "name": "FreeBitcoin.Win :: XPM",
+    "frequency": 5,
+    "payout": "FaucetHub",
+    "url": "http://freebitcoin.win/xpm/?ref=3206",
+    "captcha": [
+      "SolveMedia"
+    ]
   }
 ]

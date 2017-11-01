@@ -69,5 +69,14 @@
     "fee": 0,
     "verified": false,
     "captcha": []
+  },
+  {
+    "name": "FreeBitcoin.Win :: BTC",
+    "frequency": 15,
+    "payout": "FaucetHub",
+    "url": "http://freebitcoin.win/btc/?ref=37191",
+    "captcha": [
+      "SolveMedia"
+    ]
   }
 ]
