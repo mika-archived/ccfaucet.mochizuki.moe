@@ -17,8 +17,7 @@
     "min": 0.2,
     "verified": false,
     "captcha": [
-      "reCAPTCHA",
-      "SolveMedia"
+      "reCAPTCHA"
     ]
   },
   {
