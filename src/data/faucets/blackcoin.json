@@ -37,6 +37,7 @@
     "url": "http://freebitcoin.win/blk/?ref=7734",
     "captcha": [
       "SolveMedia"
-    ]
+    ],
+    "ignore": true
   }
 ]

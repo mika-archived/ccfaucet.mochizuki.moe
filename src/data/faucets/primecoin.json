@@ -37,6 +37,7 @@
     "url": "http://freebitcoin.win/xpm/?ref=3206",
     "captcha": [
       "SolveMedia"
-    ]
+    ],
+    "ignore": true
   }
 ]

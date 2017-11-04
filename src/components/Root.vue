@@ -90,6 +90,9 @@ export default {
     _.forEach(currencies, (w) => {
       const _faucets = _.sortBy(require(`../data/faucets/${this.lowerCurrencyName(w.name)}.json`), (w) => w.name.toLowerCase())
       _.forEach(_faucets, (v) => {
+        if (v.ignore) {
+          return
+        }
         if (b) {
           v.url = v.url.replace(/(\?)?(ref|r|i)(=|\/).*/g, '')
         }
