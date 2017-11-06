@@ -10,10 +10,10 @@
     ]
   },
   {
-    "name": "FreeBitcoin.Win :: BTC Cash",
-    "frequency": 5,
+    "name": "FreeBitcoin.Win",
+    "frequency": 10,
     "payout": "FaucetHub",
-    "url": "http://freebitcoin.win/bch/?ref=15659",
+    "url": "http://freebitcoin.win/ref/3033",
     "captcha": [
       "SolveMedia"
     ]

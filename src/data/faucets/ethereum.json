@@ -30,10 +30,10 @@
     ]
   },
   {
-    "name": "FreeBitcoin.Win :: Ethereum",
-    "frequency": 5,
+    "name": "FreeBitcoin.Win",
+    "frequency": 10,
     "payout": "FaucetHub",
-    "url": "http://freebitcoin.win/eth/?ref=15437",
+    "url": "http://freebitcoin.win/ref/3033",
     "captcha": [
       "SolveMedia"
     ]

@@ -31,13 +31,12 @@
     ]
   },
   {
-    "name": "FreeBitcoin.Win :: BLK",
-    "frequency": 5,
+    "name": "FreeBitcoin.Win",
+    "frequency": 10,
     "payout": "FaucetHub",
-    "url": "http://freebitcoin.win/blk/?ref=7734",
+    "url": "http://freebitcoin.win/ref/3033",
     "captcha": [
       "SolveMedia"
-    ],
-    "ignore": true
+    ]
   }
 ]

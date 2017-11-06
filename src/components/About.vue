@@ -77,6 +77,7 @@ export default {
         items: [
           {currency: 'Bitcoin', from: 'CoinPot', txid: '1d6f03b14909353e417422e13332f87012f1a34a70e5b0413acadc882843bc06'},
           {currency: 'Dogecoin', from: 'FaucetHub', txid: '40798c472fe913e0020886bee9fdaaab5f74424fc35d9ee9f72457ecd69357d4'},
+          {currency: 'Dogecoin', from: 'FaucetHub', txid: '7e5de2bb05ed85ca521a495648ba4482d739d1c77187d69fbbab66f221a78c9c'},
           {currency: 'Litecoin', from: 'CoinPot', txid: '420c1a180e0d5ee6e0eb2e3ef031314d334adf146e465eaca824ba1ea57a2d38'},
           {currency: 'Monacoin', from: 'Monacoin Station', txid: '524ab77e1a158b5698ca24e7b72cf5cc3f3c242bc87a6b91fc5e15d2b826160b'}
         ]

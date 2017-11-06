@@ -42,10 +42,10 @@
     ]
   },
   {
-    "name": "FreeBitcoin.Win :: DOGE",
-    "frequency": 5,
+    "name": "FreeBitcoin.Win",
+    "frequency": 10,
     "payout": "FaucetHub",
-    "url": "http://freebitcoin.win/doge/?ref=13474",
+    "url": "http://freebitcoin.win/ref/3033",
     "captcha": [
       "SolveMedia"
     ]

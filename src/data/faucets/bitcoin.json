@@ -71,10 +71,10 @@
     "captcha": []
   },
   {
-    "name": "FreeBitcoin.Win :: BTC",
+    "name": "FreeBitcoin.Win",
     "frequency": 15,
     "payout": "FaucetHub",
-    "url": "http://freebitcoin.win/btc/?ref=37191",
+    "url": "http://freebitcoin.win/ref/3033",
     "captcha": [
       "SolveMedia"
     ]
