@@ -38,5 +38,15 @@
     "captcha": [
       "SolveMedia"
     ]
+  },
+  {
+    "name": "QoinPro.com",
+    "frequency": 1440,
+    "payout": "Pooling",
+    "url": "https://qoinpro.com/4bae2377edbc3c45641828b303ad4227",
+    "min": 0.02,
+    "fee": 0.001,
+    "verified": false,
+    "captcha": []
   }
 ]
