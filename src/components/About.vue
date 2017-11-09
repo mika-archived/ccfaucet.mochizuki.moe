@@ -76,6 +76,7 @@ export default {
         },
         items: [
           {currency: 'Bitcoin', from: 'CoinPot', txid: '1d6f03b14909353e417422e13332f87012f1a34a70e5b0413acadc882843bc06'},
+          {currency: 'Bitcoin Cash', from: 'FaucetHub', txid: '3b4dc630adce9113b0ab55887b9d4a8d60000d9be0522259f46e25460a833821'},
           {currency: 'Dogecoin', from: 'CoinPot', txid: 'e0f92f1e3d41c1c5a746431dae4fc32466991215a83812c61b83f2008b4e21f3'},
           {currency: 'Dogecoin', from: 'FaucetHub', txid: '40798c472fe913e0020886bee9fdaaab5f74424fc35d9ee9f72457ecd69357d4'},
           {currency: 'Dogecoin', from: 'FaucetHub', txid: '7e5de2bb05ed85ca521a495648ba4482d739d1c77187d69fbbab66f221a78c9c'},
@@ -85,6 +86,7 @@ export default {
       },
       blockexplorers: [
         {currency: 'Bitcoin', url: 'https://chainflyer.bitflyer.jp/Transaction'},
+        {currency: 'Bitcoin Cash', url: 'https://bitcoincash.blockexplorer.com/tx'},
         {currency: 'Dogecoin', url: 'https://dogechain.info/tx'},
         {currency: 'Litecoin', url: 'https://live.blockcypher.com/ltc/tx'},
         {currency: 'Monacoin', url: 'https://mona.chainsight.info/tx'}

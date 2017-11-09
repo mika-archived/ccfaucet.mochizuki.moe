@@ -62,7 +62,7 @@
       "ethereum": false,
       "litecoin": false,
       "dogecoin": true,
-      "bitcoin-cash": false,
+      "bitcoin-cash": true,
       "blackcoin": false,
       "dash": false,
       "peercoin": false,
