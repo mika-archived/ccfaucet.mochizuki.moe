@@ -176,7 +176,8 @@ export default {
       if (this.$data.tickers === null) {
         return '読み込み中...'
       }
-      const ticker = this.resolve('tickers', 'symbol', data.currency)
+      const currency = this.resolve('currencies', 'symbol', data.currency)
+      const ticker = this.resolve('tickers', 'id', this.lowerCurrencyName(currency.name))
       if (ticker) {
         const price = ticker.price_jpy >= 1000 ? Math.round(ticker.price_jpy) : ticker.price_jpy
         return new Intl.NumberFormat('ja-JP', {style: 'currency', currency: 'JPY', currencyDisplay: 'name', maximumFractionDigits: 3}).format(price)
@@ -221,7 +222,7 @@ export default {
   },
   mounted: function() {
     if (this.$data.tickers === null) {
-      axios.get('https://api.coinmarketcap.com/v1/ticker/?convert=JPY')
+      axios.get('https://api.coinmarketcap.com/v1/ticker/?convert=JPY&limit=0')
       .then((w) => {
         this.$data.tickers = w.data
       })
