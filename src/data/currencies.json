@@ -74,5 +74,9 @@
   {
     "name": "Bitcoin Gold",
     "symbol": "BTG"
+  },
+  {
+    "name": "BitCore",
+    "symbol": "BTX"
   }
 ]
