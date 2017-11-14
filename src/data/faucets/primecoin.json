@@ -38,5 +38,14 @@
     "captcha": [
       "SolveMedia"
     ]
+  },
+  {
+    "name": "CoinPOT.win",
+    "frequency": 15,
+    "payout": "FaucetHub",
+    "url": "http://coinpot.win/ref/7549",
+    "captcha": [
+      "SolveMedia"
+    ]
   }
 ]

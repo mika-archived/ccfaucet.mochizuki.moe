@@ -45,7 +45,8 @@
       "dash": 0.001,
       "peercoin": 1,
       "primecoin": 2,
-      "bitcore": 0.01
+      "bitcore": 0.01,
+      "b3coin": 0
     },
     "fee": {
       "bitcoin": 0.0000001,
@@ -57,7 +58,8 @@
       "dash": 0.000002,
       "peercoin": 0.0002,
       "primecoin": 0.0002,
-      "bitcore": 0.00002
+      "bitcore": 0.00002,
+      "b3coin": 0
     },
     "verified": {
       "bitcoin": false,
@@ -69,7 +71,8 @@
       "dash": false,
       "peercoin": false,
       "primecoin": false,
-      "bitcore": false
+      "bitcore": false,
+      "b3coin": false
     },
     "name": "FaucetHub.io",
     "url": "https://faucethub.io/r/23804436"

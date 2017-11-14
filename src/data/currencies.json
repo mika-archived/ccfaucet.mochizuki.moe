@@ -78,5 +78,9 @@
   {
     "name": "BitCore",
     "symbol": "BTX"
+  },
+  {
+    "name": "B3Coin",
+    "symbol": "B3"
   }
 ]
