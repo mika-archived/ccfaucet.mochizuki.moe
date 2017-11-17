@@ -76,6 +76,7 @@ export default {
         },
         items: [
           {currency: 'Bitcoin', from: 'CoinPot', txid: '1d6f03b14909353e417422e13332f87012f1a34a70e5b0413acadc882843bc06'},
+          {currency: 'Bitcoin Cash', from: 'CoinPot', txid: '478a1a061c8f6eb550dbaeea8bb105deb1b44ceaa3c6bb7a50ac48c01fbdbb67'},
           {currency: 'Bitcoin Cash', from: 'FaucetHub', txid: '3b4dc630adce9113b0ab55887b9d4a8d60000d9be0522259f46e25460a833821'},
           {currency: 'Dogecoin', from: 'CoinPot', txid: 'e0f92f1e3d41c1c5a746431dae4fc32466991215a83812c61b83f2008b4e21f3'},
           {currency: 'Dogecoin', from: 'FaucetHub', txid: '40798c472fe913e0020886bee9fdaaab5f74424fc35d9ee9f72457ecd69357d4'},

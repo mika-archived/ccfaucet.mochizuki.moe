@@ -18,17 +18,23 @@
     "min": {
       "bitcoin": 0.0001,
       "dogecoin": 50,
-      "litecoin": 0.002
+      "litecoin": 0.002,
+      "bitcoin-cash": 0.0001,
+      "dash": 0
     },
     "fee": {
       "bitcoin": 0.00001,
       "dogecoin": 0,
-      "litecoin": 0
+      "litecoin": 0,
+      "bitcoin-cash": 0,
+      "dash": 0
     },
     "verified": {
       "bitcoin": true,
       "dogecoin": true,
-      "litecoin": true
+      "litecoin": true,
+      "bitcoin-cash": true,
+      "dash": false
     },
     "name": "CoinPot",
     "url": "https://coinpot.co"
