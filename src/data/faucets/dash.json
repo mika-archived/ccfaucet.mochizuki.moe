@@ -55,8 +55,8 @@
     "payout": "CoinPot",
     "url": "http://moondash.co.in/?ref=79E6E5317422",
     "captcha": [
-      "SolveMedia",
-      "reCAPTCHA"
+      "reCAPTCHA",
+      "SolveMedia"
     ]
   }
 ]
