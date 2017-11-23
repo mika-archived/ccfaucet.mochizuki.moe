@@ -4,8 +4,7 @@
     "frequency": 60,
     "payout": "Pooling",
     "url": "http://litecoinfaucet.info/ref/LVfzaELameCFoEWoLQtKiBCsCUWgwkorcq",
-    "min": 0.01,
-    "verified": false,
+    "minimum": 0.01,
     "captcha": [
       "reCAPTCHA"
     ]
@@ -53,9 +52,8 @@
     "frequency": 1440,
     "payout": "Pooling",
     "url": "https://qoinpro.com/4bae2377edbc3c45641828b303ad4227",
-    "min": 0.012639,
+    "minimum": 0.012639,
     "fee": 0.01,
-    "verified": false,
     "captcha": []
   },
   {

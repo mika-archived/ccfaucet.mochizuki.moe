@@ -1,21 +1,21 @@
 [
   {
-    "id": "Direct",
-    "min": 0,
-    "fee": 0,
     "name": "Direct",
-    "url": ""
-  },
-  {
-    "id": "Pooling",
-    "min": -1,
+    "minimum": 0,
     "fee": 0,
-    "name": "Pooling",
+    "requireRes": false,
     "url": ""
   },
   {
-    "id": "CoinPot",
-    "min": {
+    "name": "Pooling",
+    "minimum": -1,
+    "fee": 0,
+    "requireRes": false,
+    "url": ""
+  },
+  {
+    "name": "CoinPot",
+    "minimum": {
       "bitcoin": 0.0001,
       "dogecoin": 50,
       "litecoin": 0.002,
@@ -29,19 +29,12 @@
       "bitcoin-cash": 0,
       "dash": 0
     },
-    "verified": {
-      "bitcoin": true,
-      "dogecoin": true,
-      "litecoin": true,
-      "bitcoin-cash": true,
-      "dash": false
-    },
-    "name": "CoinPot",
+    "requireRes": true,
     "url": "https://coinpot.co"
   },
   {
-    "id": "FaucetHub",
-    "min": {
+    "name": "FaucetHub",
+    "minimum": {
       "bitcoin": 0.0002,
       "ethereum": 0.01,
       "litecoin": 0.01,
@@ -67,20 +60,7 @@
       "bitcore": 0.00002,
       "b3coin": 0
     },
-    "verified": {
-      "bitcoin": false,
-      "ethereum": false,
-      "litecoin": false,
-      "dogecoin": true,
-      "bitcoin-cash": true,
-      "blackcoin": false,
-      "dash": false,
-      "peercoin": false,
-      "primecoin": false,
-      "bitcore": false,
-      "b3coin": false
-    },
-    "name": "FaucetHub.io",
+    "requireRes": true,
     "url": "https://faucethub.io/r/23804436"
   }
 ]

@@ -4,8 +4,7 @@
     "frequency": 60,
     "payout": "Pooling",
     "url": "http://liskfaucet.info/ref/12123451325770747144L",
-    "min": 0.5,
-    "verified": false,
+    "minimum": 0.5,
     "captcha": [
       "reCAPTCHA"
     ]

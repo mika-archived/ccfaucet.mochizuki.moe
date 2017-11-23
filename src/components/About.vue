@@ -1,109 +1,80 @@
-<template>
-  <b-container>
-    <section>
-      <h2>このサイトについて</h2>
-      <p>
-        このサイトは、仮想通貨・暗号通貨のフォーセット(蛇口)へのリンクを纏めた物です。
-      </p>
-    </section>
-    <section>
-      <h3>フォーセット (蛇口) とは？</h3>
-      <p>
-        無料で Bitcoin や Monacoin がもらえるサイトの事です。一定の条件を満たす (広告を見るなど) ことで、少額の暗号通貨を無料でもらうことが出来ます。 基本的には広告収入によって成り立っていますが、 Monacoin などでは、運営者の善意によって配布されていることがあります。
-      </p>
-    </section>
-    <section>
-      <h3>各項目について</h3>
-      <p>
-        蛇口の一覧表示について、各項目の説明です。
-      </p>
-      <b-table bordered responsive :items="items.items" :fields="items.fields" />
-    </section>
-    <section>
-      <h3>Verify について</h3>
-      <p>
-        以下、出金に成功した際のトランザクションです。
-      </p>
-      <b-table bordered responsive :items="transactions.items" :fields="transactions.fields">
-        <template slot="txid" slot-scope="data">
-          <a :href="linkTo(data.item)" target="_blank">
-            <code>{{data.item.txid}}</code>
-          </a>
-        </template>
-      </b-table>
-    </section>
-    <section>
-      <h3>その他</h3>
-      <div>
-        <h4>招待リンクになっているのウザい</h4>
-        <p>
-          どうしてもという場合は、URL に
-          <code>?refer=false</code> を付けてリロードすると、純粋なサイト URL になります。
-        </p>
-      </div>
-    </section>
-  </b-container>
+<template lang="pug">
+  b-container
+    section
+      h2 このサイトについて
+      p
+        | このサイトは、暗号通貨を無料でもらうことが出来る「蛇口」へのリンクをまとめているサイトです。
+        br
+        small ※ Cryptocurrency の日本語訳として「仮想通貨」が当てられることが多いですが、当サイトでは「暗号通貨」を用いています。「仮想通貨」=「暗号通貨」という認識で問題ありません。
+
+    section
+      h3 蛇口とは？
+      p
+        | 無料で Bitcoin や Monacoin などの暗号通貨をもらうことがサイトの事です。
+        | 一定の条件を満たすなどで、少額の暗号通貨をもらうことができます。
+        | 多くのサイトは広告収入によって成り立っていますが、運営者の善意 (暗号通貨の普及など) によって配布されている場合もあります。
+    
+    section
+      h3 各項目について
+      p
+        | 蛇口リストの各項目についての説明です。
+      b-table(bordered :items="description.items" :fields="description.fields")
+
 </template>
 
-<script>
-/* eslint-disable space-before-function-paren */
-export default {
-  name: 'About',
-  data() {
-    return {
-      items: {
-        fields: {
-          label: {label: '項目名'},
-          desc: {label: '説明'}
-        },
-        items: [
-          {label: '✓', desc: '当サイトにて、実際に出金を確認できた場合は ✓ が入っています。'},
-          {label: '通貨', desc: '蛇口から引き出すことが出来る暗号通貨です。'},
-          {label: 'ウェブサイト', desc: '蛇口の URL およびサイト名です。申し訳ありませんが、リンクはアフィリエイトになっています。'},
-          {label: 'タイマー', desc: '蛇口から暗号通貨をもらうことが出来る頻度です。 Generate の場合、時間経過によってもらえる量が変化します。'},
-          {label: '支払い方法', desc: '暗号通貨の支払い方法です。 Direct 以外は、一旦サイト側に保持され、一定量貯まることで出金できます。'},
-          {label: '最小出金額', desc: '暗号通貨を出金する際の最小金額です。この額に満たない場合は出金できず、サイト側にて保持されます。'},
-          {label: '手数料', desc: '出金時にかかる手数料です。多くの場合、出金量が多いほど手数料が少なくなります。'},
-          {label: '日本円', desc: 'サイトにアクセスした時点の日本円換算での価値です。'},
-          {label: '認証形式', desc: 'ロボットでないことを証明するための CAPTCHA の種類です。'}
-        ]
+<script lang="ts">
+import Vue from "vue";
+import Component from "vue-class-component";
+
+@Component
+export default class About extends Vue {
+  description = {
+    fields: {
+      name: {
+        label: "項目名"
       },
-      transactions: {
-        fields: {
-          currency: {label: 'Currency'},
-          from: {label: 'From'},
-          txid: {label: 'TxID'}
-        },
-        items: [
-          {currency: 'Bitcoin', from: 'CoinPot', txid: '1d6f03b14909353e417422e13332f87012f1a34a70e5b0413acadc882843bc06'},
-          {currency: 'Bitcoin Cash', from: 'CoinPot', txid: '478a1a061c8f6eb550dbaeea8bb105deb1b44ceaa3c6bb7a50ac48c01fbdbb67'},
-          {currency: 'Bitcoin Cash', from: 'FaucetHub', txid: '3b4dc630adce9113b0ab55887b9d4a8d60000d9be0522259f46e25460a833821'},
-          {currency: 'Dogecoin', from: 'CoinPot', txid: 'e0f92f1e3d41c1c5a746431dae4fc32466991215a83812c61b83f2008b4e21f3'},
-          {currency: 'Dogecoin', from: 'FaucetHub', txid: '40798c472fe913e0020886bee9fdaaab5f74424fc35d9ee9f72457ecd69357d4'},
-          {currency: 'Dogecoin', from: 'FaucetHub', txid: '7e5de2bb05ed85ca521a495648ba4482d739d1c77187d69fbbab66f221a78c9c'},
-          {currency: 'Litecoin', from: 'CoinPot', txid: '420c1a180e0d5ee6e0eb2e3ef031314d334adf146e465eaca824ba1ea57a2d38'},
-          {currency: 'Monacoin', from: 'Monacoin Station', txid: '524ab77e1a158b5698ca24e7b72cf5cc3f3c242bc87a6b91fc5e15d2b826160b'}
-        ]
+      description: {
+        label: "内容"
+      }
+    },
+    items: [
+      {
+        name: "信頼性",
+        description: "当サイトで、実際に出金を確認できた蛇口です。出金の詳細は、リンク先で確認できます。"
       },
-      blockexplorers: [
-        {currency: 'Bitcoin', url: 'https://chainflyer.bitflyer.jp/Transaction'},
-        {currency: 'Bitcoin Cash', url: 'https://bitcoincash.blockexplorer.com/tx'},
-        {currency: 'Dogecoin', url: 'https://dogechain.info/tx'},
-        {currency: 'Litecoin', url: 'https://live.blockcypher.com/ltc/tx'},
-        {currency: 'Monacoin', url: 'https://mona.chainsight.info/tx'}
-      ]
-    }
-  },
-  methods: {
-    linkTo: function(data) {
-      return `${this.$data.blockexplorers.find((w) => w.currency === data.currency).url}/${data.txid}`
-    }
-  }
+      {
+        name: "通貨",
+        description: "もらうことが出来る暗号通貨の種類です。 （「全て」のページのみ表示）"
+      },
+      {
+        name: "ウェブサイト",
+        description: "ウェブサイト名およびリンクです。アフィリエイトリンクとなっています。"
+      },
+      {
+        name: "タイマー",
+        description: "暗号通貨をもらうことが出来る頻度です。「生成」となっている物は、時間経過によってもらえる暗号通貨の量が増加します。"
+      },
+      {
+        name: "支払い方法",
+        description: "ウォレットへ払い出す方法です。「直接」以外は、一旦サイト側にて一定額貯まるまで補完されます。"
+      },
+      {
+        name: "最小出金額",
+        description: "払い出す際の最小出金額です。この額に満たない場合は出金できません。"
+      },
+      {
+        name: "最小手数料",
+        description: "払い出す際の最小手数料です。払い出す金額が小さい場合は、手数料が高くなる場合があります。"
+      },
+      {
+        name: "日本円",
+        description: "アクセスした時点での暗号通貨の日本円換算価格です。"
+      },
+      {
+        name: "認証形式",
+        description: "ロボットでない事を証明する CAPTCHA の種類です。"
+      }
+    ]
+  };
 }
 </script>
-
-<style scoped>
-section {
-  padding: 10px 0 20px 0;
-}
-</style>

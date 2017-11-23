@@ -1,31 +1,64 @@
 [
   {
     "name": "Bitcoin",
-    "symbol": "BTC"
+    "symbol": "BTC",
+    "explorer": "https://chainflyer.bitflyer.jp/Transaction/",
+    "logo": {
+      "license": "Public Domain",
+      "source": "https://en.bitcoin.it/wiki/Promotional_graphics"
+    }
   },
   {
     "name": "BitZeny",
-    "symbol": "ZNY"
+    "symbol": "ZNY",
+    "logo": {
+      "license": "Unlicense"
+    }
   },
   {
     "name": "DASH",
-    "symbol": "DASH"
+    "symbol": "DASH",
+    "explorer": "https://explorer.dash.org/tx/",
+    "logo": {
+      "license": "CC-BY SA 4.0",
+      "link": {
+        "href": "https://www.dash.org/",
+        "text": "The Dash Network"
+      }
+    }
   },
   {
     "name": "Dogecoin",
-    "symbol": "DOGE"
+    "symbol": "DOGE",
+    "explorer": "https://dogechain.info/tx/"
   },
   {
     "name": "Litecoin",
-    "symbol": "LTC"
+    "symbol": "LTC",
+    "explorer": "https://live.blockcypher.com/ltc/tx/",
+    "logo": {
+      "license": "Public Domain"
+    }
   },
   {
     "name": "Nekonium",
-    "symbol": "NUKO"
+    "symbol": "NUKO",
+    "explorer": "http://explorer.nekonium.org/tx/",
+    "logo": {
+      "license": "CC-BY",
+      "link": {
+        "href": "https://nekonium.github.io/",
+        "text": "Nekonium project"
+      }
+    }
   },
   {
     "name": "Monacoin",
-    "symbol": "MONA"
+    "symbol": "MONA",
+    "explorer": "https://mona.chainsight.info/tx/",
+    "logo": {
+      "license": "Unlicense"
+    }
   },
   {
     "name": "Kumacoin",
@@ -33,7 +66,12 @@
   },
   {
     "name": "FujiCoin",
-    "symbol": "FJC"
+    "symbol": "FJC",
+    "explorer": "http://explorer.fujicoin.org/tx/",
+    "logo": {
+      "license": "Unlicense",
+      "source": "http://www.fujicoin.org/ja/downloads.php"
+    }
   },
   {
     "name": "Sha1coin",
@@ -41,11 +79,25 @@
   },
   {
     "name": "NEM",
-    "symbol": "XEM"
+    "symbol": "XEM",
+    "logo": {
+      "license": "CC-BY SA 4.0",
+      "link": {
+        "href": "https://commons.wikimedia.org/wiki/File:Nem_logo.svg",
+        "text": "Prieger"
+      }
+    }
   },
   {
     "name": "Ethereum",
-    "symbol": "ETH"
+    "symbol": "ETH",
+    "logo": {
+      "license": "CC-BY 3.0",
+      "link": {
+        "href": "https://www.ethereum.org/",
+        "text": "Ethereum Foundation"
+      }
+    }
   },
   {
     "name": "Blackcoin",
@@ -53,34 +105,78 @@
   },
   {
     "name": "Peercoin",
-    "symbol": "PPC"
+    "symbol": "PPC",
+    "logo": {
+      "license": "Unlicense",
+      "source": "https://github.com/peercoin/media"
+    }
   },
   {
     "name": "Primecoin",
-    "symbol": "XPM"
+    "symbol": "XPM",
+    "logo": {
+      "license": "Unlicense"
+    }
   },
   {
     "name": "Lisk",
-    "symbol": "LSK"
+    "symbol": "LSK",
+    "logo": {
+      "license": "Unlicense"
+    }
   },
   {
     "name": "Monero",
-    "symbol": "XMR"
+    "symbol": "XMR",
+    "logo": {
+      "license": "Public Domain"
+    }
   },
   {
     "name": "Bitcoin Cash",
-    "symbol": "BCH"
+    "symbol": "BCH",
+    "explorer": "https://bitcoincash.blockexplorer.com/tx/",
+    "logo": {
+      "license": "Unlicense"
+    }
   },
   {
     "name": "Bitcoin Gold",
-    "symbol": "BTG"
+    "symbol": "BTG",
+    "logo": {
+      "license": "Unlicense"
+    }
   },
   {
     "name": "BitCore",
-    "symbol": "BTX"
+    "symbol": "BTX",
+    "logo": {
+      "license": "Unlicense"
+    }
   },
   {
     "name": "B3Coin",
-    "symbol": "B3"
+    "symbol": "B3",
+    "logo": {
+      "license": "Unlicense"
+    }
+  },
+  {
+    "name": "Ethereum Classic",
+    "symbol": "ETC",
+    "logo": {
+      "license": "Public Domain"
+    }
+  },
+  {
+    "name": "Ripple",
+    "symbol": "XRP",
+    "logo": {
+      "license": "Unlicense",
+      "link": {
+        "href": "https://ripple.com",
+        "text": "Ripple"
+      }
+    }
   }
 ]

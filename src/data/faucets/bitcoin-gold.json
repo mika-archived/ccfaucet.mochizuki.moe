@@ -4,9 +4,8 @@
     "frequency": 1440,
     "payout": "Pooling",
     "url": "https://qoinpro.com/4bae2377edbc3c45641828b303ad4227",
-    "min": 0.00015,
+    "minimum": 0.00015,
     "fee": 0.0005,
-    "verified": false,
     "captcha": []
   }
 ]

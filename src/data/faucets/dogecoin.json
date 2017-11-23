@@ -14,9 +14,8 @@
     "frequency": 60,
     "payout": "Pooling",
     "url": "https://freedoge.co.in/?r=1294087",
-    "min": 200,
+    "minimum": 200,
     "fee": 1,
-    "verified": false,
     "captcha": [
       "reCAPTCHA",
       "SolveMedia"
@@ -55,9 +54,8 @@
     "frequency": 1440,
     "payout": "Pooling",
     "url": "https://qoinpro.com/4bae2377edbc3c45641828b303ad4227",
-    "min": 1.34615384,
+    "minimum": 1.34615384,
     "fee": 4,
-    "verified": false,
     "captcha": []
   },
   {

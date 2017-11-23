@@ -14,8 +14,7 @@
     "frequency": 60,
     "payout": "Pooling",
     "url": "http://peercoinfaucet.info/ref/PAhsQAGaarFr5CznSBii31mGgx9L3NhoVf",
-    "min": 0.05,
-    "verified": false,
+    "minimumimum": 0.05,
     "captcha": [
       "reCAPTCHA"
     ]
@@ -44,9 +43,8 @@
     "frequency": 1440,
     "payout": "Pooling",
     "url": "https://qoinpro.com/4bae2377edbc3c45641828b303ad4227",
-    "min": 0.02,
+    "minimumimum": 0.02,
     "fee": 0.001,
-    "verified": false,
     "captcha": []
   },
   {

@@ -14,8 +14,7 @@
     "frequency": 60,
     "payout": "Pooling",
     "url": "http://blackcoin.info/ref/B69gaoqskF4LQ1ABqwJbFuqtuBKoNaDyts",
-    "min": 0.2,
-    "verified": false,
+    "minimum": 0.2,
     "captcha": [
       "reCAPTCHA"
     ]

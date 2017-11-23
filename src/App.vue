@@ -1,18 +1,16 @@
-<template>
-  <div id="app">
-    <container>
-      <router-view/>
-    </container>
-  </div>
+<template lang="pug">
+  #app
+    container
+      router-view
 </template>
 
-<script>
-import Container from './components/Container.vue'
+<script lang="ts">
+import Container from "./components/Container.vue";
 
 export default {
-  name: 'app',
+  name: "App",
   components: {
     container: Container
   }
-}
+};
 </script>

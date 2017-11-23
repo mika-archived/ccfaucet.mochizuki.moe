@@ -14,8 +14,7 @@
     "frequency": 60,
     "payout": "Pooling",
     "url": "http://primecoinfaucet.info/ref/AR1PhZrZsqiFysV8u8VboEjBfPow4kSoHs",
-    "min": 0.2,
-    "verified": false,
+    "minimum": 0.2,
     "captcha": [
       "reCAPTCHA"
     ]

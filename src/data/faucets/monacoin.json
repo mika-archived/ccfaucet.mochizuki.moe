@@ -4,8 +4,7 @@
     "frequency": 360,
     "payout": "Pooling",
     "url": "https://faucet.mona-coin.org",
-    "min": 0.002,
-    "verified": true,
+    "minimum": 0.002,
     "captcha": [
       "reCAPTCHA"
     ]
@@ -33,9 +32,8 @@
     "frequency": 30,
     "payout": "Pooling",
     "url": "http://shiganaifaucet.chocottokozukai.click/faucet2/",
-    "min": 1,
+    "minimum": 1,
     "fee": 0,
-    "verified": false,
     "captcha": [
       "reCAPTCHA"
     ]
@@ -45,9 +43,8 @@
     "frequency": 10,
     "payout": "Pooling",
     "url": "http://www.shiganaicontents.ga/faucet3/",
-    "min": 0.1,
+    "minimum": 0.1,
     "fee": 0,
-    "verified": false,
     "captcha": [
       "reCAPTCHA"
     ]
@@ -57,9 +54,8 @@
     "frequency": 60,
     "payout": "Pooling",
     "url": "http://namuyan.dip.jp/all_in_faucet.php",
-    "min": 0,
+    "minimum": 0,
     "fee": 0.01,
-    "verified": false,
     "captcha": [
       "reCAPTCHA"
     ]

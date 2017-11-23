@@ -4,9 +4,8 @@
     "frequency": 240,
     "payout": "Pooling",
     "url": "http://namuyan.dip.jp/nem/mainnet_nodb/",
-    "min": 5,
+    "minimum": 5,
     "fee": 5,
-    "verified": false,
     "captcha": [
       "reCAPTCHA"
     ]
@@ -16,8 +15,7 @@
     "frequency": 60,
     "payout": "Pooling",
     "url": "http://nemfaucet.info/ref/NDXD3H-ZJVPEI-JDWA7Q-56DUKJ-3YYQZV-QHX7DL-GMDV",
-    "min": 0.5,
-    "verified": false,
+    "minimum": 0.5,
     "captcha": [
       "reCAPTCHA"
     ]

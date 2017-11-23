@@ -4,8 +4,7 @@
     "frequency": 60,
     "payout": "Pooling",
     "url": "http://monerofaucet.info/ref/485hBEHtnV26No8MriUAdyjd7V8GrvFkVXD4AAAFYTD9cG1Jw64KrkjHqNiqcbLtj1CxLTRJVhqBjcU6PjQSTzJr33tGmmG",
-    "min": 0.05,
-    "verified": false,
+    "minimum": 0.05,
     "captcha": [
       "reCAPTCHA"
     ]

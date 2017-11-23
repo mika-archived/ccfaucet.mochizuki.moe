@@ -24,9 +24,8 @@
     "frequency": 60,
     "payout": "Pooling",
     "url": "https://freebitco.in/?r=7713155",
-    "min": 0.0003,
+    "minimum": 0.0003,
     "fee": 0,
-    "verified": false,
     "captcha": [
       "reCAPTCHA",
       "SolveMedia"
@@ -56,9 +55,8 @@
     "frequency": 180,
     "payout": "Pooling",
     "url": "http://btcheat.com/?i=332724",
-    "min": 0.002,
+    "minimum": 0.002,
     "fee": 0,
-    "verified": false,
     "captcha": []
   },
   {
@@ -75,9 +73,8 @@
     "frequency": 1440,
     "payout": "Pooling",
     "url": "https://qoinpro.com/4bae2377edbc3c45641828b303ad4227",
-    "min": 0.0005,
+    "minimum": 0.0005,
     "fee": 0.00025,
-    "verified": false,
     "captcha": []
   },
   {
