@@ -1,6 +1,7 @@
 import { ICaptcha } from "./captcha";
 import { Currency } from './currency';
 import { IPayout } from "./payout";
+import { ITrust } from './trust';
 
 export interface IFaucet {
   name: string;
@@ -11,7 +12,7 @@ export interface IFaucet {
   pureUrl: string;
   minimum: number;
   fee: number;
-  trusted: boolean;
+  tx?: ITrust;
   captcha: ICaptcha[];
 }
 
@@ -24,7 +25,7 @@ export class Faucet implements IFaucet {
   public pureUrl: string;
   public minimum: number;
   public fee: number;
-  public trusted: boolean;
+  public tx?: ITrust;
   public captcha: ICaptcha[];
 
   public static fromJson(json: any): Faucet {
@@ -35,6 +36,10 @@ export class Faucet implements IFaucet {
       }
     }
     return faucet;
+  }
+
+  public get isTrust(): boolean {
+    return this.tx !== undefined && this.tx !== null;
   }
 
   public formatFrequency(): string {
@@ -55,7 +60,7 @@ export class Faucet implements IFaucet {
     }
 
     if (minimum > 0) {
-      return `${minimum.toFixed(8).replace(/0+$/, "")} ${this.currency.symbol}`;
+      return `${minimum.toFixed(8).replace(/(\.)?0+$/, "")} ${this.currency.symbol}`;
     }
     return "N/A";
   }
@@ -69,7 +74,7 @@ export class Faucet implements IFaucet {
     }
 
     if (fee > 0) {
-      return `${fee.toFixed(8).replace(/0+$/, "")} ${this.currency.symbol}`;
+      return `${fee.toFixed(8).replace(/(\.)?0+$/, "")} ${this.currency.symbol}`;
     }
     return "N/A";
   }

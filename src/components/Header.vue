@@ -5,6 +5,7 @@
       <b-navbar-brand to="/">Crypto Faucets</b-navbar-brand>
       <b-collapse is-nav id="nav_collapse">
         <b-nav is-nav-bar class="ml-auto">
+          <b-nav-item to="/currency/all">All</b-nav-item>
           <b-nav-item to="/about">About</b-nav-item>
           <b-nav-item to="/changelog">Changelog</b-nav-item>
           <b-nav-item href="https://github.com/mika-f/crypto-faucets/" target="_blank">GitHub</b-nav-item>
@@ -16,6 +17,6 @@
 
 <script>
 export default {
-  name: 'Header'
-}
+  name: "Header"
+};
 </script>

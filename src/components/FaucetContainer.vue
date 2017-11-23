@@ -2,8 +2,11 @@
   b-container
     section
       h2
-        img.title(:src="`/static/assets/${currency.id}.png`")
-        | {{currency.name}} の蛇口一覧
+        template(v-if="currency !== null")
+          img.title(:src="`/static/assets/${currency.id}.png`")
+          | {{currency.name}} の蛇口一覧
+        template(v-else)
+          | 登録されている全ての蛇口一覧
     section
       b-card(title="絞り込み")
         b-form
@@ -13,7 +16,9 @@
     section
       b-table.table(bordered striped responsive hover show-empty empty-text="アイテムが見つかりませんでした" :items="filteredItems()" :fields="tableFields")
         template(slot="trust" slot-scope="data")
-          span {{data.item.trusted ? "✓" : ""}}
+          span {{data.item.isTrust ? "✓" : ""}}
+        template(slot="currency" slot-scope="data")
+          span {{data.item.currency.name}}
         template(slot="website" slot-scope="data")
           a(:href="data.item.url" target="_blank") {{data.item.name}}
         template(slot="frequency" slot-scope="data")
@@ -42,7 +47,7 @@ import FormCheckboxGroupImpl from "./CheckboxGroupImpl.vue";
 import { Currency } from "../models/currency";
 import { Faucet } from "../models/faucet";
 import { IPayout } from "../models/payout";
-import { currencies, faucets, payouts } from "../utils";
+import { currencies, faucetStore, payouts } from "../utils";
 
 @Component({
   components: {
@@ -50,10 +55,16 @@ import { currencies, faucets, payouts } from "../utils";
   }
 })
 export default class FaucetContainer extends Vue {
-  public currency: Currency = currencies()[0];
+  public currency: Currency | null = currencies()[0];
   public faucets: Faucet[] = [];
   public payouts: IPayout[] = payouts();
-  public tableFields = {
+  public tableFields: any = {};
+
+  // models
+  public selectedFields: string[] = [];
+  public selectedPayouts: string[] = [];
+
+  private fieldType1 = {
     trust: { label: "信頼性" },
     website: { label: "ウェブサイト" },
     frequency: { label: "タイマー" },
@@ -64,9 +75,17 @@ export default class FaucetContainer extends Vue {
     captcha: { label: "認証形式" }
   };
 
-  // models
-  public selectedFields: string[] = [];
-  public selectedPayouts: string[] = [];
+  private fieldType2 = {
+    trust: { label: "信頼性" },
+    currency: { label: "暗号通貨" },
+    website: { label: "ウェブサイト" },
+    frequency: { label: "タイマー" },
+    payout: { label: "支払い方法" },
+    minimum: { label: "最小出金額" },
+    fee: { label: "最小手数料" },
+    jpy: { label: "日本円" },
+    captcha: { label: "認証形式" }
+  };
 
   public filteredItems(): Faucet[] {
     return this.faucets.filter(w => {
@@ -75,9 +94,15 @@ export default class FaucetContainer extends Vue {
   }
 
   public mounted(): void {
-    console.log("Hello?");
-    this.currency = currencies().filter(w => w.id === this.$route.params.id)[0];
-    this.faucets = faucets().filter(w => w.currency.id === this.currency.id);
+    if (this.$route.params.id !== "all") {
+      this.tableFields = this.fieldType1;
+      this.currency = currencies().filter(w => w.id === this.$route.params.id)[0];
+      this.faucets = faucetStore.filter(w => w.currency.id === (<Currency>this.currency).id);
+    } else {
+      this.tableFields = this.fieldType2;
+      this.currency = null;
+      this.faucets = faucetStore;
+    }
   }
 
   @Watch("$route")

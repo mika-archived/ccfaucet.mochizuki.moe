@@ -4,6 +4,7 @@
     "minimum": 0,
     "fee": 0,
     "requireRes": false,
+    "txSearchMode": "none",
     "url": ""
   },
   {
@@ -11,6 +12,7 @@
     "minimum": -1,
     "fee": 0,
     "requireRes": false,
+    "txSearchMode": "prefix",
     "url": ""
   },
   {
@@ -30,6 +32,7 @@
       "dash": 0
     },
     "requireRes": true,
+    "txSearchMode": "default",
     "url": "https://coinpot.co"
   },
   {
@@ -61,6 +64,7 @@
       "b3coin": 0
     },
     "requireRes": true,
+    "txSearchMode": "default",
     "url": "https://faucethub.io/r/23804436"
   }
 ]

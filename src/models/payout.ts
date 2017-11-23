@@ -9,4 +9,5 @@ export interface IPayout {
   name: string;
   url: string;
   requireRes: boolean;
+  txSearchMode: "none" | "default" | "prefix";
 }
