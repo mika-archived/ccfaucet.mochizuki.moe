@@ -11,10 +11,13 @@
       b-card(title="絞り込み")
         b-form
           b-form-row
+            template(v-show="isAll")
+              b-col(sm="12")
+                form-checkbox-group-impl(field-text="name" field-value="symbol" :options="currencies" label="通貨" v-model="selectedCurrencies")
             b-col(sm="12")
               form-checkbox-group-impl(field-text="name" field-value="name" :options="payouts" label="支払い方法" v-model="selectedPayouts")
     section
-      b-table.table(bordered striped responsive hover show-empty empty-text="アイテムが見つかりませんでした" :items="filteredItems()" :fields="tableFields")
+      b-table.fill-table(bordered striped responsive="" hover show-empty empty-text="アイテムが見つかりませんでした" :items="filteredItems()" :fields="tableFields")
         template(slot="trust" slot-scope="data")
           span {{data.item.isTrust ? "✓" : ""}}
         template(slot="currency" slot-scope="data")
@@ -57,10 +60,12 @@ import { currencies, faucetStore, payouts } from "../utils";
 export default class FaucetContainer extends Vue {
   public currency: Currency | null = currencies()[0];
   public faucets: Faucet[] = [];
+  public currencies: Currency[] = currencies();
   public payouts: IPayout[] = payouts();
   public tableFields: any = {};
 
   // models
+  public selectedCurrencies: string[] = [];
   public selectedFields: string[] = [];
   public selectedPayouts: string[] = [];
 
@@ -87,21 +92,28 @@ export default class FaucetContainer extends Vue {
     captcha: { label: "認証形式" }
   };
 
+  public get isAll(): boolean {
+    return this.$route.params.id === "all";
+  }
+
   public filteredItems(): Faucet[] {
     return this.faucets.filter(w => {
-      return this.selectedPayouts.includes(w.payout.name);
+      return (
+        this.selectedPayouts.includes(w.payout.name) &&
+        (this.isAll ? this.selectedCurrencies.includes(w.currency.symbol) : true)
+      );
     });
   }
 
   public mounted(): void {
-    if (this.$route.params.id !== "all") {
-      this.tableFields = this.fieldType1;
-      this.currency = currencies().filter(w => w.id === this.$route.params.id)[0];
-      this.faucets = faucetStore.filter(w => w.currency.id === (<Currency>this.currency).id);
-    } else {
+    if (this.isAll) {
       this.tableFields = this.fieldType2;
       this.currency = null;
       this.faucets = faucetStore;
+    } else {
+      this.tableFields = this.fieldType1;
+      this.currency = currencies().filter(w => w.id === this.$route.params.id)[0];
+      this.faucets = faucetStore.filter(w => w.currency.id === (<Currency>this.currency).id);
     }
   }
 
@@ -125,7 +137,7 @@ h2 {
   }
 }
 
-.table {
+.fill-table {
   min-width: 100%;
   max-width: 100%;
 }
