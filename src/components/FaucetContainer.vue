@@ -3,7 +3,7 @@
     section
       h2
         template(v-if="currency !== null")
-          img.title(:src="`.//static/${currency.id}.png`")
+          img.title(:src="`./static/${currency.id}.png`")
           | {{currency.name}} の蛇口一覧
         template(v-else)
           | 登録されている全ての蛇口一覧
@@ -23,7 +23,7 @@
         template(slot="currency" slot-scope="data")
           span {{data.item.currency.name}}
         template(slot="website" slot-scope="data")
-          a(:href="data.item.url" target="_blank") {{data.item.name}}
+          a(:href="isPureUrl ? data.item.pureUrl : data.item.url" target="_blank") {{data.item.name}}
         template(slot="frequency" slot-scope="data")
           span {{data.item.formatFrequency()}}
         template(slot="payout" slot-scope="data")
@@ -94,6 +94,10 @@ export default class FaucetContainer extends Vue {
 
   public get isAll(): boolean {
     return this.$route.params.id === "all";
+  }
+
+  public get isPureUrl(): boolean {
+    return localStorage.getItem("disableAffilicate") !== null;
   }
 
   public filteredItems(): Faucet[] {
