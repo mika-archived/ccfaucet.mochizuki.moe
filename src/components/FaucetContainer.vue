@@ -3,7 +3,7 @@
     section
       h2
         template(v-if="currency !== null")
-          img.title(:src="`/static/assets/${currency.id}.png`")
+          img.title(:src="`.//static/${currency.id}.png`")
           | {{currency.name}} の蛇口一覧
         template(v-else)
           | 登録されている全ての蛇口一覧
@@ -11,7 +11,7 @@
       b-card(title="絞り込み")
         b-form
           b-form-row
-            template(v-show="isAll")
+            template(v-if="isAll")
               b-col(sm="12")
                 form-checkbox-group-impl(field-text="name" field-value="symbol" :options="currencies" label="通貨" v-model="selectedCurrencies")
             b-col(sm="12")
@@ -106,6 +106,15 @@ export default class FaucetContainer extends Vue {
   }
 
   public mounted(): void {
+    this.setData();
+  }
+
+  @Watch("$route")
+  public onRouteChanged(to, from): void {
+    this.setData();
+  }
+
+  private setData(): void {
     if (this.isAll) {
       this.tableFields = this.fieldType2;
       this.currency = null;
@@ -116,9 +125,6 @@ export default class FaucetContainer extends Vue {
       this.faucets = faucetStore.filter(w => w.currency.id === (<Currency>this.currency).id);
     }
   }
-
-  @Watch("$route")
-  public onRouteChanged(to, from): void {}
 }
 </script>
 

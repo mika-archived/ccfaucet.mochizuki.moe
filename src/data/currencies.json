@@ -5,14 +5,28 @@
     "explorer": "https://chainflyer.bitflyer.jp/Transaction/",
     "logo": {
       "license": "Public Domain",
-      "source": "https://en.bitcoin.it/wiki/Promotional_graphics"
+      "link": {
+        "href": "https://bitcoin.org/",
+        "text": [
+          "Bitcoin Project"
+        ]
+      }
     }
   },
   {
     "name": "BitZeny",
     "symbol": "ZNY",
     "logo": {
-      "license": "Unlicense"
+      "license": "MIT License",
+      "link": {
+        "href": "https://github.com/bitzeny/bitzeny",
+        "text": [
+          "BitZeny Core Developers",
+          "Bitcoin Core Developers",
+          "DarkCoin Developers",
+          "Alexander Peslyak"
+        ]
+      }
     }
   },
   {
@@ -23,21 +37,40 @@
       "license": "CC-BY SA 4.0",
       "link": {
         "href": "https://www.dash.org/",
-        "text": "The Dash Network"
+        "text": [
+          "The Dash Network"
+        ]
       }
     }
   },
   {
     "name": "Dogecoin",
     "symbol": "DOGE",
-    "explorer": "https://dogechain.info/tx/"
+    "explorer": "https://dogechain.info/tx/",
+    "logo": {
+      "license": "MIT License",
+      "link": {
+        "href": "https://github.com/dogecoin/dogecoin",
+        "text": [
+          "The Dogecoin Core developers",
+          "The Bitcoin Core developers"
+        ]
+      }
+    }
   },
   {
     "name": "Litecoin",
     "symbol": "LTC",
     "explorer": "https://live.blockcypher.com/ltc/tx/",
     "logo": {
-      "license": "Public Domain"
+      "license": "Public Domain",
+      "link": {
+        "href": "https://github.com/litecoin-project/litecoin",
+        "text": [
+          "The Litecoin Core Developers",
+          "The Bitcoin Core developers"
+        ]
+      }
     }
   },
   {
@@ -48,7 +81,9 @@
       "license": "CC-BY",
       "link": {
         "href": "https://nekonium.github.io/",
-        "text": "Nekonium project"
+        "text": [
+          "Nekonium project"
+        ]
       }
     }
   },
@@ -57,12 +92,31 @@
     "symbol": "MONA",
     "explorer": "https://mona.chainsight.info/tx/",
     "logo": {
-      "license": "Unlicense"
+      "license": "MIT License",
+      "link": {
+        "href": "https://github.com/monacoinproject/monacoin",
+        "text": [
+          "モナーコインプロジェクト",
+          "The Bitcoin Core developers"
+        ]
+      }
     }
   },
   {
     "name": "Kumacoin",
-    "symbol": "KUMA"
+    "symbol": "KUMA",
+    "logo": {
+      "license": "MIT License",
+      "link": {
+        "href": "https://github.com/kumacoinproject/kumacoin",
+        "text": [
+          "KumaCoin Developers",
+          "PROBE Developers",
+          "PPCoin Developers",
+          "Bitcoin Developers"
+        ]
+      }
+    }
   },
   {
     "name": "FujiCoin",
@@ -70,21 +124,41 @@
     "explorer": "http://explorer.fujicoin.org/tx/",
     "logo": {
       "license": "Unlicense",
-      "source": "http://www.fujicoin.org/ja/downloads.php"
+      "link": {
+        "href": "http://www.fujicoin.org/",
+        "text": [
+          "fujicoin.org"
+        ]
+      }
     }
   },
   {
     "name": "Sha1coin",
-    "symbol": "SHA1"
+    "symbol": "SHA1",
+    "logo": {
+      "license": "MIT License",
+      "link": {
+        "href": "https://github.com/ohac/sha1coin",
+        "text": [
+          "Sha1coin Developers",
+          "The DigiByte Developers",
+          "Litecoin Developers",
+          "Bitcoin Developers"
+        ]
+      }
+    }
   },
   {
     "name": "NEM",
     "symbol": "XEM",
     "logo": {
-      "license": "CC-BY SA 4.0",
+      "license": "MIT License",
       "link": {
-        "href": "https://commons.wikimedia.org/wiki/File:Nem_logo.svg",
-        "text": "Prieger"
+        "href": "https://github.com/NemProject/NanoWallet",
+        "text": [
+          "New Economy Movement",
+          "QuantumMechanics"
+        ]
       }
     }
   },
@@ -95,41 +169,80 @@
       "license": "CC-BY 3.0",
       "link": {
         "href": "https://www.ethereum.org/",
-        "text": "Ethereum Foundation"
+        "text": [
+          "Ethereum Foundation"
+        ]
       }
     }
   },
   {
     "name": "Blackcoin",
-    "symbol": "BLK"
+    "symbol": "BLK",
+    "logo": {
+      "license": "MIT License",
+      "link": {
+        "href": "https://github.com/CoinBlack/blackcoin",
+        "text": [
+          "BlackCoin Developers",
+          "NovaCoin Developers",
+          "PPCoin Developers",
+          "Bitcoin Developers"
+        ]
+      }
+    }
   },
   {
     "name": "Peercoin",
     "symbol": "PPC",
     "logo": {
       "license": "Unlicense",
-      "source": "https://github.com/peercoin/media"
+      "link": {
+        "href": "https://github.com/peercoin/media",
+        "text": [
+          "peerchemist"
+        ]
+      }
     }
   },
   {
     "name": "Primecoin",
     "symbol": "XPM",
     "logo": {
-      "license": "Unlicense"
+      "license": "MIT License",
+      "link": {
+        "href": "http://primecoin.io/",
+        "text": [
+          "Primecoin Developers",
+          "Bitcoin Developers",
+          "PPCoin Developers"
+        ]
+      }
     }
   },
   {
     "name": "Lisk",
     "symbol": "LSK",
     "logo": {
-      "license": "Unlicense"
+      "license": "Unlicense",
+      "link": {
+        "href": "https://lisk.io",
+        "text": [
+          "Lisk Foundation"
+        ]
+      }
     }
   },
   {
     "name": "Monero",
     "symbol": "XMR",
     "logo": {
-      "license": "Public Domain"
+      "license": "The 3-Clause BSD License",
+      "link": {
+        "href": "https://github.com/monero-project/monero-gui",
+        "text": [
+          "The Monero Project"
+        ]
+      }
     }
   },
   {
@@ -137,35 +250,69 @@
     "symbol": "BCH",
     "explorer": "https://bitcoincash.blockexplorer.com/tx/",
     "logo": {
-      "license": "Unlicense"
+      "license": "Unlicense",
+      "link": {
+        "href": "https://forum.bitcoin.com/bitcoin-cash-f119/bitcoin-cash-logo-branding-t48603.html",
+        "text": [
+          "Mjbmonetarymetals"
+        ]
+      }
     }
   },
   {
     "name": "Bitcoin Gold",
     "symbol": "BTG",
     "logo": {
-      "license": "Unlicense"
+      "license": "MIT License",
+      "link": {
+        "href": "https://github.com/BTCGPU/BTCGPU",
+        "text": [
+          "BTCGPU",
+          "The Bitcoin Core developers"
+        ]
+      }
     }
   },
   {
     "name": "BitCore",
     "symbol": "BTX",
     "logo": {
-      "license": "Unlicense"
+      "license": "MIT License",
+      "link": {
+        "href": "https://github.com/LIMXTEC/BitCore",
+        "text": [
+          "The BitCore Core developers"
+        ]
+      }
     }
   },
   {
     "name": "B3Coin",
     "symbol": "B3",
     "logo": {
-      "license": "Unlicense"
+      "license": "MIT License",
+      "link": {
+        "href": "https://github.com/LIMXTEC/B3-CoinV2",
+        "text": [
+          "B3-Coin Developers",
+          "NovaCoin Developers",
+          "PPCoin Developers",
+          "Bitcoin Developers"
+        ]
+      }
     }
   },
   {
     "name": "Ethereum Classic",
     "symbol": "ETC",
     "logo": {
-      "license": "Public Domain"
+      "license": "Public Domain",
+      "link": {
+        "href": "https://ethereumclassic.github.io/",
+        "text": [
+          "Ethereum Classic"
+        ]
+      }
     }
   },
   {
@@ -175,7 +322,9 @@
       "license": "Unlicense",
       "link": {
         "href": "https://ripple.com",
-        "text": "Ripple"
+        "text": [
+          "Ripple"
+        ]
       }
     }
   }

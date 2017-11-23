@@ -25,7 +25,7 @@ export function captchas(): ICaptcha[] {
 }
 
 export function currencies(): Currency[] {
-  return _.sortBy((<any>_currencies).map((w) => new Currency(w.name, w.symbol, w.explorer, w.logo)), (w: Currency) => w.name.toLocaleLowerCase());
+  return _.sortBy((<any>_currencies).map((w) => new Currency(w.name, w.symbol, w.explorer)), (w: Currency) => w.name.toLocaleLowerCase());
 }
 
 export function payouts(): IPayout[] {

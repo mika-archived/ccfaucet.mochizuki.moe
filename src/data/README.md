@@ -41,12 +41,11 @@
 | `name` | Yes | 暗号通貨名 |
 | `symbol` | Yes | 暗号通貨通貨記号 |
 | `exlorer` | No | ブロックエクスプローラーのトランザクション URL |
-| `logo` | No | -> |
-| `logo.license` | No | ロゴファイルライセンス |
-| `logo.link` | No | -> |
-| `logo.link.href` | No | 権利者ページ URL |
-| `logo.link.text` | No | 権利者名 |
-| `logo.source` | No | 入手先 |
+| `logo` | Yes | -> |
+| `logo.license` | Yes | ロゴファイルライセンス |
+| `logo.link` | Yes | -> |
+| `logo.link.href` | Yes | 権利者ページ URL |
+| `logo.link.text` | Yes | 権利者名 |
 
 
 ## `payouts.json`

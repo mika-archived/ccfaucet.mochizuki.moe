@@ -59,6 +59,3 @@ typings/
 
 # Nuxt build
 .nuxt
-
-# 
-static/assets/*.png

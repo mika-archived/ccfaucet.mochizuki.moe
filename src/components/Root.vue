@@ -14,9 +14,9 @@
     section
       h3 暗号通貨一覧
       .currencies
-        template(v-for="(currency, index) in currencies")
+        template(v-for="currency in currencies")
           router-link.logo-outer(:to="`/currency/${currency.id}`")
-            img.logo-inner(:src="`/static/assets/${currency.id}.png`" :title="currency.name")
+            img.logo-inner(:src="`./static/${currency.id}.png`" :title="currency.name")
 
 
 </template>
