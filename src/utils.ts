@@ -1,22 +1,25 @@
+import axios from "axios";
 import _ from "lodash";
 
 import { ICaptcha } from "./models/captcha";
 import { Currency } from "./models/currency";
 import { IFaucet, Faucet } from "./models/faucet";
 import { IPayout } from "./models/payout";
+import { ITicker } from './models/ticker';
 import { ITrust, DirectTrust } from "./models/trust";
 
 import * as _captchas from "./data/captcha.json"
 import * as _currencies from "./data/currencies.json";
 import * as _payouts from "./data/payouts.json";
 
+export const currencyStore: Currency[] = [];
 export const faucetStore: Faucet[] = [];
 export const trustStore: ITrust[] = [];
 
 export function initiaize(): void {
+  loadCurrencies();
   loadFaucets();
   loadTrusts();
-
   updateFaucets();
 }
 
@@ -24,16 +27,30 @@ export function captchas(): ICaptcha[] {
   return <ICaptcha[]>(<any>_captchas);
 }
 
-export function currencies(): Currency[] {
-  return _.sortBy((<any>_currencies).map((w) => new Currency(w.name, w.symbol, w.explorer)), (w: Currency) => w.name.toLocaleLowerCase());
-}
-
 export function payouts(): IPayout[] {
   return <IPayout[]>(<any>_payouts);
 }
 
+export async function loadTickers(): Promise<void> {
+  const response = await axios.get('https://api.coinmarketcap.com/v1/ticker/?convert=JPY&limit=0');
+  if (response.status === 200) {
+    _.forEach(response.data, (w: ITicker) => {
+      const currency = currencyStore.find((v) => v.id === w.id);
+      if (currency) {
+        currency.ticker = w;
+      }
+    });
+  }
+}
+
+function loadCurrencies(): void {
+  _.sortBy((<any>_currencies).map((w) => new Currency(w.name, w.symbol, w.explorer)), (w: Currency) => w.name.toLocaleLowerCase()).forEach((w) => {
+    currencyStore.push(w);
+  });
+}
+
 function loadFaucets(): void {
-  currencies().forEach((currency) => {
+  currencyStore.forEach((currency) => {
     const faucets = _.sortBy(require(`./data/faucets/${currency.id}.json`), (w) => w.name.toLocaleLowerCase());
     faucets.forEach((faucet) => {
       const fixed: Faucet = Faucet.fromJson(faucet);
@@ -55,7 +72,7 @@ function updateFaucets(): void {
 }
 
 function loadTrusts(): void {
-  currencies().forEach((currency) => {
+  currencyStore.forEach((currency) => {
     const trusts = require(`./data/trusts/${currency.id}.json`);
     trusts.forEach((trust) => {
       const name = trust.payout;
@@ -63,6 +80,7 @@ function loadTrusts(): void {
       fixed.currency = currency;
       fixed.payout = resolveTrustedPayout(name);
       fixed.payoutOriginal = name;
+      console.log(`${currency.id}, ${name}, ${fixed.payout}`);
 
       trustStore.push(fixed);
     });

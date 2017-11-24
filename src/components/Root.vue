@@ -26,11 +26,11 @@ import Vue from "vue";
 import Component from "vue-class-component";
 
 import { Currency } from "../models/currency";
-import { currencies as _currencies } from "../utils";
+import { currencyStore } from "../utils";
 
 @Component
 export default class Root extends Vue {
-  public currencies: Currency[] = _currencies();
+  public currencies: Currency[] = currencyStore;
 }
 </script>
 

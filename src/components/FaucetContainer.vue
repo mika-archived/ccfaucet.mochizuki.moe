@@ -35,6 +35,14 @@
           span {{data.item.formatMinimum()}}
         template(slot="fee" slot-scope="data")
           span {{data.item.formatFee()}}
+        template(slot="jpy" slot-scope="data")
+          template(v-if="isLoadedTicker")
+            template(v-if="data.item.currency.hasTicker")
+              a(:href="`https://coinmarketcap.com/currencies/${data.item.currency.id}/`" target="_blank") {{data.item.currency.formatPrice}}
+            template(v-else)
+              | N/A
+          template(v-else)
+            | 読み込み中...
         template(slot="captcha" slot-scope="data")
           b-badge.badge(v-for="w in data.item.captcha" :key="w.name" :variant="w.color") {{w.name}}
 </template>
@@ -50,7 +58,8 @@ import FormCheckboxGroupImpl from "./CheckboxGroupImpl.vue";
 import { Currency } from "../models/currency";
 import { Faucet } from "../models/faucet";
 import { IPayout } from "../models/payout";
-import { currencies, faucetStore, payouts } from "../utils";
+import { ITicker } from "../models/ticker";
+import { currencyStore, faucetStore, loadTickers, payouts } from "../utils";
 
 @Component({
   components: {
@@ -58,11 +67,12 @@ import { currencies, faucetStore, payouts } from "../utils";
   }
 })
 export default class FaucetContainer extends Vue {
-  public currency: Currency | null = currencies()[0];
+  public currency: Currency | null = currencyStore[0];
   public faucets: Faucet[] = [];
-  public currencies: Currency[] = currencies();
+  public currencies: Currency[] = currencyStore;
   public payouts: IPayout[] = payouts();
   public tableFields: any = {};
+  public isLoadedTicker: boolean = currencyStore[0].hasTicker;
 
   // models
   public selectedCurrencies: string[] = [];
@@ -111,6 +121,12 @@ export default class FaucetContainer extends Vue {
 
   public mounted(): void {
     this.setData();
+    if (!this.isLoadedTicker) {
+      (async () => {
+        await loadTickers();
+        this.isLoadedTicker = true;
+      })();
+    }
   }
 
   @Watch("$route")
@@ -125,7 +141,7 @@ export default class FaucetContainer extends Vue {
       this.faucets = faucetStore;
     } else {
       this.tableFields = this.fieldType1;
-      this.currency = currencies().filter(w => w.id === this.$route.params.id)[0];
+      this.currency = currencyStore.filter(w => w.id === this.$route.params.id)[0];
       this.faucets = faucetStore.filter(w => w.currency.id === (<Currency>this.currency).id);
     }
   }
