@@ -80,7 +80,6 @@ function loadTrusts(): void {
       fixed.currency = currency;
       fixed.payout = resolveTrustedPayout(name);
       fixed.payoutOriginal = name;
-      console.log(`${currency.id}, ${name}, ${fixed.payout}`);
 
       trustStore.push(fixed);
     });
