@@ -1,0 +1,21 @@
+[
+  {
+    "name": "NEO Faucet",
+    "frequency": 60,
+    "payout": "Pooling",
+    "url": "http://neofaucet.info/ref/ALaiMeM3Je2ehPpwvBMuNGHaaYBWFe7de3",
+    "minimum": 0.125,
+    "captcha": [
+      "reCAPTCHA"
+    ]
+  },
+  {
+    "name": "QoinPro.com",
+    "frequency": 1440,
+    "payout": "Pooling",
+    "url": "https://qoinpro.com/4bae2377edbc3c45641828b303ad4227",
+    "minimum": 0.00571499,
+    "fee": 0.01,
+    "captcha": []
+  }
+]

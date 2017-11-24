@@ -327,5 +327,30 @@
         ]
       }
     }
+  },
+  {
+    "name": "Zcash",
+    "symbol": "ZEC",
+    "logo": {
+      "license": "https://z.cash/trademark-policy.html",
+      "link": {
+        "href": "https://z.cash",
+        "text": [
+          "The Zcash developers",
+          "The Bitcoin Core developers"
+        ]
+      }
+    }
+  },
+  {
+    "name": "NEO",
+    "symbol": "NEO",
+    "logo": {
+      "license": "Unlicense",
+      "link": {
+        "href": "https://neo.org/logo",
+        "text": "The NEO project"
+      }
+    }
   }
 ]

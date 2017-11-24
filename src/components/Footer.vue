@@ -1,28 +1,27 @@
-<template>
-  <b-container>
-    <footer>
-      <p>
-        仮想通貨, 暗号通貨や蛇口の追加, 削除は、
-        <a href="https://github.com/mika-f/crypto-faucets/">GitHub リポジトリ</a>
-        まで
-      </p>
-      <p>
-        コンタクト:
-        <a href="https://twitter.com/MikazukiFuyuno">@MikazukiFuyuno</a>
-        寄付:
-        <a href="https://mochizuki.moe/donation/">こちら</a>
-      </p>
-      <p>
-        Copyright &copy; 2017 mochizuki.moe.
-      </p>
-    </footer>
-  </b-container>
+<template lang="pug">
+  b-container
+    footer
+      p
+        | 当サイトにて使用している各種ロゴファイルおよび名称は、各団体・個人によって保護されています。
+        br
+        | また、当サイトは、それらの団体・個人とは関係がありません。
+      p
+        | 暗号通貨や蛇口の追加, 編集, 削除は、
+        a(href="https://github.com/mika-f/crypto-faucets/" target="_blank") GitHub レポジトリ
+        | まで
+      p
+        | コンタクト: 
+        a(href="https://twitter.com/MikazukiFuyuno" target="_blank") @MikazukiFuyuno
+        |  / 
+        | 寄付: 
+        a(href="https://mochizuki.moe/donation/" target="_blank") こちら
+      p Copyright &copy; 2017 mochizuki.moe.
 </template>
 
 <script>
 export default {
-  name: 'Footer'
-}
+  name: "Footer"
+};
 </script>
 
 <style scoped>

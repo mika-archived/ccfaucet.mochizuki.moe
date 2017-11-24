@@ -1,1 +1,12 @@
-[]
+[
+  {
+    "name": "The Ethereum Classic Faucet",
+    "frequency": 60,
+    "payout": "Pooling",
+    "url": "http://etcfaucet.info/ref/0xfd0859b6f00bee9777511c96cd3e86418390a99d",
+    "minimum": 0.01,
+    "captcha": [
+      "reCAPTCHA"
+    ]
+  }
+]

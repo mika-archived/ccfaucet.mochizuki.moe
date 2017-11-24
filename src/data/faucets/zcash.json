@@ -1,0 +1,12 @@
+[
+  {
+    "name": "Zcash Faucet",
+    "frequency": 60,
+    "payout": "Pooling",
+    "url": "http://zcashfaucet.info/ref/t1MyEJt3HVaLAxm4tU1a8w5K1wWBLZXn79Q",
+    "minimum": 0.0005,
+    "captcha": [
+      "reCAPTCHA"
+    ]
+  }
+]
