@@ -56,5 +56,14 @@
       "reCAPTCHA",
       "SolveMedia"
     ]
+  },
+  {
+    "name": "HOT COINS DASH",
+    "frequency": 5,
+    "payout": "FaucetHub",
+    "url": "http://hotcoins.cf/dash/?r=XinqrYP4KD3vxFhuEniqkwa6GPRayhriqU",
+    "captcha": [
+      "SolveMedia"
+    ]
   }
 ]

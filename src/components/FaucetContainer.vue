@@ -19,7 +19,11 @@
     section
       b-table.fill-table(bordered striped responsive="" hover show-empty empty-text="アイテムが見つかりませんでした" :items="filteredItems()" :fields="tableFields")
         template(slot="trust" slot-scope="data")
-          span {{data.item.isTrust ? "✓" : ""}}
+          template(v-if="data.item.isTrust")
+            template(v-if="data.item.tx.isInvalid")
+              | ✓
+            template(v-else)
+              a(:href="`${data.item.currency.explorer}${data.item.tx.txid}`" target="_blank") ✓
         template(slot="currency" slot-scope="data")
           span {{data.item.currency.name}}
         template(slot="website" slot-scope="data")

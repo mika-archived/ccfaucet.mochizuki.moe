@@ -17,7 +17,11 @@ export default class Changelog extends Vue {
     {
       date: "2017/11/23",
       content: "リニューアルしました。"
+    },
+    {
+      date: "2017/11/25",
+      content: "トランザクションへのリンクを追加"
     }
-  ];
+  ].reverse();
 }
 </script>
