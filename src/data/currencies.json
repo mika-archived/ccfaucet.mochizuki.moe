@@ -349,7 +349,25 @@
       "license": "Unlicense",
       "link": {
         "href": "https://neo.org/logo",
-        "text": "The NEO project"
+        "text": [
+          "The NEO project"
+        ]
+      }
+    }
+  },
+  {
+    "name": "Bitcoin Diamond",
+    "symbol": "BCD",
+    "logo": {
+      "license": "MIT License",
+      "link": {
+        "href": "https://github.com/Bitcoin-Diamond/BitcoinDiamond",
+        "text": [
+          "BitcoinDiamond Developers",
+          "NovaCoin Developers",
+          "PPCoin Developers",
+          "Bitcoin Developers"
+        ]
       }
     }
   }

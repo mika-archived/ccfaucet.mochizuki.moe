@@ -1,0 +1,11 @@
+[
+  {
+    "name": "QoinPro.com",
+    "frequency": 1440,
+    "payout": "Pooling",
+    "url": "https://qoinpro.com/4bae2377edbc3c45641828b303ad4227",
+    "minimum": 0.0015,
+    "fee": 0.005,
+    "captcha": []
+  }
+]
