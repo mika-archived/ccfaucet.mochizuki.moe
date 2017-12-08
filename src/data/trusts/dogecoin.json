@@ -10,5 +10,9 @@
   {
     "payout": "FaucetHub",
     "txid": "7e5de2bb05ed85ca521a495648ba4482d739d1c77187d69fbbab66f221a78c9c"
+  },
+  {
+    "payout": "Pooling/FreeDoge.co.in",
+    "txid": "e5ab85901ea672971a15e946df0c66d21fb8acc69d5f45be9de9e98113085fb0"
   }
 ]
