@@ -85,5 +85,15 @@
     "captcha": [
       "SolveMedia"
     ]
+  },
+  {
+    "name": "Bonus Bitcoin",
+    "frequency": 15,
+    "payout": "CoinPot",
+    "url": "http://bonusbitcoin.co/?ref=D7ED3F50E1A9 ",
+    "captcha": [
+      "reCAPTCHA",
+      "SolveMedia"
+    ]
   }
 ]
