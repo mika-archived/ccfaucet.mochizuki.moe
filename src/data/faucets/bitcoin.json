@@ -51,15 +51,6 @@
     ]
   },
   {
-    "name": "BTC HEAT",
-    "frequency": 180,
-    "payout": "Pooling",
-    "url": "http://btcheat.com/?i=332724",
-    "minimum": 0.002,
-    "fee": 0,
-    "captcha": []
-  },
-  {
     "name": "FreeBitcoin.Win",
     "frequency": 15,
     "payout": "FaucetHub",
