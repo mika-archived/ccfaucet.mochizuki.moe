@@ -11,7 +11,7 @@
         | まで
       p
         | コンタクト: 
-        a(href="https://twitter.com/MikazukiFuyuno" target="_blank") @MikazukiFuyuno
+        a(href="https://twitter.com/mika_f_cc" target="_blank") @mika_f_cc
         |  / 
         | 寄付: 
         a(href="https://mochizuki.moe/donation/" target="_blank") こちら

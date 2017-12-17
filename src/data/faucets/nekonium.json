@@ -1,7 +1,7 @@
 [
   {
     "name": "Nekonium Mining Pool",
-    "frequency": 30,
+    "frequency": 360,
     "payout": "Direct",
     "url": "http://nuko.oldbeyond.com/#/faucet",
     "captcha": [
