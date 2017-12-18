@@ -59,3 +59,5 @@ typings/
 
 # Nuxt build
 .nuxt
+
+Thumbs.db
