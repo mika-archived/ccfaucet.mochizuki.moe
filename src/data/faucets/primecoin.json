@@ -28,23 +28,5 @@
       "Geetest",
       "reCAPTCHA"
     ]
-  },
-  {
-    "name": "FreeBitcoin.Win",
-    "frequency": 10,
-    "payout": "FaucetHub",
-    "url": "http://freebitcoin.win/ref/3033",
-    "captcha": [
-      "SolveMedia"
-    ]
-  },
-  {
-    "name": "CoinPOT.win",
-    "frequency": 15,
-    "payout": "FaucetHub",
-    "url": "http://coinpot.win/ref/7549",
-    "captcha": [
-      "SolveMedia"
-    ]
   }
 ]

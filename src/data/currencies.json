@@ -370,5 +370,22 @@
         ]
       }
     }
+  },
+  {
+    "name": "XP",
+    "symbol": "XP",
+    "logo": {
+      "license": "MIT License",
+      "link": {
+        "href": "https://github.com/eXperiencePoints/XPCoin",
+        "text": [
+          "The Bitcoin developers",
+          "The PPCoin Developers",
+          "The Peerunity Developers",
+          "The EmerCoin Developers",
+          "The XP developers"
+        ]
+      }
+    }
   }
 ]

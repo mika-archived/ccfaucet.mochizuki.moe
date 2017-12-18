@@ -30,15 +30,6 @@
     ]
   },
   {
-    "name": "FreeBitcoin.Win",
-    "frequency": 10,
-    "payout": "FaucetHub",
-    "url": "http://freebitcoin.win/ref/3033",
-    "captcha": [
-      "SolveMedia"
-    ]
-  },
-  {
     "name": "QoinPro.com",
     "frequency": 1440,
     "payout": "Pooling",
