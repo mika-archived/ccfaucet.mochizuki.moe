@@ -1,0 +1,13 @@
+[
+  {
+    "name": "Free AEON from the Aeon Faucet!",
+    "frequency": 60,
+    "payout": "Pooling",
+    "url": "http://aeonfaucet.info/ref/Wmu7GswJucgimbaGiiYuyvhqc5EDif3t9dxTTr79qmJyJ5ZmeaFgPkdhFaaEttMUt9c61Em6dP1WeHkyDtyRgWf11Q6PxfCvS",
+    "minimum": 0.05,
+    "fee": 0,
+    "captcha": [
+      "reCAPTCHA"
+    ]
+  }
+]

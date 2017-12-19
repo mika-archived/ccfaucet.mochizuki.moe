@@ -1,0 +1,13 @@
+[
+  {
+    "name": "Free DCR from the Decred Faucet!",
+    "frequency": 60,
+    "payout": "Pooling",
+    "url": "http://decredfaucet.info/ref/Dsiwsg3LKGUUB7hZswWyzJxw1WoL8pGY4m3",
+    "minimum": 0.1,
+    "fee": 0,
+    "captcha": [
+      "reCAPTCHA"
+    ]
+  }
+]

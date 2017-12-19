@@ -1,0 +1,13 @@
+[
+  {
+    "name": "Free NXT from the NXT Faucet!",
+    "frequency": 60,
+    "payout": "Pooling",
+    "url": "NXT-M8AL-L7XL-HZ7H-BV4WL/b1cc5cb86b1fce1593d3638834c4e2ff88421ce62a9fd3499b3195773dd32738",
+    "minimum": 5,
+    "fee": 0,
+    "captcha": [
+      "reCAPTCHA"
+    ]
+  }
+]

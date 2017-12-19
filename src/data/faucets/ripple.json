@@ -1,1 +1,13 @@
-[]
+[
+  {
+    "name": "Free XRP from the XRP Faucet!",
+    "frequency": 60,
+    "payout": "Pooling",
+    "url": "http://xrpfaucet.info",
+    "minimum": 1,
+    "fee": 0,
+    "captcha": [
+      "reCAPTCHA"
+    ]
+  }
+]

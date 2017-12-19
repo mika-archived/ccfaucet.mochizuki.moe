@@ -387,5 +387,43 @@
         ]
       }
     }
+  },
+  {
+    "name": "Aeon",
+    "symbol": "AEON",
+    "logo": {
+      "license": "Unlicense",
+      "link": {
+        "href": "https://coinmarketcap.com/currencies/aeon/",
+        "text": [
+          "AEON, The Monero Project"
+        ]
+      }
+    }
+  },
+  {
+    "name": "Decred",
+    "symbol": "DCR",
+    "logo": {
+      "license": "Unlicense",
+      "link": {
+        "href": "https://www.decred.org/brand/",
+        "text": "Decred "
+      }
+    }
+  },
+  {
+    "name": "NXT",
+    "symbol": "NXT",
+    "logo": {
+      "license": "Unlicense",
+      "link": {
+        "href": "https://coinmarketcap.com/currencies/nxt/",
+        "text": [
+          "The Nxt Core Developers.",
+          "Jelurida IP B.V."
+        ]
+      }
+    }
   }
 ]
