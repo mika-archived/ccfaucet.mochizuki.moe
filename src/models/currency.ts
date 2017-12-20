@@ -6,7 +6,7 @@ export class Currency {
 
   public ticker: ITicker;
 
-  public constructor(public name: string, public symbol: string, public explorer: string) {
+  public constructor(public name: string, public symbol: string, public fallbackId: string, public explorer: string) {
     this.id = name.toLocaleLowerCase().replace(' ', '-');
     this.lowername = name.toLocaleLowerCase();
   }

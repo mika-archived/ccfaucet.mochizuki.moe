@@ -1,0 +1,13 @@
+[
+  {
+    "name": "Free DGB from the Digibyte Faucet!",
+    "frequency": 60,
+    "payout": "Pooling",
+    "url": "http://digibytefaucet.info/ref/DLMZ21zDnKPkXko7HGuaUiHYvytT6szPjv",
+    "minimum": 6,
+    "fee": 0,
+    "captcha": [
+      "reCAPTCHA"
+    ]
+  }
+]

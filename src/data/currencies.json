@@ -408,7 +408,9 @@
       "license": "Unlicense",
       "link": {
         "href": "https://www.decred.org/brand/",
-        "text": "Decred "
+        "text": [
+          "Decred"
+        ]
       }
     }
   },
@@ -422,6 +424,31 @@
         "text": [
           "The Nxt Core Developers.",
           "Jelurida IP B.V."
+        ]
+      }
+    }
+  },
+  {
+    "name": "Bytecoin",
+    "symbol": "BCN",
+    "id": "bytecoin-bcn",
+    "logo": {
+      "license": "Unlicense",
+      "link": {
+        "href": "https://coinmarketcap.com/currencies/bytecoin-bcn/",
+        "text": []
+      }
+    }
+  },
+  {
+    "name": "DigiByte",
+    "symbol": "DGB",
+    "logo": {
+      "license": "MIT License",
+      "link": {
+        "href": "https://github.com/digibyte/digibyte",
+        "text": [
+          "The DigiByte Core developers"
         ]
       }
     }

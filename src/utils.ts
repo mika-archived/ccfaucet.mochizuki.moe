@@ -34,17 +34,22 @@ export function payouts(): IPayout[] {
 export async function loadTickers(): Promise<void> {
   const response = await axios.get('https://api.coinmarketcap.com/v1/ticker/?convert=JPY&limit=0');
   if (response.status === 200) {
-    _.forEach(response.data, (w: ITicker) => {
-      const currency = currencyStore.find((v) => v.id === w.id);
-      if (currency) {
-        currency.ticker = w;
+    _.forEach(currencyStore, (w: Currency) => {
+      let ticker = response.data.find((v) => v.id === w.id);
+      if (ticker) {
+        w.ticker = ticker;
+      } else {
+        ticker = response.data.find((v) => v.id === w.fallbackId);
+        if (ticker) {
+          w.ticker = ticker;
+        }
       }
     });
   }
 }
 
 function loadCurrencies(): void {
-  _.sortBy((<any>_currencies).map((w) => new Currency(w.name, w.symbol, w.explorer)), (w: Currency) => w.name.toLocaleLowerCase()).forEach((w) => {
+  _.sortBy((<any>_currencies).map((w) => new Currency(w.name, w.symbol, w.id, w.explorer)), (w: Currency) => w.name.toLocaleLowerCase()).forEach((w) => {
     currencyStore.push(w);
   });
 }
