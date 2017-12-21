@@ -276,6 +276,7 @@
   {
     "name": "BitCore",
     "symbol": "BTX",
+    "explorer": "https://chainz.cryptoid.info/btx/tx.dws?",
     "logo": {
       "license": "MIT License",
       "link": {
