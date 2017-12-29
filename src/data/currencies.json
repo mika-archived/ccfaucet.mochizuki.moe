@@ -375,6 +375,7 @@
   {
     "name": "XP",
     "symbol": "XP",
+    "id": "experience-points",
     "logo": {
       "license": "MIT License",
       "link": {
