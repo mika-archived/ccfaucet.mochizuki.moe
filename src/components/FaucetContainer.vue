@@ -111,7 +111,7 @@ export default class FaucetContainer extends Vue {
   }
 
   public get isPureUrl(): boolean {
-    return localStorage.getItem("disableAffilicate") !== null;
+    return localStorage.getItem("disableAffiliate") !== null;
   }
 
   public filteredItems(): Faucet[] {
