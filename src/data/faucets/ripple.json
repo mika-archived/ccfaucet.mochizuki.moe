@@ -4,7 +4,7 @@
     "frequency": 60,
     "payout": "Pooling",
     "url": "https://xrpfaucet.info/ref/rUpRPeEwjkHwU4wyZKeFLRQQvCguxZP4UG",
-    "minimum": 1,
+    "minimum": 0.5,
     "fee": 0,
     "captcha": [
       "reCAPTCHA"

@@ -4,7 +4,7 @@
     "frequency": 60,
     "payout": "Pooling",
     "url": "http://digibytefaucet.info/ref/DLMZ21zDnKPkXko7HGuaUiHYvytT6szPjv",
-    "minimum": 6,
+    "minimum": 5,
     "fee": 0,
     "captcha": [
       "reCAPTCHA"

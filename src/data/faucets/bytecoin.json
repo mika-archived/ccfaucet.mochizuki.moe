@@ -4,7 +4,7 @@
     "frequency": 60,
     "payout": "Pooling",
     "url": "http://bytecoinfaucet.info/ref/23PWUE6G9jpHBgsCocCG8pF6Epoj96FBigp6dpKCGjeRGuEFr9mJRHn9BAMtRdfTgDdwKG15XoPap85b3DfeUaXZ369daA4",
-    "minimum": 100,
+    "minimum": 50,
     "fee": 0,
     "captcha": [
       "reCAPTCHA"
