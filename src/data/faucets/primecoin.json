@@ -5,6 +5,7 @@
     "payout": "FaucetHub",
     "url": "https://xpm-faucet.com/?r=AM2QVydWBt23S5HCsCNVvaWqDRShqfkJKa",
     "captcha": [
+      "AntiBot Links",
       "reCAPTCHA",
       "SolveMedia"
     ]
@@ -27,6 +28,18 @@
     "captcha": [
       "Geetest",
       "reCAPTCHA"
-    ]
+    ],
+    "global": true
+  },
+  {
+    "name": "XPM - Faucet Gold",
+    "frequency": 5,
+    "payout": "FaucetHub",
+    "url": "https://faucet.gold/XPM/?r=AM2QVydWBt23S5HCsCNVvaWqDRShqfkJKa",
+    "captcha": [
+      "AntiBot Links",
+      "SolveMedia"
+    ],
+    "global": true
   }
 ]

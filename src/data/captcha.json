@@ -10,5 +10,9 @@
   {
     "name": "Geetest",
     "color": "info"
+  },
+  {
+    "name": "AntiBot Links",
+    "color": "success"
   }
 ]

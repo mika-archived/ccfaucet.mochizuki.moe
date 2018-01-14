@@ -5,6 +5,7 @@
     "payout": "FaucetHub",
     "url": "https://dash-faucet.com/?r=XinqrYP4KD3vxFhuEniqkwa6GPRayhriqU",
     "captcha": [
+      "AntiBot Links",
       "reCAPTCHA",
       "SolveMedia"
     ]
@@ -27,7 +28,8 @@
     "captcha": [
       "Geetest",
       "reCAPTCHA"
-    ]
+    ],
+    "global": true
   },
   {
     "name": "QoinPro.com",
@@ -56,5 +58,16 @@
     "captcha": [
       "SolveMedia"
     ]
+  },
+  {
+    "name": "DASH - Faucet Gold",
+    "frequency": 5,
+    "payout": "FaucetHub",
+    "url": "https://faucet.gold/DASH/?r=XinqrYP4KD3vxFhuEniqkwa6GPRayhriqU",
+    "captcha": [
+      "AntiBot Links",
+      "SolveMedia"
+    ],
+    "global": true
   }
 ]

@@ -12,10 +12,10 @@
 }
 ```
 
-| Field | Required | Desc |
-| ----- | -------- | ---- |
-| `name` | Yes | CAPTCHA サービス名 |
-| `color` | Yes | バッジ表示カラー (参照: [Badge - BootstrapVue](https://bootstrap-vue.js.org/docs/components/badge#contextual-variations))
+| Field   | Required | Desc                                                                                                                |
+| ------- | -------- | ------------------------------------------------------------------------------------------------------------------- |
+| `name`  | Yes      | CAPTCHA サービス名                                                                                                      |
+| `color` | Yes      | バッジ表示カラー (参照: [Badge - BootstrapVue](https://bootstrap-vue.js.org/docs/components/badge#contextual-variations)) |
 
 
 
@@ -36,16 +36,16 @@
 }
 ```
 
-| Field | Required | Desc |
-| ----- | -------- | ---- |
-| `name` | Yes | 暗号通貨名 |
-| `symbol` | Yes | 暗号通貨通貨記号 |
-| `exlorer` | No | ブロックエクスプローラーのトランザクション URL |
-| `logo` | Yes | -> |
-| `logo.license` | Yes | ロゴファイルライセンス |
-| `logo.link` | Yes | -> |
-| `logo.link.href` | Yes | 権利者ページ URL |
-| `logo.link.text` | Yes | 権利者名 |
+| Field            | Required | Desc                      |
+| ---------------- | -------- | ------------------------- |
+| `name`           | Yes      | 暗号通貨名                |
+| `symbol`         | Yes      | 暗号通貨通貨記号          |
+| `exlorer`        | No       | ブロックエクスプローラーのトランザクション URL |
+| `logo`           | Yes      | ->                        |
+| `logo.license`   | Yes      | ロゴファイルライセンス               |
+| `logo.link`      | Yes      | ->                        |
+| `logo.link.href` | Yes      | 権利者ページ URL             |
+| `logo.link.text` | Yes      | 権利者名                  |
 
 
 ## `payouts.json`
@@ -87,14 +87,14 @@
 }
 ```
 
-| Field | Required | Desc |
-| ----- | -------- | ---- |
-| `name` | Yes | 支払い方法もしくはサービス名 |
-| `minimum` | Yes | 最小出金額 (Object の場合、 `requireRes` を `true` に) |
-| `fee` | Yes | 最小手数料 (Object の場合、 `requireRes` を `true` に) |
-| `requireRes` | Yes | `minimum` / `fee` の参照が必要か |
-| `txSearchMode` | Yes | Tx の検索方法 (`default` / `none` / `prefix`) |
-| `url` | Yes | サービス URL |
+| Field          | Required | Desc                                                |
+| -------------- | -------- | --------------------------------------------------- |
+| `name`         | Yes      | 支払い方法もしくはサービス名                                 |
+| `minimum`      | Yes      | 最小出金額 (Object の場合、 `requireRes` を `true` に) |
+| `fee`          | Yes      | 最小手数料 (Object の場合、 `requireRes` を `true` に) |
+| `requireRes`   | Yes      | `minimum` / `fee` の参照が必要か                       |
+| `txSearchMode` | Yes      | Tx の検索方法 (`default` / `none` / `prefix`)        |
+| `url`          | Yes      | サービス URL                                            |
 
 
 ## `faucets/*.json`
@@ -128,15 +128,16 @@
 }
 ```
 
-| Field | Required | Desc |
-| ----- | -------- | ---- |
-| `name` | Yes | サイト名 |
-| `frequency` | Yes | 出金可能頻度 (分) |
-| `payout` | Yes | 出金方法 (`payouts.json` の `name`) |
-| `url` | Yes | サイト URL |
-| `minimum` | No | 最小出金額 (`payout` が `Direct` の場合必須) |
-| `fee` | No | 最小手数料 (`payout` が `Direct` の場合必須) |
-| `captcha` | Yes | CAPTCHA (`captcha.json` の `name`) |
+| Field       | Required | Desc                                       |
+| ----------- | -------- | ------------------------------------------ |
+| `name`      | Yes      | サイト名                                      |
+| `frequency` | Yes      | 出金可能頻度 (分)                          |
+| `payout`    | Yes      | 出金方法 (`payouts.json` の `name`)         |
+| `url`       | Yes      | サイト URL                                    |
+| `minimum`   | No       | 最小出金額 (`payout` が `Direct` の場合必須) |
+| `fee`       | No       | 最小手数料 (`payout` が `Direct` の場合必須) |
+| `captcha`   | Yes      | CAPTCHA (`captcha.json` の `name`)          |
+| `global`    | No       | ドメイン下でタイマーが共通になっている場合 `true`          |
 
 
 ## `trusts/*.json`
@@ -151,7 +152,7 @@
 }
 ```
 
-| Field | Required | Desc |
-| ----- | -------- | ---- |
-| `payout` | Yes | 出金方法 (`payouts.json` の `name`) |
-| `txid` | Yes | トランザクション ID |
+| Field    | Required | Desc                               |
+| -------- | -------- | ---------------------------------- |
+| `payout` | Yes      | 出金方法 (`payouts.json` の `name`) |
+| `txid`   | Yes      | トランザクション ID                        |

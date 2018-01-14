@@ -16,6 +16,7 @@
     "payout": "Pooling",
     "url": "http://nemfaucet.info/ref/NDXD3H-ZJVPEI-JDWA7Q-56DUKJ-3YYQZV-QHX7DL-GMDV",
     "minimum": 0.5,
+    "fee": 0.001,
     "captcha": [
       "reCAPTCHA"
     ]

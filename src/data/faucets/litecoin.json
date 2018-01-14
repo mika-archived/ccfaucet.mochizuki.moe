@@ -15,6 +15,7 @@
     "payout": "FaucetHub",
     "url": "https://litecoin-faucet.com/?r=LiSmd3Pp1hCoPGPguSVCUyo1RHak5g1mcj",
     "captcha": [
+      "AntiBot Links",
       "reCAPTCHA",
       "SolveMedia"
     ]
@@ -37,7 +38,8 @@
     "captcha": [
       "Geetest",
       "reCAPTCHA"
-    ]
+    ],
+    "global": true
   },
   {
     "name": "FreeBitcoin.Win",
@@ -65,5 +67,16 @@
     "captcha": [
       "SolveMedia"
     ]
+  },
+  {
+    "name": "LTC - Faucet Gold",
+    "frequency": 5,
+    "payout": "FaucetHub",
+    "url": "https://faucet.gold/LTC/?r=LiSmd3Pp1hCoPGPguSVCUyo1RHak5g1mcj",
+    "captcha": [
+      "AntiBot Links",
+      "SolveMedia"
+    ],
+    "global": true
   }
 ]

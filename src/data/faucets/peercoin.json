@@ -5,6 +5,7 @@
     "payout": "FaucetHub",
     "url": "https://ppc-faucet.com/?r=PBHB7UYxn1QQcavS1JZrVmXWza7tKt6Lxh",
     "captcha": [
+      "AntiBot Links",
       "reCAPTCHA",
       "SolveMedia"
     ]
@@ -27,15 +28,27 @@
     "captcha": [
       "Geetest",
       "reCAPTCHA"
-    ]
+    ],
+    "global": true
   },
   {
     "name": "QoinPro.com",
     "frequency": 1440,
     "payout": "Pooling",
     "url": "https://qoinpro.com/4bae2377edbc3c45641828b303ad4227",
-    "minimumimum": 0.02,
+    "minimum": 0.02,
     "fee": 0.001,
     "captcha": []
+  },
+  {
+    "name": "PPC - Faucet Gold",
+    "frequency": 5,
+    "payout": "FaucetHub",
+    "url": "https://faucet.gold/PPC/?r=PBHB7UYxn1QQcavS1JZrVmXWza7tKt6Lxh",
+    "captcha": [
+      "AntiBot Links",
+      "SolveMedia"
+    ],
+    "global": true
   }
 ]
