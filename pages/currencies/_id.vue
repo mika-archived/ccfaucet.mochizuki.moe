@@ -25,7 +25,7 @@
         template(slot="currency" slot-scope="data")
           span {{data.item.currency.name}}
         template(slot="website" slot-scope="data")
-          a(:href="isPureUrl ? data.item.pureUrl : data.item.url" target="_blank") {{data.item.name}}
+          a(:href="isPureUrl ? purelize(data.item.url) : data.item.url" target="_blank") {{data.item.name}}
         template(slot="frequency" slot-scope="data")
           span {{data.item.formatFrequency()}}
         template(slot="payout" slot-scope="data")
@@ -114,6 +114,10 @@ export default class extends Vue {
   public mounted(): void {
     // this.currency = this.findCurrency((this as any).$route.params.id);
     this.faucets = this.selectFaucets((this as any).$route.params.id).map(w => Faucet.fromJson(w));
+  }
+
+  public purelize(url: string): string {
+    return url.replace(/(\?)?(ref|r|i)(=|\/).*/g, "");
   }
 }
 </script>
