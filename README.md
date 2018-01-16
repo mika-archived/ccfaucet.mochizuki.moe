@@ -3,7 +3,7 @@
 [![license](https://img.shields.io/github/license/mika-f/crypto-faucets.svg?style=flat-square)](./LICENSE)
 
 暗号通貨の蛇口リストです。  
-詳しくは、 https://mochizuki.moe/crypto-faucets/#/about を参照して下さい。
+詳しくは、 https://mochizuki.moe/crypto-faucets/about を参照して下さい。
 
 
 ## ビルド & セットアップ
@@ -28,14 +28,14 @@ yarn run build --report
 暗号通貨の種類や単位、蛇口などのデータは、全て JSON ファイルで定義されています。  
 それぞれ、以下のファイルにて定義されています。
 
-* 暗号通貨: [`currencies.json`](./src/assets/data/currencies.json)
-* 支払い方法: [`payouts.json`](./src/assets/data/payouts.json)
-* 認証方法: [`captcha.json`](./src/assets/data/captcha.json)
-* 蛇口: [`faucets/*.json`](./src/assets/data/faucets/)
-  * Bitcoin: [`faucets/bitcoin.json`](./src/assets/data/faucets/bitcoin.json)
-  * Bitcoin Cash: [`faucets/bitcoin-cash.json`](./src/assets/data/faucets/bitcoin-cash.json)
+* 暗号通貨: [`currencies.json`](./assets/data/currencies.json)
+* 支払い方法: [`payouts.json`](./assets/data/payouts.json)
+* 認証方法: [`captcha.json`](./assets/data/captcha.json)
+* 蛇口: [`faucets/*.json`](./assets/data/faucets/)
+  * Bitcoin: [`faucets/bitcoin.json`](./assets/data/faucets/bitcoin.json)
+  * Bitcoin Cash: [`faucets/bitcoin-cash.json`](./assets/data/faucets/bitcoin-cash.json)
   * 全て `"暗号通貨名".toLocaleLowerCase().replace(' ', '-')` のファイルが参照されています。
-* トランザクション: [`transactions/*.json`](./src/assets/data/transactions/)
-  * Bitcoin: [`transactions/bitcoin.json`](./src/assets/data/faucets/bitcoin.json)
-  * Bitcoin Cash: [`transactions/bitcoin-cash.json`](./src/assets/data/faucets/bitcoin-cash.json)
+* トランザクション: [`transactions/*.json`](./assets/data/transactions/)
+  * Bitcoin: [`transactions/bitcoin.json`](./assets/data/faucets/bitcoin.json)
+  * Bitcoin Cash: [`transactions/bitcoin-cash.json`](./assets/data/faucets/bitcoin-cash.json)
   * 全て `"暗号通貨名".toLocaleLowerCase().replace(' ', '-')` のファイルが参照されています。
