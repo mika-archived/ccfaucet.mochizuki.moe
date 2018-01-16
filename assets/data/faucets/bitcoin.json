@@ -48,8 +48,8 @@
     "payout": "FaucetHub",
     "url": "https://www.xfaucet.net/bitcoin/?r=1E4NZUSC39BEPsE1xVKVyHrBxstXdrNVM4",
     "captcha": [
-      "Geetest",
-      "reCAPTCHA"
+      "Bitcaptcha",
+      "Coinhive"
     ],
     "global": true
   },

@@ -26,8 +26,8 @@
     "payout": "FaucetHub",
     "url": "https://www.xfaucet.net/blackcoin/?r=BGgDvUmW4mbF1jgi69wVUbwskYRNyB4Trx",
     "captcha": [
-      "Geetest",
-      "reCAPTCHA"
+      "Bitcaptcha",
+      "Coinhive"
     ],
     "global": true
   },

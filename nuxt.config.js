@@ -38,7 +38,7 @@ module.exports = {
         */
       }
     },
-    vendor: ["axios"]
+    vendor: []
   },
   modules: [
     "modules/typescript.ts",

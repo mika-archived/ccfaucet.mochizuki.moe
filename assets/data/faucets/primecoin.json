@@ -26,8 +26,8 @@
     "payout": "FaucetHub",
     "url": "https://www.xfaucet.net/primecoin/?r=AM2QVydWBt23S5HCsCNVvaWqDRShqfkJKa",
     "captcha": [
-      "Geetest",
-      "reCAPTCHA"
+      "Bitcaptcha",
+      "Coinhive"
     ],
     "global": true
   },

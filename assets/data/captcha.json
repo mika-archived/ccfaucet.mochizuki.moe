@@ -14,5 +14,13 @@
   {
     "name": "AntiBot Links",
     "color": "success"
+  },
+  {
+    "name": "Bitcaptcha",
+    "color": "dark"
+  },
+  {
+    "name": "Coinhive",
+    "color": "danger"
   }
 ]
