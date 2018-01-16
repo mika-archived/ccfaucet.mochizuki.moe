@@ -17,7 +17,7 @@
       h3 暗号通貨一覧
       .currencies
         template(v-for="currency in currencies")
-          router-link.logo-outer(:to="`/currencies/${currency.id}`")
+          router-link.logo-outer(:to="`./currencies/${currency.id}`")
             img.logo-inner(:src="`./${currency.id}.png`" :title="currency.name")
 
 </template>

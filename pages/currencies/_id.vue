@@ -2,7 +2,7 @@
   b-container
     section
       h2
-        img.title(:src="`../${currency.id}.png`")
+        img.title(:src="`./${currency.id}.png`")
         | {{currency.name}} の蛇口一覧
 
     section

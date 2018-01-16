@@ -2,7 +2,7 @@
   b-container
     section
       h2
-        img.title(:src="`../bitcoin.png`")
+        img.title(:src="`./bitcoin.png`")
         | 登録されている全ての蛇口一覧
 
     section

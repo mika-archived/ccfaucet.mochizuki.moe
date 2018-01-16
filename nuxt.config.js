@@ -59,5 +59,8 @@ module.exports = {
       callback(null, routes);
     },
     interval: 500
+  },
+  router: {
+    base: "/crypto-faucets/"
   }
 }
