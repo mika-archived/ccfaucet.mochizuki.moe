@@ -1,20 +1,22 @@
 {
   "compilerOptions": {
     "target": "es5",
-    "module": "es2015",
     "lib": [
       "dom",
       "es2015",
-      "es2016"
+      "es2016",
+      "es2017"
     ],
-    "sourceMap": true,
-    "strict": true,
+    "module": "es2015",
     "moduleResolution": "node",
-    "allowSyntheticDefaultImports": true,
     "experimentalDecorators": true,
-    "emitDecoratorMetadata": true,
-    "importHelpers": true,
-    "noEmitHelpers": true,
-    "noImplicitAny": false
+    "noImplicitAny": false,
+    "noImplicitThis": false,
+    "strictNullChecks": true,
+    "removeComments": true,
+    "suppressImplicitAnyIndexErrors": true,
+    "allowSyntheticDefaultImports": true,
+    "allowJs": true,
+    "baseUrl": "."
   }
 }
