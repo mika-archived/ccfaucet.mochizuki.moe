@@ -2,5 +2,9 @@
   {
     "payout": "CoinPot",
     "txid": "82325a6d2723f23394566836c13af6fb303ef2925aa0494d6e70576c5901cf7a"
+  },
+  {
+    "payout": "FaucetHub",
+    "txid": "acb00348673af934dd123158ff35580006d17953007eb12fbb87701f6ac3dfef"
   }
 ]
