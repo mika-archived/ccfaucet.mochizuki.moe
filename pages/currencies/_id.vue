@@ -82,7 +82,7 @@ export default class extends Vue {
   public currency: Currency = new Bitcoin();
   public title: string = "";
   public tableFields = {
-    trust: { label: "信頼性" },
+    trust: { label: "Tx" },
     website: { label: "ウェブサイト" },
     frequency: { label: "タイマー" },
     payout: { label: "支払い方法" },

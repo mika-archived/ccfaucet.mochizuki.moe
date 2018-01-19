@@ -38,5 +38,15 @@
       "SolveMedia"
     ],
     "global": true
+  },
+  {
+    "name": "Moon Cash",
+    "frequency": 0,
+    "payout": "CoinPot",
+    "url": "http://moonb.ch/?ref=1C119DA23244",
+    "captcha": [
+      "reCAPTCHA",
+      "SolveMedia"
+    ]
   }
 ]

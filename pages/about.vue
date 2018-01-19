@@ -52,7 +52,7 @@ export default class extends Vue {
     items: [
       {
         name: "Tx",
-        description: "当サイトで、実際に出金を確認できた蛇口です。出金の詳細は、リンク先で確認できます。"
+        description: "✓ がある場合、当サイトで実際に出金を確認できた蛇口です。出金の詳細は、リンク先で確認できます。"
       },
       {
         name: "種類",
@@ -64,7 +64,7 @@ export default class extends Vue {
       },
       {
         name: "タイマー",
-        description: "仮想通貨をもらうことが出来る頻度です。「生成」となっている物は、時間経過によってもらえる仮想通貨の量が増加します。"
+        description: "仮想通貨をもらえる頻度です。「生成」の場合は、時間経過によってもらえる量が増加します。"
       },
       {
         name: "支払い方法",
