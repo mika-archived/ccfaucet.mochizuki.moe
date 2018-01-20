@@ -36,6 +36,6 @@ yarn run build --report
   * Bitcoin Cash: [`faucets/bitcoin-cash.json`](./assets/data/faucets/bitcoin-cash.json)
   * 全て `"暗号通貨名".toLocaleLowerCase().replace(' ', '-')` のファイルが参照されています。
 * トランザクション: [`transactions/*.json`](./assets/data/transactions/)
-  * Bitcoin: [`transactions/bitcoin.json`](./assets/data/faucets/bitcoin.json)
-  * Bitcoin Cash: [`transactions/bitcoin-cash.json`](./assets/data/faucets/bitcoin-cash.json)
+  * Bitcoin: [`transactions/bitcoin.json`](./assets/data/transactions/bitcoin.json)
+  * Bitcoin Cash: [`transactions/bitcoin-cash.json`](./assets/data/transactions/bitcoin-cash.json)
   * 全て `"暗号通貨名".toLocaleLowerCase().replace(' ', '-')` のファイルが参照されています。
