@@ -13,9 +13,10 @@
     "precommit": "npm run lint"
   },
   "dependencies": {
+    "@nuxtjs/google-analytics": "^2.0.2",
     "bootstrap": "4.0.0-beta.2",
     "bootstrap-vue": "^1.4.1",
-    "lodash": "^4.17.4",
+    "lodash.sortby": "^4.7.0",
     "nuxt": "^1.0.0",
     "nuxt-class-component": "^1.1.3",
     "vue-class-component": "^6.1.2",

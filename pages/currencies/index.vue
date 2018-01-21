@@ -44,7 +44,6 @@
 </template>
 
 <script lang="ts">
-import _ from "lodash";
 import Vue from "vue";
 import Component from "nuxt-class-component";
 import { Getter } from "vuex-class";

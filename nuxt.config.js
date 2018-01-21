@@ -42,7 +42,8 @@ module.exports = {
   },
   modules: [
     "modules/typescript.ts",
-    ["bootstrap-vue/nuxt", { css: false, bvCSS: false }]
+    ["bootstrap-vue/nuxt", { css: false, bvCSS: false }],
+    ["@nuxtjs/google-analytics", { id: "UA-68289020-2" }]
   ],
   generate: {
     dir: "docs",

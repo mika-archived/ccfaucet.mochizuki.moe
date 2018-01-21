@@ -15,8 +15,8 @@
     "frequency": 60,
     "payout": "Pooling",
     "url": "https://freedoge.co.in/?r=1294087",
-    "minimum": 200,
-    "fee": 1,
+    "minimum": 19,
+    "fee": 0.25,
     "captcha": [
       "reCAPTCHA",
       "SolveMedia"

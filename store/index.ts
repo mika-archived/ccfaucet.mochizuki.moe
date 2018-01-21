@@ -1,4 +1,4 @@
-import _ from "lodash";
+import sortBy from "lodash.sortby";
 
 import { ICaptcha } from "../models/captcha";
 import { Currency } from "../models/currency";
@@ -47,7 +47,7 @@ const actions = {
     commit("SET_PAYOUTS", payouts);
 
     const currencies: Currency[] = [];
-    _.sortBy((require("../assets/data/currencies.json")).map((w) => new Currency(w.name, w.symbol, w.id, w.explorer)), (w: Currency) => w.name.toLocaleLowerCase()).forEach((w) => {
+    sortBy((require("../assets/data/currencies.json")).map((w) => new Currency(w.name, w.symbol, w.id, w.explorer)), (w: Currency) => w.name.toLocaleLowerCase()).forEach((w) => {
       currencies.push(w);
     });
     commit("SET_CURRENCIES", currencies);
@@ -55,7 +55,7 @@ const actions = {
 
     const faucets: Faucet[] = [];
     currencies.forEach((currency) => {
-      const faucetsOfCurrency = _.sortBy(require(`../assets/data/faucets/${currency.id}.json`), (w) => w.name.toLocaleLowerCase());
+      const faucetsOfCurrency = sortBy(require(`../assets/data/faucets/${currency.id}.json`), (w) => w.name.toLocaleLowerCase());
       const txsOfCurrency: any[] = require(`../assets/data/transactions/${currency.id}.json`);
       faucetsOfCurrency.forEach((json) => {
         const faucet = Faucet.fromJson(json);
