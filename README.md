@@ -1,5 +1,6 @@
 # Cryptocurrency Faucet List
-[![GitHub last commit](https://img.shields.io/github/last-commit/mika-f/crypto-faucets.svg?style=flat-square)]()
+[![CircleCI](https://img.shields.io/circleci/project/github/mika-f/crypto-faucets.svg?style=flat-square)](https://ccfaucet.mochizuki.moe)
+[![GitHub last commit](https://img.shields.io/github/last-commit/mika-f/crypto-faucets.svg?style=flat-square)](https://github.com/mika-f/crypto-faucets/commits/master)
 [![license](https://img.shields.io/github/license/mika-f/crypto-faucets.svg?style=flat-square)](./LICENSE)
 
 暗号通貨の蛇口リストです。  
