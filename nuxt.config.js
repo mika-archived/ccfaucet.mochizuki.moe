@@ -62,6 +62,6 @@ module.exports = {
     interval: 500
   },
   router: {
-    base: "/crypto-faucets/"
+    // base: "/crypto-faucets/"
   }
 }
