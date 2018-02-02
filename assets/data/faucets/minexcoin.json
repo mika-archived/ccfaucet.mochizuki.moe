@@ -1,0 +1,13 @@
+[
+  {
+    "name": "Minexcoin Stratum Pool",
+    "frequency": 360,
+    "payout": "Direct",
+    "url": "https://xdeathwing.com/faucet/#",
+    "minimum": 0,
+    "fee": 0,
+    "captcha": [
+      "reCAPTCHA"
+    ]
+  }
+]

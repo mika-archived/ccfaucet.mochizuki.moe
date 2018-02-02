@@ -61,13 +61,12 @@
   },
   {
     "name": "DASH - Faucet Gold",
-    "frequency": 5,
+    "frequency": 3,
     "payout": "FaucetHub",
     "url": "https://faucet.gold/DASH/?r=XinqrYP4KD3vxFhuEniqkwa6GPRayhriqU",
     "captcha": [
       "AntiBot Links",
       "SolveMedia"
-    ],
-    "global": true
+    ]
   }
 ]

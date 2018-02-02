@@ -59,7 +59,8 @@
     "payout": "FaucetHub",
     "url": "http://freebitcoin.win/ref/3033",
     "captcha": [
-      "SolveMedia"
+      "SolveMedia",
+      "Captch Me"
     ]
   },
   {
@@ -92,13 +93,12 @@
   },
   {
     "name": "BTC - Faucet Gold",
-    "frequency": 5,
+    "frequency": 3,
     "payout": "FaucetHub",
     "url": "https://faucet.gold/BTC/?r=1E4NZUSC39BEPsE1xVKVyHrBxstXdrNVM4",
     "captcha": [
       "AntiBot Links",
       "SolveMedia"
-    ],
-    "global": true
+    ]
   }
 ]

@@ -14,8 +14,7 @@
   },
   "dependencies": {
     "@nuxtjs/google-analytics": "^2.0.2",
-    "bootstrap": "4.0.0-beta.2",
-    "bootstrap-vue": "^1.4.1",
+    "bootstrap-vue": "^2.0.0-rc.1",
     "lodash.sortby": "^4.7.0",
     "nuxt": "^1.0.0",
     "nuxt-class-component": "^1.1.3",

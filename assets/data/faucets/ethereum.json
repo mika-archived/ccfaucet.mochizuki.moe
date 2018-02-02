@@ -1,6 +1,6 @@
 [
   {
-    "name": "Ethereum for free! Claim your free ether from the Ethereum Faucet!",
+    "name": "Free ether from the Ethereum Faucet!",
     "frequency": 60,
     "payout": "Pooling",
     "url": "http://ethereumfaucet.info/ref/0x3cD67f16C2D7FE518E924930f645DD73AAdAAF39",
@@ -35,18 +35,18 @@
     "payout": "FaucetHub",
     "url": "http://freebitcoin.win/ref/3033",
     "captcha": [
-      "SolveMedia"
+      "SolveMedia",
+      "Captch Me"
     ]
   },
   {
     "name": "ETH - Faucet Gold",
-    "frequency": 5,
+    "frequency": 3,
     "payout": "FaucetHub",
     "url": "https://faucet.gold/ETH/?r=0x3cD67f16C2D7FE518E924930f645DD73AAdAAF39",
     "captcha": [
       "AntiBot Links",
       "SolveMedia"
-    ],
-    "global": true
+    ]
   }
 ]

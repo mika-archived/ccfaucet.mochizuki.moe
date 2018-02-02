@@ -33,13 +33,12 @@
   },
   {
     "name": "XPM - Faucet Gold",
-    "frequency": 5,
+    "frequency": 3,
     "payout": "FaucetHub",
     "url": "https://faucet.gold/XPM/?r=AM2QVydWBt23S5HCsCNVvaWqDRShqfkJKa",
     "captcha": [
       "AntiBot Links",
       "SolveMedia"
-    ],
-    "global": true
+    ]
   }
 ]

@@ -11,7 +11,7 @@
     ]
   },
   {
-    "name": "Free Blackcoin with the Blackcoin.info faucet!",
+    "name": "Free Blackcoin with the Blackcoin faucet!",
     "frequency": 60,
     "payout": "Pooling",
     "url": "http://blackcoin.info/ref/B69gaoqskF4LQ1ABqwJbFuqtuBKoNaDyts",
@@ -33,13 +33,12 @@
   },
   {
     "name": "BLK - Faucet Gold",
-    "frequency": 5,
+    "frequency": 3,
     "payout": "FaucetHub",
     "url": "https://faucet.gold/BLK/?r=BGgDvUmW4mbF1jgi69wVUbwskYRNyB4Trx",
     "captcha": [
       "AntiBot Links",
       "SolveMedia"
-    ],
-    "global": true
+    ]
   }
 ]

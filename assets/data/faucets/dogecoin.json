@@ -49,7 +49,8 @@
     "payout": "FaucetHub",
     "url": "http://freebitcoin.win/ref/3033",
     "captcha": [
-      "SolveMedia"
+      "SolveMedia",
+      "Captch Me"
     ]
   },
   {
@@ -63,13 +64,12 @@
   },
   {
     "name": "DOGE - Faucet Gold",
-    "frequency": 5,
+    "frequency": 3,
     "payout": "FaucetHub",
     "url": "https://faucet.gold/DOGE/?r=DU2g1zeQbmhXdFzx3vzSFGbkuwzduVas85",
     "captcha": [
       "AntiBot Links",
       "SolveMedia"
-    ],
-    "global": true
+    ]
   }
 ]

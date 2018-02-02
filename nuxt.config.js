@@ -11,8 +11,8 @@ module.exports = {
     ],
     link: [
       { rel: "icon", type: "image/x-icon", href: "/favicon.ico" },
-      { rel: "stylesheet", href: "https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" },
-      { rel: "stylesheet", href: "https://unpkg.com/bootstrap-vue@1.4.1/dist/bootstrap-vue.css" }
+      { rel: "stylesheet", href: "https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" },
+      { rel: "stylesheet", href: "https://unpkg.com/bootstrap-vue@2.0.0-rc.1/dist/bootstrap-vue.css" }
     ]
   },
   /*

@@ -42,13 +42,12 @@
   },
   {
     "name": "PPC - Faucet Gold",
-    "frequency": 5,
+    "frequency": 3,
     "payout": "FaucetHub",
     "url": "https://faucet.gold/PPC/?r=PBHB7UYxn1QQcavS1JZrVmXWza7tKt6Lxh",
     "captcha": [
       "AntiBot Links",
       "SolveMedia"
-    ],
-    "global": true
+    ]
   }
 ]

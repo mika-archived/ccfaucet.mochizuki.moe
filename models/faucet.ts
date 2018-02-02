@@ -35,9 +35,6 @@ export class Faucet implements IFaucet {
         faucet[key] = json[key];
       }
     }
-    if (faucet.name.length > 25) {
-      faucet.name = `${faucet.name.substr(0, 24)}…`;
-    }
     return faucet;
   }
 

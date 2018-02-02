@@ -22,5 +22,9 @@
   {
     "name": "Coinhive",
     "color": "danger"
+  },
+  {
+    "name": "Captch Me",
+    "color": "default"
   }
 ]

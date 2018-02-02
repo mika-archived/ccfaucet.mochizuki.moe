@@ -454,5 +454,26 @@
         ]
       }
     }
+  },
+  {
+    "name": "Minexcoin",
+    "symbol": "MNX",
+    "logo": {
+      "license": "MIT License",
+      "link": {
+        "href": "https://github.com/minexcoin/minexcoin",
+        "text": [
+          "The Minexcoin Core developers"
+        ]
+      }
+    }
+  },
+  {
+    "name": "Siacoin",
+    "symbol": "SC",
+    "logo": {
+      "license": "",
+      "link": {}
+    }
   }
 ]
