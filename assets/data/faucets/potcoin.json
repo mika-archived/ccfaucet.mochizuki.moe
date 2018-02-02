@@ -1,5 +1,21 @@
 [
   {
-    "name": ""
+    "name": "POT - Faucet GOld",
+    "frequency": 5,
+    "payout": "FaucetHub",
+    "url": "https://faucet.gold/POT/?r=PPZAvGzZXaQUddiJTHdCtQcRr5s21PWPan",
+    "captcha": [
+      "reCAPTCHA"
+    ]
+  },
+  {
+    "name": "FreeBitcoin.Win",
+    "frequency": 10,
+    "payout": "FaucetHub",
+    "url": "http://freebitcoin.win/ref/3033",
+    "captcha": [
+      "SolveMedia",
+      "Captch Me"
+    ]
   }
 ]
