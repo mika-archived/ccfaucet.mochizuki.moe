@@ -3,7 +3,7 @@
 [![license](https://img.shields.io/github/license/mika-f/crypto-faucets.svg?style=flat-square)](./LICENSE)
 
 暗号通貨の蛇口リストです。  
-詳しくは、 https://mochizuki.moe/crypto-faucets/about を参照して下さい。
+詳しくは、 https://ccfaucet.mochizuki.moe/about を参照して下さい。
 
 
 ## ビルド & セットアップ
