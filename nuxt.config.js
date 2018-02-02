@@ -46,7 +46,6 @@ module.exports = {
     ["@nuxtjs/google-analytics", { id: "UA-68289020-2" }]
   ],
   generate: {
-    dir: "docs",
     routes: function (callback) {
       const routes = [
         "/",
@@ -60,8 +59,5 @@ module.exports = {
       callback(null, routes);
     },
     interval: 500
-  },
-  router: {
-    // base: "/crypto-faucets/"
   }
 }
