@@ -7,7 +7,7 @@ jobs:
   build:
     docker:
       # specify the version you desire here
-      - image: circleci/node:7.10
+      - image: circleci/node:9.4.0
 
       # Specify service dependencies here if necessary
       # CircleCI maintains a library of pre-built images
@@ -42,6 +42,6 @@ jobs:
           name: Deployment task
           command: |
             if [ "${CIRCLE_BRANCH}" == "master" ]; then
-              ssh-keyscan -H ccfaucet.mochizuki.moe >> ~/.ssh/known_hosts
+              ssh-keyscan -H hiverlune.net >> ~/.ssh/known_hosts
               yarn run deploy
             fi
