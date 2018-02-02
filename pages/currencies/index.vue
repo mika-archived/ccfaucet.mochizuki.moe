@@ -1,9 +1,6 @@
 <template lang="pug">
   b-container
     section
-      b-alert(show) 現在、ページリロードもしくは直アクセスすると、絞り込み機能が使えない場合があります。その場合は、一旦別ページに移動してから再度このページにアクセスすると、正常に表示されます。
-
-    section
       h2
         img.title(:src="`/bitcoin.png`")
         | 登録されている全ての蛇口一覧
