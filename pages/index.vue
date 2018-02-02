@@ -18,7 +18,7 @@
       .currencies
         template(v-for="currency in currencies")
           router-link.logo-outer(:to="`./currencies/${currency.id}`")
-            img.logo-inner(:src="`./${currency.id}.png`" :title="currency.name")
+            img.logo-inner(:src="`/${currency.id}.png`" :title="currency.name")
 
 </template>
 
