@@ -15,7 +15,7 @@
     "frequency": 60,
     "payout": "Pooling",
     "url": "http://peercoinfaucet.info/ref/PAhsQAGaarFr5CznSBii31mGgx9L3NhoVf",
-    "minimumimum": 0.05,
+    "minimum": 0.05,
     "captcha": [
       "reCAPTCHA"
     ]

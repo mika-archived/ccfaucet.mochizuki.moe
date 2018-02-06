@@ -178,6 +178,7 @@
   {
     "name": "Blackcoin",
     "symbol": "BLK",
+    "explorer": "https://chainz.cryptoid.info/blk/tx.dws?",
     "logo": {
       "license": "MIT License",
       "link": {
@@ -472,8 +473,13 @@
     "name": "Siacoin",
     "symbol": "SC",
     "logo": {
-      "license": "",
-      "link": {}
+      "license": "Unlicense",
+      "link": {
+        "href": "https://coinmarketcap.com/currencies/siacoin/",
+        "text": [
+          "Nebulous Inc"
+        ]
+      }
     }
   }
 ]

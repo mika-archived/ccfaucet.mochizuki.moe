@@ -5,6 +5,7 @@
     "payout": "Pooling",
     "url": "https://siacoinfaucet.info/ref/ac8f21b6f0b61b4ba2fd6094e8791a8fdfe9b15fca309bbb6b4e1d17c2d821c0a78c4eab7772",
     "minimum": 0.5,
+    "fee": 0.1,
     "captcha": [
       "reCAPTCHA"
     ]
