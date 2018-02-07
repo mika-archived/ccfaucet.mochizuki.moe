@@ -472,6 +472,7 @@
   {
     "name": "Siacoin",
     "symbol": "SC",
+    "explorer": "https://explore.sia.tech/hashes/",
     "logo": {
       "license": "Unlicense",
       "link": {
