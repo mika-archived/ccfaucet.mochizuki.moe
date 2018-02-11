@@ -1,9 +1,9 @@
 <template lang="pug">
   b-container
     section
-      h2 暗号通貨蛇口リスト
+      h2 仮想通貨蛇口リスト
       p
-        | 暗号通貨の蛇口リストです。
+        | 仮想通貨の蛇口リストです。
         | 絞り込み機能を使うことで、出金方法などを絞り込むことが可能です。
         br
         b
@@ -14,7 +14,7 @@
         | 個別に表示したい場合は、下の各仮想通貨のアイコンをクリックすることで絞り込んだ状態で表示できます。
 
     section
-      h3 暗号通貨一覧
+      h3 仮想通貨一覧
       .currencies
         template(v-for="currency in currencies")
           router-link.logo-outer(:to="`./currencies/${currency.id}`")

@@ -6,7 +6,7 @@
         br
         | また、当サイトは、それらの団体・個人とは関係がありません。
       p
-        | 暗号通貨や蛇口の追加, 編集, 削除は、
+        | 仮想通貨や蛇口の追加, 編集, 削除は、
         a(href="https://github.com/mika-f/crypto-faucets/" target="_blank") GitHub レポジトリ
         | まで
       p

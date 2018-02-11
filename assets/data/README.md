@@ -21,7 +21,7 @@
 
 ## `currencies.json`
 
-サポートしている暗号通貨の種類とその情報。
+サポートしている仮想通貨の種類とその情報。
 
 ```javascript
 // Sample
@@ -38,8 +38,8 @@
 
 | Field            | Required | Desc                      |
 | ---------------- | -------- | ------------------------- |
-| `name`           | Yes      | 暗号通貨名                |
-| `symbol`         | Yes      | 暗号通貨通貨記号          |
+| `name`           | Yes      | 仮想通貨名                |
+| `symbol`         | Yes      | 仮想通貨通貨記号          |
 | `exlorer`        | No       | ブロックエクスプローラーのトランザクション URL |
 | `logo`           | Yes      | ->                        |
 | `logo.license`   | Yes      | ロゴファイルライセンス               |

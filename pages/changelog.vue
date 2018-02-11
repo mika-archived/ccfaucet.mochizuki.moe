@@ -31,6 +31,10 @@ export default class Changelog extends Vue {
     {
       date: "2018/01/15",
       content: "Google にインデックスされるようにいろいろ変更しました。"
+    },
+    {
+      date: "2018/02/12",
+      content: "Transacion 情報の有無で絞れるようにしました。"
     }
   ].reverse();
 }
