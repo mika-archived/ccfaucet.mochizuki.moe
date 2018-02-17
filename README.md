@@ -4,6 +4,7 @@
 [![license](https://img.shields.io/github/license/mika-f/crypto-faucets.svg?style=flat-square)](./LICENSE)
 
 仮想通貨の蛇口リストです。  
+既存の蛇口については、毎週日曜日に情報を更新しています。  
 詳しくは、 https://ccfaucet.mochizuki.moe/about を参照して下さい。
 
 
