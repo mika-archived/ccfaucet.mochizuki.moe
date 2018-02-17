@@ -11,15 +11,6 @@
     ]
   },
   {
-    "name": "FreeBitcoin.Win",
-    "frequency": 10,
-    "payout": "FaucetHub",
-    "url": "http://freebitcoin.win/ref/3033",
-    "captcha": [
-      "SolveMedia"
-    ]
-  },
-  {
     "name": "QoinPro.com",
     "frequency": 1440,
     "payout": "Pooling",
@@ -30,7 +21,7 @@
   },
   {
     "name": "BCH - Faucet Gold",
-    "frequency": 3,
+    "frequency": 2,
     "payout": "FaucetHub",
     "url": "https://faucet.gold/BCH/?r=3M9JdFXaD1vc8uscaovkoRHCaWqe1P13vR",
     "captcha": [
@@ -45,6 +36,15 @@
     "url": "http://moonb.ch/?ref=1C119DA23244",
     "captcha": [
       "reCAPTCHA",
+      "SolveMedia"
+    ]
+  },
+  {
+    "name": "CoinPOT.win",
+    "frequency": 15,
+    "payout": "FaucetHub",
+    "url": "http://coinpot.win/ref/7549",
+    "captcha": [
       "SolveMedia"
     ]
   }

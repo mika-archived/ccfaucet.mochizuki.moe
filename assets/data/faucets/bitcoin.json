@@ -84,11 +84,20 @@
   },
   {
     "name": "BTC - Faucet Gold",
-    "frequency": 3,
+    "frequency": 2,
     "payout": "FaucetHub",
     "url": "https://faucet.gold/BTC/?r=1E4NZUSC39BEPsE1xVKVyHrBxstXdrNVM4",
     "captcha": [
       "AntiBot Links",
+      "SolveMedia"
+    ]
+  },
+  {
+    "name": "CoinPOT.win",
+    "frequency": 15,
+    "payout": "FaucetHub",
+    "url": "http://coinpot.win/ref/7549",
+    "captcha": [
       "SolveMedia"
     ]
   }

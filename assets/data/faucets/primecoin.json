@@ -3,9 +3,8 @@
     "name": "Free Primecoin (XPM) Faucet",
     "frequency": 60,
     "payout": "FaucetHub",
-    "url": "https://xpm-faucet.com/?r=AM2QVydWBt23S5HCsCNVvaWqDRShqfkJKa",
+    "url": "https://xpm-faucet.com/?r=1187",
     "captcha": [
-      "AntiBot Links",
       "reCAPTCHA",
       "SolveMedia"
     ]
@@ -33,7 +32,7 @@
   },
   {
     "name": "XPM - Faucet Gold",
-    "frequency": 3,
+    "frequency": 2,
     "payout": "FaucetHub",
     "url": "https://faucet.gold/XPM/?r=AM2QVydWBt23S5HCsCNVvaWqDRShqfkJKa",
     "captcha": [

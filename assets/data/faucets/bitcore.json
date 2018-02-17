@@ -20,7 +20,7 @@
   },
   {
     "name": "BTX - Faucet Gold",
-    "frequency": 3,
+    "frequency": 2,
     "payout": "FaucetHub",
     "url": "https://faucet.gold/BTX/?r=1JS96M1SUScs6EoyJ4yWuzCLQkY6g53pbZ",
     "captcha": [

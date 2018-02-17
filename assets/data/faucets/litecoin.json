@@ -71,7 +71,7 @@
   },
   {
     "name": "LTC - Faucet Gold",
-    "frequency": 3,
+    "frequency": 2,
     "payout": "FaucetHub",
     "url": "https://faucet.gold/LTC/?r=LiSmd3Pp1hCoPGPguSVCUyo1RHak5g1mcj",
     "captcha": [

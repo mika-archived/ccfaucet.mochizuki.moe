@@ -34,7 +34,7 @@
   },
   {
     "name": "BLK - Faucet Gold",
-    "frequency": 3,
+    "frequency": 2,
     "payout": "FaucetHub",
     "url": "https://faucet.gold/BLK/?r=BGgDvUmW4mbF1jgi69wVUbwskYRNyB4Trx",
     "captcha": [
