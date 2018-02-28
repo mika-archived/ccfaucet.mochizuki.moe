@@ -1,5 +1,5 @@
 import Vue from "vue";
-import { Faucet } from "models/faucet";
+import { Faucet } from "../models/faucet";
 
 export class CurrencyPage extends Vue {
   public txs = [{ name: "あり", value: "yes" }, { name: "なし", value: "no" }];

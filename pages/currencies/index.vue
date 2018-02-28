@@ -51,11 +51,11 @@ import Vue from "vue";
 import Component from "nuxt-class-component";
 import { Getter } from "vuex-class";
 
-import FormCheckboxGroupImpl from "components/CheckboxGroupImpl.vue";
-import { CurrencyPage } from "components/CurrencyPage";
-import { Currency } from "models/currency";
-import { Faucet } from "models/faucet";
-import { IPayout } from "models/payout";
+import FormCheckboxGroupImpl from "../../components/CheckboxGroupImpl.vue";
+import { CurrencyPage } from "../../components/CurrencyPage";
+import { Currency } from "../../models/currency";
+import { Faucet } from "../../models/faucet";
+import { IPayout } from "../../models/payout";
 
 @Component({
   components: {
