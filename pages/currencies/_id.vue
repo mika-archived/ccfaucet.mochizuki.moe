@@ -104,8 +104,9 @@ export default class extends CurrencyPage {
   @Getter("selectFaucets") public selectFaucets: (id: string) => Faucet[];
 
   public mounted(): void {
-    // this.currency = this.findCurrency((this as any).$route.params.id);
     this.faucets = this.selectFaucets((this as any).$route.params.id).map(w => Faucet.fromJson(w));
+    this.restore();
+    this.isEnableStoreData = true;
   }
 }
 </script>

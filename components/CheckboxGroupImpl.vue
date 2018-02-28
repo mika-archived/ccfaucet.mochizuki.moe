@@ -28,8 +28,15 @@ export default {
   mounted: function() {
     this.toggleAll(true);
   },
-  props: ["fieldText", "fieldValue", "options", "label"],
+  model: {
+    prop: "selectedOptions",
+    event: "input"
+  },
+  props: ["selectedOptions", "fieldText", "fieldValue", "options", "label"],
   watch: {
+    selectedOptions(newValue, oldValue) {
+      this.selected = newValue;
+    },
     selected(newValue, oldValue) {
       if (newValue.length === 0) {
         this.indeterminate = false;

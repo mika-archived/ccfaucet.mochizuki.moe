@@ -16,7 +16,6 @@
             b-col(sm="12")
               form-checkbox-group-impl(field-text="name" field-value="value" :options="txs" label="Transaction 情報" v-model="selectedTxs")
 
-
     section
       b-table.fill-table(bordered striped responsive hover show-empty empty-text="アイテムが見つかりませんでした" :items="filteredItems()" :fields="tableFields")
         template(slot="trust" slot-scope="data")
@@ -112,6 +111,8 @@ export default class extends CurrencyPage {
 
   public mounted(): void {
     this.faucets = this._faucets.map(w => Faucet.fromJson(w));
+    this.restore();
+    this.isEnableStoreData = true;
   }
 }
 </script>
