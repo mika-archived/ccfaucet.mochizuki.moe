@@ -106,7 +106,7 @@ export default class extends CurrencyPage {
 
   @Getter("payouts") public payouts: IPayout[];
 
-  public filterCallbacK(faucet: Faucet): boolean {
+  public filterCallback(faucet: Faucet): boolean {
     return this.selectedCurrencies.includes(faucet.currency.symbol);
   }
 

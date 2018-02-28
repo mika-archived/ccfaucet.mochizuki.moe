@@ -18,13 +18,13 @@ export class CurrencyPage extends Vue {
     return url.replace(/(\?)?(ref|r|i)(=|\/).*/g, "");
   }
 
-  public filterCallbacK(faucet: Faucet): boolean {
+  public filterCallback(faucet: Faucet): boolean {
     return true;
   }
 
   public filteredItems(): Faucet[] {
     return this.faucets.filter(w => {
-      if (this.selectedPayouts.includes(w.payout.name) && this.filterCallbacK(w)) {
+      if (this.selectedPayouts.includes(w.payout.name) && this.filterCallback(w)) {
         if (this.selectedTxs.length === 2) {
           return true;
         } else {
