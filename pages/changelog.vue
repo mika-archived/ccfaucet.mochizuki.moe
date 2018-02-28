@@ -37,7 +37,7 @@ export default class Changelog extends Vue {
       content: "Transacion 情報の有無で絞れるようにしました。"
     },
     {
-      data: "2018/02/28",
+      date: "2018/02/28",
       content: "検索条件の保存および復元に対応しました (自動で保存と復元を行います)。"
     }
   ].reverse();
