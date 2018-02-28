@@ -51,10 +51,11 @@ import Vue from "vue";
 import Component from "nuxt-class-component";
 import { Getter } from "vuex-class";
 
-import FormCheckboxGroupImpl from "../../components/CheckboxGroupImpl.vue";
-import { Currency } from "../../models/currency";
-import { Faucet } from "../../models/faucet";
-import { IPayout } from "../../models/payout";
+import FormCheckboxGroupImpl from "components/CheckboxGroupImpl.vue";
+import { CurrencyPage } from "components/CurrencyPage";
+import { Currency } from "models/currency";
+import { Faucet } from "models/faucet";
+import { IPayout } from "models/payout";
 
 @Component({
   components: {
@@ -87,12 +88,7 @@ import { IPayout } from "../../models/payout";
     };
   }
 })
-export default class extends Vue {
-  public selectedCurrencies: string[] = [];
-  public selectedFields: string[] = [];
-  public selectedPayouts: string[] = [];
-  public selectedTxs: string[] = [];
-  public faucets: Faucet[] = [];
+export default class extends CurrencyPage {
   public tableFields = {
     trust: { label: "Tx" },
     currency: { label: "仮想通貨" },
@@ -103,7 +99,6 @@ export default class extends Vue {
     fee: { label: "最小手数料" },
     captcha: { label: "認証形式" }
   };
-  public txs = [{ name: "あり", value: "yes" }, { name: "なし", value: "no" }];
 
   @Getter("currencies") public currencies: Currency[];
 
@@ -111,33 +106,12 @@ export default class extends Vue {
 
   @Getter("payouts") public payouts: IPayout[];
 
-  public get isPureUrl(): boolean {
-    return localStorage.getItem("disableAffiliate") !== null;
-  }
-
-  public filteredItems(): Faucet[] {
-    return this.faucets.filter(w => {
-      if (this.selectedPayouts.includes(w.payout.name) && this.selectedCurrencies.includes(w.currency.symbol)) {
-        if (this.selectedTxs.length === 2) {
-          return true;
-        } else {
-          if (this.selectedTxs[0] === "yes") {
-            return w.tx !== undefined || w.payout.name === "Direct";
-          } else {
-            return w.tx === undefined;
-          }
-        }
-      }
-      return false;
-    });
+  public filterCallbacK(faucet: Faucet): boolean {
+    return this.selectedCurrencies.includes(faucet.currency.symbol);
   }
 
   public mounted(): void {
     this.faucets = this._faucets.map(w => Faucet.fromJson(w));
-  }
-
-  public purelize(url: string): string {
-    return url.replace(/(\?)?(ref|r|i)(=|\/).*/g, "");
   }
 }
 </script>

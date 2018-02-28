@@ -49,10 +49,11 @@ import Vue from "vue";
 import Component from "nuxt-class-component";
 import { Getter } from "vuex-class";
 
-import FormCheckboxGroupImpl from "../../components/CheckboxGroupImpl.vue";
-import { Bitcoin, Currency } from "../../models/currency";
-import { Faucet } from "../../models/faucet";
-import { IPayout } from "../../models/payout";
+import FormCheckboxGroupImpl from "components/CheckboxGroupImpl.vue";
+import { Bitcoin, Currency } from "models/currency";
+import { Faucet } from "models/faucet";
+import { IPayout } from "models/payout";
+import { CurrencyPage } from "components/CurrencyPage";
 
 @Component({
   components: {
@@ -80,7 +81,7 @@ import { IPayout } from "../../models/payout";
     });
   }
 })
-export default class extends Vue {
+export default class extends CurrencyPage {
   public currency: Currency = new Bitcoin();
   public title: string = "";
   public tableFields = {
@@ -92,12 +93,7 @@ export default class extends Vue {
     fee: { label: "最小手数料" },
     captcha: { label: "認証形式" }
   };
-  public txs = [{ name: "あり", value: "yes" }, { name: "なし", value: "no" }];
   public meta: any[] = [];
-  public selectedFields: string[] = [];
-  public selectedPayouts: string[] = [];
-  public selectedTxs: string[] = [];
-  public faucets: Faucet[] = [];
 
   @Getter("faucets") public _faucets: string[];
 
@@ -107,34 +103,9 @@ export default class extends Vue {
 
   @Getter("selectFaucets") public selectFaucets: (id: string) => Faucet[];
 
-  public get isPureUrl(): boolean {
-    return localStorage.getItem("disableAffiliate") !== null;
-  }
-
-  public filteredItems(): Faucet[] {
-    return this.faucets.filter(w => {
-      if (this.selectedPayouts.includes(w.payout.name)) {
-        if (this.selectedTxs.length === 2) {
-          return true;
-        } else {
-          if (this.selectedTxs[0] === "yes") {
-            return w.tx !== undefined || w.payout.name === "Direct";
-          } else {
-            return w.tx === undefined;
-          }
-        }
-      }
-      return false;
-    });
-  }
-
   public mounted(): void {
     // this.currency = this.findCurrency((this as any).$route.params.id);
     this.faucets = this.selectFaucets((this as any).$route.params.id).map(w => Faucet.fromJson(w));
-  }
-
-  public purelize(url: string): string {
-    return url.replace(/(\?)?(ref|r|i)(=|\/).*/g, "");
   }
 }
 </script>
