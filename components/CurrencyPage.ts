@@ -4,7 +4,6 @@ import { Faucet } from "../models/faucet";
 
 interface ICondition {
   currencies: string[];
-  fields: string[];
   payouts: string[];
   txs: string[];
 }
@@ -14,7 +13,6 @@ export class CurrencyPage extends Vue {
   public faucets: Faucet[] = [];
 
   public selectedCurrencies: string[] = [];
-  public selectedFields: string[] = [];
   public selectedPayouts: string[] = [];
   public selectedTxs: string[] = [];
 
@@ -61,7 +59,6 @@ export class CurrencyPage extends Vue {
 
     const data = {
       currencies: this.selectedCurrencies,
-      fields: this.selectedFields,
       payouts: this.selectedPayouts,
       txs: this.selectedTxs
     } as ICondition;
@@ -76,7 +73,6 @@ export class CurrencyPage extends Vue {
     const data = JSON.parse(localStorage.getItem(this.pageKey) as string) as ICondition;
     this.isEnableStoreData = false;
     this.selectedCurrencies = data.currencies;
-    this.selectedFields = data.fields;
     this.selectedPayouts = data.payouts;
     this.selectedTxs = data.txs;
     this.isEnableStoreData = true;
