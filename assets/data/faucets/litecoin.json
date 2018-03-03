@@ -10,12 +10,11 @@
     ]
   },
   {
-    "name": "Free Litecoin (LTC) Faucet",
+    "name": "Litecoin-Faucet.com",
     "frequency": 60,
     "payout": "FaucetHub",
-    "url": "https://litecoin-faucet.com/?r=LiSmd3Pp1hCoPGPguSVCUyo1RHak5g1mcj",
+    "url": "https://litecoin-faucet.com/?r=15899",
     "captcha": [
-      "AntiBot Links",
       "reCAPTCHA",
       "SolveMedia"
     ]

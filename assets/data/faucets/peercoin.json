@@ -1,11 +1,10 @@
 [
   {
-    "name": "Free Peercoin (PPC) Faucet",
+    "name": "PPC-Faucet.com",
     "frequency": 60,
     "payout": "FaucetHub",
-    "url": "https://ppc-faucet.com/?r=PBHB7UYxn1QQcavS1JZrVmXWza7tKt6Lxh",
+    "url": "https://ppc-faucet.com/?r=3654",
     "captcha": [
-      "AntiBot Links",
       "reCAPTCHA",
       "SolveMedia"
     ]

@@ -1,11 +1,10 @@
 [
   {
-    "name": "Free Dash (DASH) Faucet",
+    "name": "DASH-Faucet.com",
     "frequency": 60,
     "payout": "FaucetHub",
-    "url": "https://dash-faucet.com/?r=XinqrYP4KD3vxFhuEniqkwa6GPRayhriqU",
+    "url": "https://dash-faucet.com/?r=6735",
     "captcha": [
-      "AntiBot Links",
       "reCAPTCHA",
       "SolveMedia"
     ]

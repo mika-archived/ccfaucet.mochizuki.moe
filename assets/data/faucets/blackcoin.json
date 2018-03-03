@@ -1,11 +1,10 @@
 [
   {
-    "name": "Free Blackcoin (BLK) Faucet",
+    "name": "BlackcoinFaucet.com",
     "frequency": 60,
     "payout": "FaucetHub",
-    "url": "https://blackcoinfaucet.com/?r=BGgDvUmW4mbF1jgi69wVUbwskYRNyB4Trx",
+    "url": "https://blackcoinfaucet.com/?r=4491",
     "captcha": [
-      "AntiBot Links",
       "reCAPTCHA",
       "SolveMedia"
     ]
