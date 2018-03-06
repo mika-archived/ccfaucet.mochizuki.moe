@@ -9,5 +9,16 @@
     "captcha": [
       "reCAPTCHA"
     ]
+  },
+  {
+    "name": "MNX - Faucet Gold",
+    "frequency": 3,
+    "payout": "Pooling",
+    "url": "https://faucet.gold/MNX/?r=XMVFjow7LDbDjUHPKANBurD4C8rjmjbHj5",
+    "minimum": 0.0002,
+    "fee": 0,
+    "captcha": [
+      "AntiBot Links"
+    ]
   }
 ]
