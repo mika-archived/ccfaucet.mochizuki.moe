@@ -1,0 +1,13 @@
+[
+  {
+    "name": "RDD - Faucet Gold",
+    "frequency": 3,
+    "payout": "Pooling",
+    "url": "https://faucet.gold/RDD/?r=RojBAmFMhbuw2DgiGgDDy4DT8PWqhhUviW",
+    "minimum": 0.25,
+    "fee": 0,
+    "captcha": [
+      "AntiBot Links"
+    ]
+  }
+]

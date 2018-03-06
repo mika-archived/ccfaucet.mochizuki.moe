@@ -482,5 +482,18 @@
         ]
       }
     }
+  },
+  {
+    "name": "Reddcoin",
+    "symbol": "RDD",
+    "logo": {
+      "license": "Unlicense",
+      "link": {
+        "href": "https://www.reddcoin.com/brand-assets/",
+        "text": [
+          "Reddcoin"
+        ]
+      }
+    }
   }
 ]
