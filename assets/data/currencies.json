@@ -459,6 +459,7 @@
   {
     "name": "Minexcoin",
     "symbol": "MNX",
+    "explorer": "https://minexexplorer.com/?r=explorer/tx&hash=",
     "logo": {
       "license": "MIT License",
       "link": {
