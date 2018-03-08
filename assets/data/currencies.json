@@ -487,6 +487,7 @@
   {
     "name": "Reddcoin",
     "symbol": "RDD",
+    "explorer": "https://live.reddcoin.com/tx/",
     "logo": {
       "license": "Unlicense",
       "link": {
