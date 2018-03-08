@@ -2,6 +2,10 @@
   b-container
     section
       h2 更新履歴
+      p 
+        | 仮想通貨や蛇口の登録・削除については記載しておりません。
+        a(href="https://github.com/mika-f/crypto-faucets/commits/master" target="_blank") GitHub リポジトリの commit ログ
+        | を参照して下さい。
     section(v-for="w in changelogs" :key="w.date")
       h3 {{w.date}}
       p {{w.content}}

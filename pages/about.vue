@@ -3,11 +3,8 @@
     section
       h2 このサイトについて
       p
-        | このサイトは、仮想通貨を無料でもらうことが出来る「蛇口」へのリンクをまとめているサイトです。
-        br
-        | 現在、 {{currencies.length}}種類の仮想通貨、{{faucets.length}}個の蛇口が登録されています。
-        br
-        | サイト名の「落ち葉拾い」は、「草コインを拾う」という意味を込めています。
+        | このサイトは、仮想通貨を一定の条件を満たすことdえ、無料でもらうことが出来る「蛇口」へのリンクをまとめているサイトです。
+        | 現時点で、 {{currencies.length}}種類の仮想通貨、{{faucets.length}}個の蛇口 ({{trusted}}個は出金確認済) が登録されています。
 
     section
       h3 蛇口とは？
@@ -22,6 +19,19 @@
         | 蛇口リストの各項目についての説明です。
       b-table(bordered :items="description.items" :fields="description.fields")
 
+    section
+      h3 トランザクション情報について
+      p
+        | 出金が確認できたサイトについては、トランザクション情報へのリンクを記載しております。
+        | なお、使用しているアドレスについては、下記のアドレスとなります。
+        br
+        small
+          | ※ 直接送金される物 (支払い方法が "Direct" のもの) は除外しています。
+          br
+          | ※ Bitcoin については、取引毎にアドレスを変更しているため、アドレスへの送金回数が1回のみとなっています。
+      b-table(bordered :items="addresses.items" :fields="addresses.fields")
+        template(slot="address" slot-scope="data")
+          code {{data.item.address}}
 </template>
 
 <script lang="ts">
@@ -88,9 +98,87 @@ export default class extends Vue {
       }
     ]
   };
+  public addresses = {
+    fields: {
+      type: {
+        label: "種類"
+      },
+      address: {
+        label: "アドレス"
+      }
+    },
+    items: [
+      {
+        type: "Bitcoin",
+        address: "1QCXtVPtH3Z7RQ2x5bGWPpnRWkwyLnUPaN"
+      },
+      {
+        type: "Bitcoin Cash",
+        address: "bitcoincash:pqeff9unjrzy36tvrfhwtx8y2psqnzetfyk433elcx"
+      },
+      {
+        type: "Bitcoin Cash",
+        address: "bitcoincash:pr2kxfvm0cgdq9wkkvrfvzjdhr6h34q58sa0cw36hr"
+      },
+      {
+        type: "BitCore",
+        address: "1JS96M1SUScs6EoyJ4yWuzCLQkY6g53pbZ"
+      },
+      {
+        type: "Blackcoin",
+        address: "B69gaoqskF4LQ1ABqwJbFuqtuBKoNaDyts"
+      },
+      {
+        type: "Dash",
+        address: "Xi1uDYVrKn4xztPTTaLB9waRgxZGDMhSGP"
+      },
+      {
+        type: "Dash",
+        address: "XinqrYP4KD3vxFhuEniqkwa6GPRayhriqU"
+      },
+      {
+        type: "Dogecoin",
+        address: "DN2Hbq7uUjtD6WFGCTq1iuKhrJtWpVy8jb"
+      },
+      {
+        type: "Dogecoin",
+        address: "DU2g1zeQbmhXdFzx3vzSFGbkuwzduVas85"
+      },
+      {
+        type: "Dogecoin",
+        address: "DExSu5JZAh87w4Z37hiKeXA14ZHt7NCZRf"
+      },
+      {
+        type: "Litecoin",
+        address: "LbGueF6cJwWf4bcVEZ1FBEYFckhsEHdFi7"
+      },
+      {
+        type: "Minexcoin",
+        address: "XMVFjow7LDbDjUHPKANBurD4C8rjmjbHj5"
+      },
+      {
+        type: "Monacoin",
+        address: "MPTnBxjaNu6pY2jd5YFd4f9nBhzALKptrz"
+      },
+      {
+        type: "Reddcoin",
+        address: "RojBAmFMhbuw2DgiGgDDy4DT8PWqhhUviW"
+      },
+      {
+        type: "Siacoin",
+        address: "ac8f21b6f0b61b4ba2fd6094e8791a8fdfe9b15fca309bbb6b4e1d17c2d821c0a78c4eab7772"
+      }
+    ]
+  };
 
   @Getter("currencies") public currencies: Currency[];
 
   @Getter("faucets") public faucets: Faucet[];
+
+  public trusted: number = 0;
+
+  public mounted(): void {
+    this.trusted = this.faucets.map(w => Faucet.fromJson(w)).filter(w => w.isDirectPayment || w.hasTransaction).length;
+  }
 }
 </script>
