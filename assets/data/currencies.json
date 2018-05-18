@@ -165,6 +165,7 @@
   {
     "name": "Ethereum",
     "symbol": "ETH",
+    "explorer": "https://etherscan.io/tx/",
     "logo": {
       "license": "CC-BY 3.0",
       "link": {
